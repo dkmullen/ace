@@ -1,0 +1,35 @@
+#hamburger-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+#hamburger-icon {
+  height: 48px;
+  width: 48px;
+  font-size: 48px;
+}
+.mat-menu-item {
+  font-size: 1.1rem;
+
+  &:hover {
+    background-color: #bb2d53;
+    color: white;
+  }
+}
+#full-menu {
+  position: relative;
+  float: right;
+  top: 1rem;
+  right: 1rem;
+  background: #000000;
+  border-radius: 5px;
+
+  button {
+    display: inline-block;
+    width: unset;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+
+  }
+}

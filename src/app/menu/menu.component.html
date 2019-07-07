@@ -1,0 +1,49 @@
+    <button *ngIf="!wide else fullMenu" id="hamburger-button" mat-icon-button [matMenuTriggerFor]="topLevel">
+      <mat-icon id="hamburger-icon">menu</mat-icon>
+    </button>
+
+    <mat-menu #topLevel="matMenu">
+      <button mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >Home</button>
+      <button mat-menu-item [matMenuTriggerFor]="learning">Learning</button>
+      <button mat-menu-item [matMenuTriggerFor]="auditions">Auditions</button>
+      <button mat-menu-item [matMenuTriggerFor]="galleries">Galleries</button>
+      <button mat-menu-item [matMenuTriggerFor]="about">About ACE</button>
+    </mat-menu>
+
+    <ng-template #fullMenu>
+      <div id="full-menu">
+        <button mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >Home</button>
+        <button mat-menu-item [matMenuTriggerFor]="learning">Learning</button>
+        <button mat-menu-item [matMenuTriggerFor]="auditions">Auditions</button>
+        <button mat-menu-item [matMenuTriggerFor]="galleries">Galleries</button>
+        <button mat-menu-item [matMenuTriggerFor]="about">About ACE</button>
+      </div>
+    </ng-template>
+
+    <mat-menu #learning="matMenu">
+      <button mat-menu-item>Project Orion</button>
+      <button mat-menu-item>Camps</button>
+    </mat-menu>
+
+    <mat-menu #auditions="matMenu">
+      <button mat-menu-item>Dance Awards</button>
+      <button mat-menu-item>Singing Awards</button>
+      <button mat-menu-item>Acting Awards</button>
+      <button mat-menu-item>Battle of the Bands</button>
+    </mat-menu>
+
+    <mat-menu #galleries="matMenu">
+      <button mat-menu-item>2019 Singing Awards</button>
+      <button mat-menu-item>2019 Acting Awards</button>
+      <button mat-menu-item>Past Contests</button>
+    </mat-menu>
+
+    <mat-menu #about="matMenu">
+      <button mat-menu-item [routerLink]="['/about/mission']" routerLinkActive="router-link-active" >Our Mission</button>
+      <button mat-menu-item [routerLink]="['/about/sponsors']" routerLinkActive="router-link-active" >Sponsors</button>
+      <button mat-menu-item [routerLink]="['/about/board']" routerLinkActive="router-link-active">Board</button>
+      <button mat-menu-item [routerLink]="['/about/support']" routerLinkActive="router-link-active" >Support ACE</button>
+    </mat-menu>
+
+
+
