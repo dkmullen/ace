@@ -11,13 +11,13 @@ export class MenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    window.innerWidth > 749 ? this.wide = true : this.wide = false;
+    window.innerWidth > 767 ? this.wide = true : this.wide = false;
     this.getWidth();
   }
 
   getWidth() {
     window.onresize = () => {
-      window.innerWidth > 749 ? this.wide = true : this.wide = false;
+      window.innerWidth > 767 ? this.wide = true : this.wide = false;
     }
   }
 }

@@ -113,7 +113,7 @@ h1 {
 // Hamburger
 #hamburger-button {
   position: absolute;
-  top: 1rem;
+  top: 2rem;
   right: 1rem;
 }
 #hamburger-icon {
@@ -123,12 +123,19 @@ h1 {
 }
 //menu
 .mat-menu-item {
-  font-size: .85rem !important;
+  font-size: .9rem !important;
   font-weight: 300 !important;
 
   &:hover {
     background-color: $accent !important;
     color: $light !important;
+  }
+}
+
+@-moz-document url-prefix() {
+  .mat-menu-item {
+    font-weight: 400 !important;
+    font-size: .8rem !important;
   }
 }
 #full-menu {
