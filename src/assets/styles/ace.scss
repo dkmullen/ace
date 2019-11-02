@@ -87,7 +87,13 @@ $ace-theme: mat-light-theme($ace-primary, $ace-accent);
     $red: #dc322f;
 }
 
+$primary: #000000;
+$accent : #bb2d53;
+$light : #ffffff;
+
 .accent-text {
-  color: #bb2d53;
+  color: $accent;
 }
+
+
 @include angular-material-theme($ace-theme);

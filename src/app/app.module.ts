@@ -7,16 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { MenuComponent } from './menu/menu.component';
-import { BrandingComponent } from './branding/branding.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BoardComponent } from './pages/about/board/board.component';
 import { MissionComponent } from './pages/about/mission/mission.component';
 import { SponsorsComponent } from './pages/about/sponsors/sponsors.component';
 import { SupportComponent } from './pages/about/support/support.component';
 
-import { MatMenuModule } from '@angular/material/menu';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { MaterialModule } from './modules/material.module';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,7 +28,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     MenuComponent,
-    BrandingComponent,
     HomeComponent,
     BoardComponent,
     MissionComponent,
@@ -42,9 +38,7 @@ const appRoutes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MatMenuModule,
-    MatButtonModule,
-    MatIconModule,
+    MaterialModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

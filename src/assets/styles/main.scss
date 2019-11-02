@@ -1,3 +1,5 @@
+@import './ace.scss';
+
 html {
 	box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
@@ -6,6 +8,7 @@ html {
 body {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 h1 {
@@ -92,100 +95,72 @@ h1 {
 // }
 
 /////
-
+.primary {
+  color: $primary;
+}
 .accent {
-  color: #bb2d53;
+  color: $accent;
 }
-
+// Logo
 #ace-logo {
-  width: 125px;
+  width: 275px;
   cursor: pointer;
 
   &:focus {
     outline: none;
   }
 }
-#tag-container {
-  display: inline-block;
+// Hamburger
+#hamburger-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+#hamburger-icon {
+  height: 48px;
+  width: 48px;
+  font-size: 48px;
+}
+//menu
+.mat-menu-item {
+  font-size: .85rem !important;
+  font-weight: 300 !important;
+
+  &:hover {
+    background-color: $accent !important;
+    color: $light !important;
+  }
+}
+#full-menu {
   position: relative;
-  left: 30px;
-  top: -5px;
-  cursor: pointer;
+  top: 20px;
+  float: right;
 
-  &:focus {
-    outline: none;
+  background: $primary !important;
+  border-radius: 5px;
+
+  button {
+    display: inline-block;
+    width: unset;
+    border-radius: 5px;
+    color: $light!important;
   }
 }
-#ace-tagline1 {
-  font-weight: 300;
-  font-size: 1.1rem;
-}
-#ace-tagline2 {
-  font-weight: 600;
-  font-size: 3rem;
-  margin-left: -5px;
-}
-#ace-tagline3 {
-  font-weight: 600;
-  font-size: 1.8rem;
-}
-@media (min-width: 600px) {
+
+@media (min-width: 850px) {
   #ace-logo {
-    width: 200px;
-  }
-  #ace-tagline1 {
-    font-size: 1.4rem;
-  }
-  #ace-tagline2 {
-    font-size: 4rem;
-    margin-left: -5px;
-  }
-  #ace-tagline3 {
-    font-size: 2.2rem;
+    width: 300px;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
+  .mat-menu-item {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (min-width: 950px) {
   #ace-logo {
-    width: 250px;
-  }
-  #tag-container {
-    display: inline-block;
-    position: relative;
-    left: 280px;
-    top: -125px;
-  }
-  #ace-tagline1 {
-    font-size: 1.4rem;
-  }
-  #ace-tagline2 {
-    font-size: 4rem;
-    margin-left: -5px;
-  }
-  #ace-tagline3 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (min-width: 925px) {
-  #ace-tagline2 {
-    font-size: 3.8rem;
-    margin-left: -5px;
-    display: inline-block;
-  }
-  #ace-tagline3 {
-    font-size: 3.8rem;
-    display: inline-block;
-    margin-left: 10px;
-  }
-}
-
-@media (min-width: 1100px) {
-  #ace-tagline2 {
-    font-size: 4.6rem;
-  }
-  #ace-tagline3 {
-    font-size: 4.6rem;
-    margin-left: 15px;
+    width: 350px;
   }
 }
