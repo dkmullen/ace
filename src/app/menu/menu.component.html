@@ -7,8 +7,7 @@
 
     <mat-menu #topLevel="matMenu">
       <button mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >Home</button>
-      <button mat-menu-item [matMenuTriggerFor]="learning">Learning</button>
-      <button mat-menu-item [matMenuTriggerFor]="auditions">Auditions</button>
+      <button mat-menu-item [matMenuTriggerFor]="auditions">Events</button>
       <button mat-menu-item [matMenuTriggerFor]="galleries">Galleries</button>
       <button mat-menu-item [matMenuTriggerFor]="about">About ACE</button>
     </mat-menu>
@@ -16,8 +15,7 @@
     <ng-template #fullMenu>
       <div id="full-menu">
         <button mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >Home</button>
-        <button mat-menu-item [matMenuTriggerFor]="learning">Learning</button>
-        <button mat-menu-item [matMenuTriggerFor]="auditions">Auditions</button>
+        <button mat-menu-item [matMenuTriggerFor]="auditions">Events</button>
         <button mat-menu-item [matMenuTriggerFor]="galleries">Galleries</button>
         <button mat-menu-item [matMenuTriggerFor]="about">About ACE</button>
       </div>
@@ -29,10 +27,9 @@
     </mat-menu>
 
     <mat-menu #auditions="matMenu">
-      <button mat-menu-item>Dance Awards</button>
-      <button mat-menu-item>Singing Awards</button>
-      <button mat-menu-item>Acting Awards</button>
-      <button mat-menu-item>Battle of the Bands</button>
+      <button mat-menu-item [routerLink]="['/singing']"routerLinkActive="router-link-active">Singing Awards</button>
+      <button mat-menu-item [routerLink]="['/acting']"routerLinkActive="router-link-active">Acting Awards</button>
+      <button mat-menu-item [routerLink]="['/battle-of-the-bands']"routerLinkActive="router-link-active">Battle of the Bands</button>
     </mat-menu>
 
     <mat-menu #galleries="matMenu">
