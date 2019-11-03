@@ -91,13 +91,4 @@ $primary: #000000;
 $accent : #bb2d53;
 $light : #ffffff;
 
-.accent-text {
-  color: $accent;
-}
-.bold-accent-text {
-  color: $accent;
-  font-weight: 700;
-}
-
-
 @include angular-material-theme($ace-theme);
