@@ -101,9 +101,12 @@ h1 {
 .accent {
   color: $accent;
 }
+
 // Logo
 #ace-logo {
-  width: 225px;
+  width: 100%;
+  height: auto;
+  min-width: 225px;
   cursor: pointer;
 
   &:focus {
@@ -123,7 +126,7 @@ h1 {
 }
 //menu
 .mat-menu-item {
-  font-size: .9rem !important;
+  font-size: 1.1rem !important;
   font-weight: 300 !important;
 
   &:hover {
@@ -135,7 +138,6 @@ h1 {
 @-moz-document url-prefix() {
   .mat-menu-item {
     font-weight: 400 !important;
-    font-size: .8rem !important;
   }
 }
 #full-menu {
@@ -154,20 +156,20 @@ h1 {
   }
 }
 
-@media (min-width: 850px) {
-  #ace-logo {
-    width: 300px;
+@media (min-width: 768px) {
+  .mat-menu-item {
+    font-size: 1rem !important;
+  }
+
+  @-moz-document url-prefix() {
+    .mat-menu-item {
+      font-size: .93rem !important;
+    }
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 820px) {
   .mat-menu-item {
     font-size: 1.1rem !important;
-  }
-}
-
-@media (min-width: 950px) {
-  #ace-logo {
-    width: 350px;
   }
 }

@@ -1,4 +1,11 @@
 @import '../../../assets/styles/ace.scss';
-p {
-  color: $accent;
+.event-card {
+  max-width: 500px;
+  background: rgb(233, 233, 233);
 }
+
+.event-header-image {
+  background-image: url('/assets/images/ace_more_margin.png');
+  background-size: cover;
+}
+

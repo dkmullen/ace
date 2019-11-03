@@ -1,2 +1,67 @@
-<hr>
-<p>home works!</p>
+<mat-card>
+<div fxLayout="row" fxLayout.sm="column" fxLayoutGap="20px" fxLayoutAlign="center center">
+  <mat-card class="event-card" [routerLink]="['/singing']" routerLinkActive="router-link-active">
+    <mat-card-header>
+      <div mat-card-avatar class="event-header-image"></div>
+      <mat-card-title>ACE Singing Awards</mat-card-title>
+      <mat-card-subtitle>January 11, 2020 - 7pm</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/images/singing_2019/singing-2019_1.jpg" alt="Photo of a young man with a guitar">
+    <mat-card-content>
+      <p>
+        The ACE Singing Awards, at Knoxvile's <span class="bold-accent-text">Bijou Theatre</span>, are for
+        students through grade 12 in and around Knoxville, Tennessee. Participants will compete for
+        prizes for themselves and their schools.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="accent">FIND OUT MORE</button>
+      <!-- <button mat-button>SHARE</button> -->
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="event-card" [routerLink]="['/acting']" routerLinkActive="router-link-active">
+    <mat-card-header>
+      <div mat-card-avatar class="event-header-image"></div>
+      <mat-card-title>ACE Acting Awards</mat-card-title>
+      <mat-card-subtitle>January 25, 2020 - 7pm</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/images/acting_2019/acting-2019_1.jpg" alt="Photo of a young man with a guitar">
+    <mat-card-content>
+      <p>
+        The ACE Acting Awards, at Knoxvile's <span class="bold-accent-text">Old City Performing Arts Center</span>,
+        are for students through grade 12 in and around Knoxville, Tennessee. This year's format is all-new.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="accent">FIND OUT MORE</button>
+      <!-- <button mat-button>SHARE</button> -->
+    </mat-card-actions>
+  </mat-card>
+
+
+</div>
+
+<div fxLayout="row" fxLayout.sm="column" fxLayoutGap="20px" fxLayoutAlign="center center" [style.margin-top.px]="25">
+  <mat-card class="event-card" [routerLink]="['/battle-of-the-bands']" routerLinkActive="router-link-active">
+    <mat-card-header>
+      <div mat-card-avatar class="event-header-image"></div>
+      <mat-card-title>Battle of the Bands</mat-card-title>
+      <mat-card-subtitle>May 2020</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/images/battle_of_the_bands/bofb.jpg" alt="Photo of a young man with a guitar">
+    <mat-card-content>
+      <p>
+        The ACE Battle of the Bands is coming in May to <span class="bold-accent-text">The Foundary</span>. We're looking for
+        bands with students through grade 12 in and around Knoxville, Tennessee. This is your year.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="accent">FIND OUT MORE</button>
+      <!-- <button mat-button>SHARE</button> -->
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+</mat-card>
