@@ -2,7 +2,6 @@
   position: relative;
   text-align: center;
   line-height: 1.3;
-
 }
 h1 {
   font-size: 3rem;
@@ -15,14 +14,30 @@ h1 {
   color: black;
   border-bottom: 1px solid black;
 }
+#mission {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 110%;
+  margin-top: 15px;
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
 
 div {
   margin-bottom: 3rem;
 }
+@media (max-width: 599px) {
+  #ace-pic {
+    height: 50%;
+    width: 50%;
+  }
+ }
 
 @media (min-width: 800px) {
-  * {
-    font-size: larger;
+  #board {
+    font-size: x-large;
     h1 {
       font-size: 4rem;
     }

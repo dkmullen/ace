@@ -140,9 +140,9 @@ a, a:visited {
 // Logo
 #ace-logo {
   width: 100%;
+  min-width: 225px;
   height: auto;
   max-height: 142px;
-  min-width: 225px;
   cursor: pointer;
 
   &:focus {
