@@ -44,3 +44,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+src/assets/images/acting_2019
+src/assets/images/singing_2019

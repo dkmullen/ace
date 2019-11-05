@@ -15,6 +15,7 @@ import { SupportComponent } from './pages/about/support/support.component';
 import { SingingComponent } from './pages/events/singing/singing.component';
 import { ActingComponent } from './pages/events/acting/acting.component';
 import { BobComponent } from './pages/events/bob/bob.component';
+import { SingingGalleryComponent } from './pages/galleries/singing/singing-gallery.component';
 
 import { MaterialModule } from './modules/material.module';
 
@@ -27,6 +28,8 @@ const appRoutes: Routes = [
   { path: 'singing', component: SingingComponent },
   { path: 'acting', component: ActingComponent },
   { path: 'battle-of-the-bands', component: BobComponent },
+  { path: 'singing-gallery', component: SingingGalleryComponent },
+
 ];
 
 @NgModule({
@@ -39,7 +42,8 @@ const appRoutes: Routes = [
     SupportComponent,
     SingingComponent,
     ActingComponent,
-    BobComponent
+    BobComponent,
+    SingingGalleryComponent
   ],
   imports: [
     BrowserModule,

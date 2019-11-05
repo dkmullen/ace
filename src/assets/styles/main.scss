@@ -106,6 +106,9 @@ a, a:visited {
 .spacer {
   height: 1.5rem;
 }
+#banner-wrapper {
+  -webkit-max-height: 100px;
+}
 
 // Event pages
 .event_page-wrapper {
@@ -142,7 +145,6 @@ a, a:visited {
   width: 100%;
   min-width: 225px;
   height: auto;
-  max-height: 142px;
   cursor: pointer;
 
   &:focus {
@@ -176,6 +178,7 @@ a, a:visited {
     font-weight: 400 !important;
   }
 }
+
 #full-menu {
   position: relative;
   top: 20px;
