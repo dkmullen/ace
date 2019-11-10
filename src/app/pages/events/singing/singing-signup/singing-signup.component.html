@@ -1,0 +1,97 @@
+<div class="container">
+  <div class="row">
+    <div>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div formGroupName="userData">
+          <div class="form-group">
+            <mat-form-field>
+              <input matInput type="text" id="username" formControlName="username" class="formcontrol" placeholder="Name" required>
+              <mat-error *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched"></mat-error>
+              <!-- <mat-error *ngIf="signupForm.get('userData.username').errors['nameIsForbidden']">This name is invalid!</mat-error> -->
+              <!-- <mat-error *ngIf="signupForm.get('userData.username').errors['required']">This field is required!</mat-error> -->
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field>
+              <input matInput type="text" id="email" placeholder="Email" formControlName="email" required>
+              <mat-error *ngIf="signupForm.get('userData.email').invalid">Enter a valid email address</mat-error>
+            </mat-form-field>
+          <!-- </div> -->
+          <!-- <div class="form-group"> -->
+            <mat-form-field>
+              <input matInput type="text" id="phone" placeholder="Phone" formControlName="phone" required>
+              <!-- <mat-error *ngIf="signupForm.get('userData.phone').invalid">Damn</mat-error> -->
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field>
+              <input matInput type="number" id="age" placeholder="Age" formControlName="age" required>
+              <!-- <mat-error *ngIf="signupForm.get('userData.age').invalid">Damn</mat-error> -->
+            </mat-form-field>
+          <!-- </div>
+          <div class="form-group"> -->
+            <mat-form-field>
+              <input matInput type="text" id="grade" placeholder="Grade in school" formControlName="grade" required>
+              <!-- <mat-error *ngIf="signupForm.get('userData.grade').invalid">Damn</mat-error> -->
+            </mat-form-field>
+          <!-- </div>
+          <div class="form-group"> -->
+            <mat-form-field>
+              <input matInput type="text" id="school" placeholder="Name of your school" formControlName="school" required>
+              <!-- <mat-error *ngIf="signupForm.get('userData.school').invalid">Damn</mat-error> -->
+            </mat-form-field>
+          </div>
+          <div class="event_section-header">Category (select one or more in your age range) *
+            </div>
+          <div class="form-group">
+            <mat-checkbox id="rising" formControlName="rising">
+              Rising Star (If you are in Grade 8 or younger, pick this one)
+            </mat-checkbox>
+          </div>
+          <div class="form-group">
+            <mat-checkbox id="i-vocal" formControlName="i-vocal">
+              Individual Vocal (Grades 9-12) - Can be accompanied
+            </mat-checkbox>
+          </div>
+          <div class="form-group">
+            <mat-checkbox id="i-instrumental" formControlName="i-instrumental">
+              Individual Instrumental (Grades 9-12) - Must accompany yourself
+            </mat-checkbox>
+          </div>
+          <div class="form-group">
+            <mat-checkbox id="group" formControlName="group">
+              Choir / A Capella (Grades 6-12)
+            </mat-checkbox>
+          </div>
+        </div>
+
+        <!-- <div class="radio" *ngFor="let gender of genders">
+          <label>
+            <input
+              type="radio"
+              formControlName="gender"
+              [value]="gender">{{ gender }}
+          </label>
+        </div> -->
+        <!-- <div formArrayName="hobbies">
+          <h4>Your Hobbies</h4>
+          <button
+            class="btn btn-default"
+            type="button"
+            (click)="onAddHobby()">Add Hobby</button>
+          <div
+            class="form-group"
+            *ngFor="let hobbyControl of signupForm.get('hobbies').controls; let i = index">
+            <input type="text" class="form-control" [formControlName]="i">
+          </div>
+        </div> -->
+        <div class="spacer"></div>
+        <button mat-flat-button color="primary" type="submit" [disabled]="!signupForm.valid">SUBMIT</button>
+
+        <div
+          *ngIf="!signupForm.valid && signupForm.touched"
+          class="help-block">Please enter valid data!</div>
+      </form>
+    </div>
+  </div>
+</div>

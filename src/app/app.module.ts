@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { BobComponent } from './pages/events/bob/bob.component';
 import { SingingGalleryComponent } from './pages/galleries/singing/singing-gallery.component';
 
 import { MaterialModule } from './modules/material.module';
+import { SingingSignupComponent } from './pages/events/singing/singing-signup/singing-signup.component';
 
 
 const appRoutes: Routes = [
@@ -29,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'acting', component: ActingComponent },
   { path: 'battle-of-the-bands', component: BobComponent },
   { path: 'singing-gallery', component: SingingGalleryComponent },
+  { path: 'singing-signup', component: SingingSignupComponent }
 
 ];
 
@@ -43,7 +46,8 @@ const appRoutes: Routes = [
     SingingComponent,
     ActingComponent,
     BobComponent,
-    SingingGalleryComponent
+    SingingGalleryComponent,
+    SingingSignupComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +55,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

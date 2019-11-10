@@ -1,1 +1,5 @@
-<p>singing works!</p>
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="center center">
+  <mat-card *ngFor="let item of pics; index as i" [style.max-width.px]="500">
+    <img mat-card-image src="assets/images/singing_2019/{{item}}.jpg">
+  </mat-card>
+</div>
