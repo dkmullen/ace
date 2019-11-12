@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <div>
+        <div class="event_secondary-heading">SIGN UP HERE</div>
       <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
         <div formGroupName="userData">
           <div class="form-group">
@@ -9,6 +10,10 @@
               <mat-error *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched"></mat-error>
               <!-- <mat-error *ngIf="signupForm.get('userData.username').errors['nameIsForbidden']">This name is invalid!</mat-error> -->
               <!-- <mat-error *ngIf="signupForm.get('userData.username').errors['required']">This field is required!</mat-error> -->
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="number" id="age" placeholder="Age" formControlName="age" required>
+              <!-- <mat-error *ngIf="signupForm.get('userData.age').invalid">Damn</mat-error> -->
             </mat-form-field>
           </div>
           <div class="form-group">
@@ -24,10 +29,6 @@
             </mat-form-field>
           </div>
           <div class="form-group">
-            <mat-form-field>
-              <input matInput type="number" id="age" placeholder="Age" formControlName="age" required>
-              <!-- <mat-error *ngIf="signupForm.get('userData.age').invalid">Damn</mat-error> -->
-            </mat-form-field>
           <!-- </div>
           <div class="form-group"> -->
             <mat-form-field>
@@ -41,21 +42,22 @@
               <!-- <mat-error *ngIf="signupForm.get('userData.school').invalid">Damn</mat-error> -->
             </mat-form-field>
           </div>
-          <div class="event_section-header">Category (select one or more in your age range) *
+          <div class="event_section-header">Category (select one or more in your age range)*
             </div>
+          <div class="checkbox-list">
           <div class="form-group">
             <mat-checkbox id="rising" formControlName="rising">
-              Rising Star (If you are in Grade 8 or younger, pick this one)
+              Rising Star (Up though grade 8)
             </mat-checkbox>
           </div>
           <div class="form-group">
             <mat-checkbox id="i-vocal" formControlName="i-vocal">
-              Individual Vocal (Grades 9-12) - Can be accompanied
+              Individual Vocal (Grades 9-12)
             </mat-checkbox>
           </div>
           <div class="form-group">
             <mat-checkbox id="i-instrumental" formControlName="i-instrumental">
-              Individual Instrumental (Grades 9-12) - Must accompany yourself
+              Individual Instrumental (Grades 9-12)
             </mat-checkbox>
           </div>
           <div class="form-group">
@@ -63,6 +65,7 @@
               Choir / A Capella (Grades 6-12)
             </mat-checkbox>
           </div>
+        </div>
         </div>
 
         <!-- <div class="radio" *ngFor="let gender of genders">

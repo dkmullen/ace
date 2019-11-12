@@ -7,12 +7,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
-
-import {MatSelectModule} from '@angular/material/select';
-
-
-import {MatInputModule} from '@angular/material/input';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   imports: [
@@ -30,7 +27,8 @@ import {MatInputModule} from '@angular/material/input';
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDividerModule
   ]
 })
 export class MaterialModule { }
