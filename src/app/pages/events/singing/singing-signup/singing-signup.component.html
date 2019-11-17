@@ -6,10 +6,10 @@
         <div formGroupName="userData">
           <div class="form-group">
             <mat-form-field>
-              <input matInput type="text" id="username" formControlName="username" class="formcontrol" placeholder="Name" required>
-              <mat-error *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched"></mat-error>
-              <!-- <mat-error *ngIf="signupForm.get('userData.username').errors['nameIsForbidden']">This name is invalid!</mat-error> -->
-              <!-- <mat-error *ngIf="signupForm.get('userData.username').errors['required']">This field is required!</mat-error> -->
+              <input matInput type="text" id="name" formControlName="name" class="formcontrol" placeholder="Name" required>
+              <mat-error *ngIf="!signupForm.get('userData.name').valid && signupForm.get('userData.name').touched"></mat-error>
+              <!-- <mat-error *ngIf="signupForm.get('userData.name').errors['nameIsForbidden']">This name is invalid!</mat-error> -->
+              <!-- <mat-error *ngIf="signupForm.get('userData.name').errors['required']">This field is required!</mat-error> -->
             </mat-form-field>
             <mat-form-field>
               <input matInput type="number" id="age" placeholder="Age" formControlName="age" required>
@@ -51,12 +51,12 @@
             </mat-checkbox>
           </div>
           <div class="form-group">
-            <mat-checkbox id="i-vocal" formControlName="i-vocal">
+            <mat-checkbox id="i-vocal" formControlName="individualVocal">
               Individual Vocal (Grades 9-12)
             </mat-checkbox>
           </div>
           <div class="form-group">
-            <mat-checkbox id="i-instrumental" formControlName="i-instrumental">
+            <mat-checkbox id="i-instrumental" formControlName="individualInstrumental">
               Individual Instrumental (Grades 9-12)
             </mat-checkbox>
           </div>

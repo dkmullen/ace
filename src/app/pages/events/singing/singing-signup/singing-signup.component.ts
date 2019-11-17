@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { Post } from './singing-signup.model';
 
 @Component({
   selector: 'app-singing-signup',
@@ -11,20 +13,20 @@ export class SingingSignupComponent implements OnInit {
   genders = ['male', 'female'];
   signupForm: FormGroup;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.signupForm = new FormGroup({
       'userData': new FormGroup({
-        'username': new FormControl(null, [Validators.required]),
+        'name': new FormControl(null, [Validators.required]),
         'email': new FormControl(null, [Validators.required, Validators.email]),
         'phone': new FormControl(null, [Validators.required]),
         'age': new FormControl(null, [Validators.required, Validators.min(5)]),
         'grade': new FormControl(null, [Validators.required]),
         'school': new FormControl(null, [Validators.required]),
         'rising': new FormControl(null),
-        'i-vocal': new FormControl(null),
-        'i-instrumental': new FormControl(null),
+        'individualVocal': new FormControl(null),
+        'individualInstrumental': new FormControl(null),
         'group': new FormControl(null),
       }),
       // 'gender': new FormControl('male'),
@@ -40,15 +42,15 @@ export class SingingSignupComponent implements OnInit {
 
     this.signupForm.setValue({
       'userData': {
-        'username': '',
+        'name': '',
         'email': '',
         'phone': '',
         'age': null,
         'grade': '',
         'school': '',
         'rising': true,
-        'i-vocal': false,
-        'i-instrumental': true,
+        'individualVocal': false,
+        'individualInstrumental': true,
         'group': false
       },
       // 'gender': 'male',
@@ -56,23 +58,42 @@ export class SingingSignupComponent implements OnInit {
     });
     this.signupForm.patchValue({
       'userData': {
-        'username': '',
+        'name': '',
         'email': '',
         'phone': '',
         'age': null,
         'grade': '',
         'school': '',
         'rising': true,
-        'i-vocal': false,
-        'i-instrumental': true,
+        'individualVocal': false,
+        'individualInstrumental': true,
         'group': false
       }
     });
   }
 
   onSubmit() {
-    console.log(this.signupForm);
-    this.signupForm.reset();
+    // console.log(this.signupForm.value.userData);
+    const data = this.signupForm.value.userData;
+    const post: Post = {
+      id: null,
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      age: data.age,
+      grade: data.grade,
+      school: data.school,
+      rising: data.rising,
+      individualVocal: data.individualVocal,
+      individualInstrumental: data.individualInstrumental,
+      group: data.group
+    };
+    this.http
+    .post<{ message: string }>("http://localhost:3000/api/posts", post)
+    .subscribe(responseData => {
+      console.log(responseData.message);
+    });
+    // this.signupForm.reset();
   }
 
   // onAddHobby() {
