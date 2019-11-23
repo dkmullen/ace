@@ -20,6 +20,7 @@ import { SingingGalleryComponent } from './pages/galleries/singing/singing-galle
 
 import { MaterialModule } from './modules/material.module';
 import { SingingSignupComponent } from './pages/events/singing/singing-signup/singing-signup.component';
+import { ActingGalleryComponent } from './pages/galleries/acting-gallery/acting-gallery.component';
 
 
 const appRoutes: Routes = [
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
   { path: 'acting', component: ActingComponent },
   { path: 'battle-of-the-bands', component: BobComponent },
   { path: 'singing-gallery', component: SingingGalleryComponent },
+  { path: 'acting-gallery', component: ActingGalleryComponent },
   { path: 'singing-signup', component: SingingSignupComponent }
 
 ];
@@ -47,7 +49,8 @@ const appRoutes: Routes = [
     ActingComponent,
     BobComponent,
     SingingGalleryComponent,
-    SingingSignupComponent
+    SingingSignupComponent,
+    ActingGalleryComponent
   ],
   imports: [
     BrowserModule,
