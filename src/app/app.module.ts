@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,8 @@ import { SingingGalleryComponent } from './pages/galleries/singing/singing-galle
 import { MaterialModule } from './modules/material.module';
 import { SingingSignupComponent } from './pages/events/singing/singing-signup/singing-signup.component';
 import { ActingGalleryComponent } from './pages/galleries/acting-gallery/acting-gallery.component';
+import { EmailComponent } from './pages/email/email.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const appRoutes: Routes = [
@@ -28,6 +30,7 @@ const appRoutes: Routes = [
   { path: 'about/sponsors', component: SponsorsComponent },
   { path: 'about/board', component: BoardComponent },
   { path: 'about/support', component: SupportComponent },
+  { path: 'about/email', component: EmailComponent },
   { path: 'singing', component: SingingComponent },
   { path: 'acting', component: ActingComponent },
   { path: 'battle-of-the-bands', component: BobComponent },
@@ -50,7 +53,9 @@ const appRoutes: Routes = [
     BobComponent,
     SingingGalleryComponent,
     SingingSignupComponent,
-    ActingGalleryComponent
+    ActingGalleryComponent,
+    EmailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +64,7 @@ const appRoutes: Routes = [
     AppRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],

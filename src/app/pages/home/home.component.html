@@ -8,15 +8,11 @@
     </mat-card-header>
     <img mat-card-image src="assets/images/singing_2019/s1.jpg" alt="Photo of a young man with a guitar">
     <mat-card-content>
-      <p>
-        The ACE Singing Awards, at Knoxvile's <span class="accent-text bold">Bijou Theatre</span>, are for
-        students through grade 12 in and around Knoxville, Tennessee. Participants will compete for
-        prizes for themselves and their schools.
-      </p>
+      <p><span class="accent-text bold">Bijou Theatre</span></p>
+      <p> For students through grade 12</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-flat-button color="accent">FIND OUT MORE</button>
-      <!-- <button mat-button>SHARE</button> -->
+      <button mat-flat-button color="accent">SIGN UP TODAY</button>
     </mat-card-actions>
   </mat-card>
 
@@ -28,19 +24,16 @@
     </mat-card-header>
     <img mat-card-image src="assets/images/acting_2019/a1.jpg" alt="Photo of a young woman acting on stage">
     <mat-card-content>
-      <p>
-        The ACE Acting Awards, at Knoxvile's <span class="accent-text bold">Old City Performing Arts Center</span>,
-        are for students through grade 12 in and around Knoxville, Tennessee. This year's format is all-new.
-      </p>
+      <p><span class="accent-text bold">Old City Performing Arts Center</span></p>
+      <p>All new format for 2020</p>
     </mat-card-content>
     <mat-card-actions>
       <button mat-flat-button color="accent">FIND OUT MORE</button>
-      <!-- <button mat-button>SHARE</button> -->
     </mat-card-actions>
   </mat-card>
 </div>
 
-<div fxLayout="row" fxLayout.sm="column" fxLayoutGap="20px" fxLayoutAlign="center center" [style.margin-top.px]="25">
+<div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="center center" [style.margin-top.px]="25">
   <mat-card class="homepage_card" [routerLink]="['/battle-of-the-bands']" routerLinkActive="router-link-active">
     <mat-card-header>
       <div mat-card-avatar class="homepage_header-image"></div>
@@ -49,17 +42,28 @@
     </mat-card-header>
     <img mat-card-image src="assets/images/battle_of_the_bands/bofb.jpg" alt="Photo of a band performing on stage">
     <mat-card-content>
-      <p>
-        The ACE Battle of the Bands is coming in May to <span class="accent-text bold">The Foundary</span>. We're looking for
-        bands with students through grade 12 in and around Knoxville, Tennessee. This is your year.
-      </p>
+      <p><span class="accent-text bold">The Foundary</span> (tentative)</p>
+      <p>This is YOUR year.</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-flat-button color="accent">FIND OUT MORE</button>
-      <!-- <button mat-button>SHARE</button> -->
+      <button mat-flat-button color="accent">GET THE LATEST INFO</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="homepage_card">
+    <mat-card-header>
+      <div mat-card-avatar class="homepage_header-image"></div>
+      <mat-card-title>High School Theater Awards</mat-card-title>
+      <mat-card-subtitle>Spring 2020</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/images/acting_2019/a43.jpg" alt="Photo of a band performing on stage">
+    <mat-card-content>
+      <p><span class="accent-text bold">Bijou Theatre</span> (tentative)</p>
+      <p>Our newest event</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="accent" disabled>MORE INFO IS COMING</button>
     </mat-card-actions>
   </mat-card>
 </div>
-
-
 </mat-card>

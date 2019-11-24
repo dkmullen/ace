@@ -2,6 +2,12 @@
 .homepage_card {
   max-width: 500px;
   background: rgb(233, 233, 233);
+
+  mat-card-actions {
+    margin-bottom: unset;
+    padding: unset;
+    margin-left: 2px;
+  }
 }
 
 .homepage_header-image {

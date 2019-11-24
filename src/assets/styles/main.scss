@@ -3,9 +3,17 @@
 html {
 	box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  height: 100%;
 }
 
 body {
+  // max-width: 1200px;
+  // // margin: 0 auto;
+  // padding: 1rem;
+  height: 100%;
+}
+
+#main-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
@@ -138,6 +146,11 @@ a, a:visited {
   font-weight: 700;
   margin: 1.5rem 0 .5rem 0;
   color: $accent;
+}
+
+.pointer {
+  cursor: pointer;
+  outline: none;
 }
 
 // Logo
