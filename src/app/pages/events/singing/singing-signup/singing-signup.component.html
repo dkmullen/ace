@@ -2,7 +2,7 @@
   <div class="row">
     <div>
         <div class="event_secondary-heading">SIGN UP HERE</div>
-      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="signupForm" #formDirective="ngForm" (ngSubmit)="onSubmit(signupForm, formDirective)" id="singingForm">
         <div formGroupName="userData">
           <div class="form-group">
             <mat-form-field>
@@ -67,33 +67,13 @@
           </div>
         </div>
         </div>
-
-        <!-- <div class="radio" *ngFor="let gender of genders">
-          <label>
-            <input
-              type="radio"
-              formControlName="gender"
-              [value]="gender">{{ gender }}
-          </label>
-        </div> -->
-        <!-- <div formArrayName="hobbies">
-          <h4>Your Hobbies</h4>
-          <button
-            class="btn btn-default"
-            type="button"
-            (click)="onAddHobby()">Add Hobby</button>
-          <div
-            class="form-group"
-            *ngFor="let hobbyControl of signupForm.get('hobbies').controls; let i = index">
-            <input type="text" class="form-control" [formControlName]="i">
-          </div>
-        </div> -->
         <div class="spacer"></div>
         <button mat-flat-button color="primary" type="submit" [disabled]="!signupForm.valid">SUBMIT</button>
 
-        <div
-          *ngIf="!signupForm.valid && signupForm.touched"
-          class="help-block">Please enter valid data!</div>
+        <div id="message">
+          <div *ngIf="submitted && !signupForm.touched" class="help-block">{{submitMsg}}</div>
+          <div *ngIf="submitError" class="error">{{errorMsg}}</div>
+        </div>
       </form>
     </div>
   </div>

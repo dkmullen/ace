@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Post } from './singing-signup.model';
 
 @Component({
@@ -10,8 +9,11 @@ import { Post } from './singing-signup.model';
   styleUrls: ['./singing-signup.component.scss']
 })
 export class SingingSignupComponent implements OnInit {
-  genders = ['male', 'female'];
   signupForm: FormGroup;
+  submitted = false;
+  submitError = false;
+  submitMsg = 'Thank you for entering. Don\'t forget to send your video too.';
+  errorMsg = 'The form was NOT submitted. Check your internet connection.';
 
   constructor(private http: HttpClient) { }
 
@@ -29,16 +31,7 @@ export class SingingSignupComponent implements OnInit {
         'individualInstrumental': new FormControl(null),
         'group': new FormControl(null),
       }),
-      // 'gender': new FormControl('male'),
-      // 'hobbies': new FormArray([])
     });
-    // this.signupForm.valueChanges.subscribe(
-    //   (value) => console.log(value)
-    // );
-
-    this.signupForm.statusChanges.subscribe(
-      (status) => console.log(status)
-    );
 
     this.signupForm.setValue({
       'userData': {
@@ -72,8 +65,7 @@ export class SingingSignupComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    // console.log(this.signupForm.value.userData);
+  onSubmit(signupForm, formDirective) {
     const data = this.signupForm.value.userData;
     const post: Post = {
       id: null,
@@ -89,36 +81,18 @@ export class SingingSignupComponent implements OnInit {
       group: data.group
     };
     this.http
-    .post<{ message: string }>("http://localhost:3000/api/posts", post)
+    .post<{ message: string }>('http://localhost:3000/api/posts', post)
     .subscribe(responseData => {
-      console.log(responseData.message);
-    });
-    // this.signupForm.reset();
+      formDirective.resetForm();
+      this.signupForm.reset();
+      this.submitted = true;
+      this.submitError = false;
+    },
+    err => {
+      this.submitted = false;
+      this.submitError = true;
+    }
+    );
   }
-
-  // onAddHobby() {
-  //   const control = new FormControl(null, Validators.required);
-  //   (<FormArray>this.signupForm.get('hobbies')).push(control);
-  // }
-
-  // forbiddenNames(control: FormControl): {[s: string]: boolean} {
-  //   if (this.forbiddenUsernames.indexOf(control.value) !== -1) {
-  //     return {'nameIsForbidden': true};
-  //   }
-  //   return null;
-  // }
-
-  // forbiddenEmails(control: FormControl): Promise<any> | Observable<any> {
-  //   const promise = new Promise<any>((resolve, reject) => {
-  //     setTimeout(() => {
-  //       if (control.value === 'test@test.com') {
-  //         resolve({'emailIsForbidden': true});
-  //       } else {
-  //         resolve(null);
-  //       }
-  //     }, 1500);
-  //   });
-  //   return promise;
-  // }
 
 }
