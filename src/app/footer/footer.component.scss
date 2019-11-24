@@ -1,16 +1,12 @@
 #footer-wrapper {
-  min-height: 100px;
+  height: 165px;
   background-color: black;
   color: white;
-  width: 100vw;
   text-align: center;
   padding: 1rem;
   line-height: 1.5;
   font-size: .85rem;
-  position: relative;
-  right: 0;
-  bottom: 0;
-  left: 0;
+
 
   a, a:visited {
     color: white;
@@ -20,4 +16,16 @@
   .underline {
     border-bottom: 1px solid white;
   }
-}
+
+  .fa {
+    margin-right: 1rem;
+    position: relative;
+    top: -15px;
+  }
+
+  #icon-row, form {
+    display: inline-block;
+    position: relative;
+    top: 4px;
+  }
+ }
