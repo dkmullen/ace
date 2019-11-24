@@ -23,6 +23,7 @@ import { SingingSignupComponent } from './pages/events/singing/singing-signup/si
 import { ActingGalleryComponent } from './pages/galleries/acting-gallery/acting-gallery.component';
 import { EmailComponent } from './pages/email/email.component';
 import { FooterComponent } from './footer/footer.component';
+import { ActingSignupComponent } from './pages/events/acting/acting-signup/acting-signup.component';
 
 
 const appRoutes: Routes = [
@@ -55,7 +56,8 @@ const appRoutes: Routes = [
     SingingSignupComponent,
     ActingGalleryComponent,
     EmailComponent,
-    FooterComponent
+    FooterComponent,
+    ActingSignupComponent
   ],
   imports: [
     BrowserModule,
