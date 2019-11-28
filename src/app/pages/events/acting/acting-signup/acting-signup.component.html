@@ -1,13 +1,16 @@
 <div class="container">
   <div class="row">
     <div>
-        <div class="event_secondary-heading">SIGN UP HERE</div>
-      <form [formGroup]="signupForm" #formDirective="ngForm" (ngSubmit)="onSubmit(signupForm, formDirective)" id="singingForm">
+        <div class="event_secondary-heading">SIGN UP HERE: INDIVIDUAL COMPETITION</div>
+        <p>If you are here to register a team, <span class="accent-text">skip to the team form below</span>.</p>
+      <form [formGroup]="actingForm" #formDirective="ngForm"
+        (ngSubmit)="onSubmit(actingForm, formDirective)"
+        id="actingForm">
         <div formGroupName="userData">
           <div class="form-group">
             <mat-form-field>
               <input matInput type="text" id="name" formControlName="name" class="formcontrol" placeholder="Name" required>
-              <mat-error *ngIf="!signupForm.get('userData.name').valid && signupForm.get('userData.name').touched"></mat-error>
+              <mat-error *ngIf="!actingForm.get('userData.name').valid && actingForm.get('userData.name').touched"></mat-error>
             </mat-form-field>
             <mat-form-field>
               <input matInput type="number" id="age" placeholder="Age" formControlName="age" required>
@@ -16,7 +19,7 @@
           <div class="form-group">
             <mat-form-field>
               <input matInput type="text" id="email" placeholder="Email" formControlName="email" required>
-              <mat-error *ngIf="signupForm.get('userData.email').invalid">Enter a valid email address</mat-error>
+              <mat-error *ngIf="actingForm.get('userData.email').invalid">Enter a valid email address</mat-error>
             </mat-form-field>
             <mat-form-field>
               <input matInput type="text" id="phone" placeholder="Phone" formControlName="phone" required>
@@ -34,79 +37,38 @@
           <p>All individuals can compete in any and all categories. To audition, you must have a monologue
             or song that qualifies for the category. Four (4) Finalists will be picked to perform in each
             monologue category. We may have more finalists for the Musical Theatre Category.
-            If you are on a team, you will automatically be registered in an individual category and you
-            can <span class="accent-text">skip these check boxes and sign up your team below</span>.
+
           </p>
           <div class="checkbox-list">
             <div class="form-group">
-              <mat-checkbox id="rising" formControlName="rising">
+              <mat-checkbox id="rising" formControlName="dramaticMonologue">
                 Dramatic Monologue
               </mat-checkbox>
             </div>
             <div class="form-group">
-              <mat-checkbox id="i-vocal" formControlName="individualVocal">
+              <mat-checkbox id="i-vocal" formControlName="comedicMonologue">
                 Comedic Monologue
               </mat-checkbox>
             </div>
             <div class="form-group">
-              <mat-checkbox id="i-instrumental" formControlName="individualInstrumental">
+              <mat-checkbox id="i-instrumental" formControlName="shakespeareMonologue">
                 Shakespeare Monologue
               </mat-checkbox>
             </div>
             <div class="form-group">
-              <mat-checkbox id="group" formControlName="group">
+              <mat-checkbox id="group" formControlName="musical">
                 Musical Theatre Song
               </mat-checkbox>
             </div>
           </div>
-
-          <div class="spacer"></div>
-          <mat-divider></mat-divider>
-          <div class="spacer"></div>
-
-          <div class="event_section-header">Team competition</div>
-          <p>Any school may enter the TEAM competition by putting together 4 individuals for each category
-            to compete as a team. These individuals will automatically be entered into the individual
-            categories as well. A school may have as many teams as they would like, but an individual
-            cannot perform in the same team category twice. Three teams will be picked as finalists..
-          </p>
-          <div class="form-line">
-              <mat-form-field>
-                <input matInput type="text" id="name" formControlName="name" class="formcontrol" placeholder="School Name">
-                <mat-error *ngIf="!signupForm.get('userData.name').valid && signupForm.get('userData.name').touched"></mat-error>
-              </mat-form-field>
-          </div>
-          <p>Enter the name and grade of each performer in the spaces below.</p>
-          <div class="form-line">
-            <mat-form-field>
-              <input matInput type="text" id="age" placeholder="Dramatic Monologue" formControlName="age">
-            </mat-form-field>
-          </div>
-          <div class="form-line">
-            <mat-form-field>
-              <input matInput type="text" id="age" placeholder="Comedic Monologue" formControlName="age">
-            </mat-form-field>
-          </div>
-          <div class="form-line">
-            <mat-form-field>
-              <input matInput type="text" id="age" placeholder="Shakespeare Monologue" formControlName="age">
-            </mat-form-field>
-          </div>
-          <div class="form-line">
-            <mat-form-field>
-              <input matInput type="text" id="age" placeholder="Musical Theatre Song" formControlName="age">
-            </mat-form-field>
-          </div>
         </div>
         <div class="spacer"></div>
-        <button mat-flat-button color="primary" type="submit" [disabled]="!signupForm.valid">SUBMIT</button>
+        <button mat-flat-button color="primary" type="submit" [disabled]="!actingForm.valid">SUBMIT INDIVIDUAL FORM</button>
 
         <div id="message">
-          <div *ngIf="submitted && !signupForm.touched" class="help-block">{{submitMsg}}</div>
+          <div *ngIf="submitted && !actingForm.touched" class="help-block">{{submitMsg}}</div>
           <div *ngIf="submitError" class="error">{{errorMsg}}</div>
         </div>
       </form>
     </div>
-  </div>
-</div>
 

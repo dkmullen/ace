@@ -24,6 +24,7 @@ import { ActingGalleryComponent } from './pages/galleries/acting-gallery/acting-
 import { EmailComponent } from './pages/email/email.component';
 import { FooterComponent } from './footer/footer.component';
 import { ActingSignupComponent } from './pages/events/acting/acting-signup/acting-signup.component';
+import { ActingTeamSignupComponent } from './pages/events/acting/acting-team-signup/acting-team-signup.component';
 
 
 const appRoutes: Routes = [
@@ -57,7 +58,8 @@ const appRoutes: Routes = [
     ActingGalleryComponent,
     EmailComponent,
     FooterComponent,
-    ActingSignupComponent
+    ActingSignupComponent,
+    ActingTeamSignupComponent
   ],
   imports: [
     BrowserModule,

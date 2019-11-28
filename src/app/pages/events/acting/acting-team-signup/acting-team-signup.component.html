@@ -1,0 +1,92 @@
+<form [formGroup]="signUpForm" #formDirective="ngForm"
+  (ngSubmit)="onSubmit(signUpForm, formDirective)"
+  id="singingForm">
+  <div formGroupName="userData">
+    <div class="event_secondary-heading">SIGN UP HERE: TEAM COMPETITION</div>
+    <div class="event_section-header">Team competition</div>
+    <p>Any school may enter the TEAM competition by putting together 4 individuals for each category
+      to compete as a team. These individuals will automatically be entered into the individual
+      categories as well. A school may have as many teams as they would like, but an individual
+      cannot perform in the same team category twice. Three teams will be picked as finalists..
+    </p>
+
+    <div class="form-line">
+      <mat-form-field>
+        <input matInput type="text" id="school" formControlName="school" class="formcontrol" placeholder="School Name">
+        <mat-error *ngIf="!signUpForm.get('userData.school').valid && signUpForm.get('userData.school').touched"></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" id="contactName" formControlName="contactName" class="formcontrol" placeholder="Contact Person">
+        <mat-error *ngIf="!signUpForm.get('userData.contactName').valid && signUpForm.get('userData.contactName').touched"></mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-line">
+      <mat-form-field>
+        <input matInput type="text" id="contactEmail" formControlName="contactEmail" class="formcontrol" placeholder="Email">
+        <mat-error *ngIf="!signUpForm.get('userData.contactEmail').valid && signUpForm.get('userData.contactEmail').touched"></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" id="contactPhone" formControlName="contactPhone" class="formcontrol" placeholder="Phone">
+        <mat-error *ngIf="!signUpForm.get('userData.contactPhone').valid && signUpForm.get('userData.contactPhone').touched"></mat-error>
+      </mat-form-field>
+    </div>
+
+    <p>Enter the name and grade of each performer in the spaces below.</p>
+
+    <div class="form-line">
+      <div>Dramatic Monologue</div>
+      <mat-form-field>
+        <input matInput type="text" id="dramaticName" formControlName="dramaticName" class="formcontrol" placeholder="Name">
+        <mat-error *ngIf="!signUpForm.get('userData.dramaticName').valid && signUpForm.get('userData.dramaticName').touched"></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" id="dramaticGrade" formControlName="dramaticGrade" class="formcontrol" placeholder="Grade">
+        <mat-error *ngIf="!signUpForm.get('userData.dramaticGrade').valid && signUpForm.get('userData.dramaticGrade').touched"></mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-line">
+      <div>Comedic Monologue</div>
+      <mat-form-field>
+        <input matInput type="text" id="comedicName" formControlName="comedicName" class="formcontrol" placeholder="Name">
+        <mat-error *ngIf="!signUpForm.get('userData.comedicName').valid && signUpForm.get('userData.comedicName').touched"></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" id="comedicGrade" formControlName="comedicGrade" class="formcontrol" placeholder="Grade">
+        <mat-error *ngIf="!signUpForm.get('userData.comedicGrade').valid && signUpForm.get('userData.comedicGrade').touched"></mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-line">
+      <div>Shakespeare Monologue</div>
+      <mat-form-field>
+        <input matInput type="text" id="shakespeareName" formControlName="shakespeareName" class="formcontrol" placeholder="Name">
+        <mat-error *ngIf="!signUpForm.get('userData.shakespeareName').valid && signUpForm.get('userData.shakespeareName').touched"></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" id="shakespeareGrade" formControlName="shakespeareGrade" class="formcontrol" placeholder="Grade">
+        <mat-error *ngIf="!signUpForm.get('userData.shakespeareGrade').valid && signUpForm.get('userData.shakespeareGrade').touched"></mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-line">
+      <div>Musical Theatre Song</div>
+      <mat-form-field>
+        <input matInput type="text" id="musicalName" formControlName="musicalName" class="formcontrol" placeholder="Name">
+        <mat-error *ngIf="!signUpForm.get('userData.musicalName').valid && signUpForm.get('userData.musicalName').touched"></mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" id="musicalGrade" formControlName="musicalGrade" class="formcontrol" placeholder="Grade">
+        <mat-error *ngIf="!signUpForm.get('userData.musicalGrade').valid && signUpForm.get('userData.musicalGrade').touched"></mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <button mat-flat-button color="primary" type="submit" [disabled]="!signUpForm.valid">SUBMIT</button>
+  <div id="message">
+    <div *ngIf="submitted && !signUpForm.touched" class="help-block">{{submitMsg}}</div>
+    <div *ngIf="submitError" class="error">{{errorMsg}}</div>
+  </div>
+</form>
+

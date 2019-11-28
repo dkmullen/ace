@@ -6,8 +6,8 @@ export interface Post {
   age: number;
   grade: string;
   school: string;
-  rising: boolean;
-  individualVocal: boolean;
-  individualInstrumental: boolean;
-  group: boolean;
+  dramaticMonologue: boolean;
+  comedicMonologue: boolean;
+  shakespeareMonologue: boolean;
+  musical: boolean;
 }
