@@ -32,10 +32,11 @@
       </mat-form-field>
     </div>
 
+    <div class="spacer"></div>
     <p>Enter the name and grade of each performer in the spaces below.</p>
 
     <div class="form-line">
-      <div>Dramatic Monologue</div>
+      <div class="event_section-header">Dramatic Monologue</div>
       <mat-form-field>
         <input matInput type="text" id="dramaticName" formControlName="dramaticName" class="formcontrol" placeholder="Name">
         <mat-error *ngIf="!signUpForm.get('userData.dramaticName').valid && signUpForm.get('userData.dramaticName').touched"></mat-error>
@@ -46,8 +47,9 @@
       </mat-form-field>
     </div>
 
+    <div class="spacer"></div>
     <div class="form-line">
-      <div>Comedic Monologue</div>
+      <div class="event_section-header">Comedic Monologue</div>
       <mat-form-field>
         <input matInput type="text" id="comedicName" formControlName="comedicName" class="formcontrol" placeholder="Name">
         <mat-error *ngIf="!signUpForm.get('userData.comedicName').valid && signUpForm.get('userData.comedicName').touched"></mat-error>
@@ -58,8 +60,9 @@
       </mat-form-field>
     </div>
 
+    <div class="spacer"></div>
     <div class="form-line">
-      <div>Shakespeare Monologue</div>
+      <div class="event_section-header">Shakespeare Monologue</div>
       <mat-form-field>
         <input matInput type="text" id="shakespeareName" formControlName="shakespeareName" class="formcontrol" placeholder="Name">
         <mat-error *ngIf="!signUpForm.get('userData.shakespeareName').valid && signUpForm.get('userData.shakespeareName').touched"></mat-error>
@@ -70,8 +73,9 @@
       </mat-form-field>
     </div>
 
+    <div class="spacer"></div>
     <div class="form-line">
-      <div>Musical Theatre Song</div>
+      <div class="event_section-header">Musical Theatre Song</div>
       <mat-form-field>
         <input matInput type="text" id="musicalName" formControlName="musicalName" class="formcontrol" placeholder="Name">
         <mat-error *ngIf="!signUpForm.get('userData.musicalName').valid && signUpForm.get('userData.musicalName').touched"></mat-error>
@@ -83,7 +87,7 @@
     </div>
   </div>
   <div class="spacer"></div>
-  <button mat-flat-button color="primary" type="submit" [disabled]="!signUpForm.valid">SUBMIT</button>
+  <button mat-flat-button color="primary" type="submit" [disabled]="!signUpForm.valid">SUBMIT TEAM FORM</button>
   <div id="message">
     <div *ngIf="submitted && !signUpForm.touched" class="help-block">{{submitMsg}}</div>
     <div *ngIf="submitError" class="error">{{errorMsg}}</div>

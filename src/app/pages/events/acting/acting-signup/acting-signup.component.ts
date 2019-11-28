@@ -9,7 +9,7 @@ import { Post } from './acting-signup.model';
   styleUrls: ['./acting-signup.component.scss']
 })
 export class ActingSignupComponent implements OnInit {
-  actingForm: FormGroup;
+  signUpForm: FormGroup;
   submitted = false;
   submitError = false;
   submitMsg = 'Thank you for entering. Don\'t forget to send your video too.';
@@ -18,53 +18,39 @@ export class ActingSignupComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.actingForm = new FormGroup({
-      'userData': new FormGroup({
-        'name': new FormControl(null, [Validators.required]),
-        'email': new FormControl(null, [Validators.required, Validators.email]),
-        'phone': new FormControl(null, [Validators.required]),
-        'age': new FormControl(null, [Validators.required, Validators.min(5)]),
-        'grade': new FormControl(null, [Validators.required]),
-        'school': new FormControl(null, [Validators.required]),
-        'dramaticMonologue': new FormControl(null),
-        'comedicMonologue': new FormControl(null),
-        'shakespeareMonologue': new FormControl(null),
-        'musical': new FormControl(null),
+    this.signUpForm = new FormGroup({
+      userData: new FormGroup({
+        name: new FormControl(null, [Validators.required]),
+        email: new FormControl(null, [Validators.required, Validators.email]),
+        phone: new FormControl(null, [Validators.required]),
+        age: new FormControl(null, [Validators.required, Validators.min(5)]),
+        grade: new FormControl(null, [Validators.required]),
+        school: new FormControl(null, [Validators.required]),
+        dramaticMonologue: new FormControl(null),
+        comedicMonologue: new FormControl(null),
+        shakespeareMonologue: new FormControl(null),
+        musical: new FormControl(null),
       }),
     });
 
-    this.actingForm.setValue({
-      'userData': {
-        'name': '',
-        'email': '',
-        'phone': '',
-        'age': null,
-        'grade': '',
-        'school': '',
-        'dramaticMonologue': true,
-        'comedicMonologue': false,
-        'shakespeareMonologue': true,
-        'musical': false
+    this.signUpForm.setValue({
+      userData: {
+        name: '',
+        email: '',
+        phone: '',
+        age: null,
+        grade: '',
+        school: '',
+        dramaticMonologue: true,
+        comedicMonologue: false,
+        shakespeareMonologue: true,
+        musical: false
       },
-    });
-    this.actingForm.patchValue({
-      'userData': {
-        'name': '',
-        'email': '',
-        'phone': '',
-        'age': null,
-        'grade': '',
-        'school': '',
-        'dramaticMonologue': true,
-        'comedicMonologue': false,
-        'shakespeareMonologue': true,
-        'musical': false
-      }
     });
   }
 
-  onSubmit(actingForm, formDirective) {
-    const data = this.actingForm.value.userData;
+  onSubmit(signUpForm, formDirective) {
+    const data = this.signUpForm.value.userData;
     const post: Post = {
       id: null,
       name: data.name,
@@ -78,19 +64,20 @@ export class ActingSignupComponent implements OnInit {
       shakespeareMonologue: data.shakespeareMonologue,
       musical: data.musical
     };
-    this.http
-    .post<{ message: string }>('http://localhost:3000/api/posts', post)
-    .subscribe(responseData => {
-      formDirective.resetForm();
-      this.actingForm.reset();
-      this.submitted = true;
-      this.submitError = false;
-    },
-    err => {
-      this.submitted = false;
-      this.submitError = true;
-    }
-    );
+    console.log(post);
+    // this.http
+    //   .post<{ message: string }>('http://localhost:3000/api/posts', post)
+    //   .subscribe(responseData => {
+    //     formDirective.resetForm();
+    //     this.signUpForm.reset();
+    //     this.submitted = true;
+    //     this.submitError = false;
+    //   },
+    //   err => {
+    //     this.submitted = false;
+    //     this.submitError = true;
+    //   }
+    // );
   }
 
 }
