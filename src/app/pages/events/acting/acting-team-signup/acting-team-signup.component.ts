@@ -62,7 +62,7 @@ export class ActingTeamSignupComponent implements OnInit {
       contactEmail:     data.contactEmail,
       contactPhone:     data.contactPhone,
       dramaticName:     data.dramaticName,
-      dramaticGrade:    data.dramaticName,
+      dramaticGrade:    data.dramaticGrade,
       comedicName:      data.comedicName,
       comedicGrade:     data.comedicGrade,
       shakespeareName:  data.shakespeareName,
@@ -71,19 +71,19 @@ export class ActingTeamSignupComponent implements OnInit {
       musicalGrade:     data.musicalGrade
     };
     console.log(post);
-    // this.http
-    //   .post<{ message: string }>('http://localhost:3000/api/posts', post)
-    //   .subscribe(responseData => {
-    //     formDirective.resetForm();
-    //     this.signUpForm.reset();
-    //     this.submitted = true;
-    //     this.submitError = false;
-    //   },
-    //   err => {
-    //     this.submitted = false;
-    //     this.submitError = true;
-    //   }
-    // );
+    this.http
+      .post<{ message: string }>('http://localhost:3000/api/acting-team-posts', post)
+      .subscribe(responseData => {
+        formDirective.resetForm();
+        this.signUpForm.reset();
+        this.submitted = true;
+        this.submitError = false;
+      },
+      err => {
+        this.submitted = false;
+        this.submitError = true;
+      }
+    );
   }
 
 }

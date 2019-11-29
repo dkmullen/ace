@@ -12,7 +12,7 @@ export class ActingSignupComponent implements OnInit {
   signUpForm: FormGroup;
   submitted = false;
   submitError = false;
-  submitMsg = 'Thank you for entering. Don\'t forget to send your video too.';
+  submitMsg = 'Thank you for entering.';
   errorMsg = 'The form was NOT submitted. Check your internet connection.';
 
   constructor(private http: HttpClient) { }
@@ -65,19 +65,19 @@ export class ActingSignupComponent implements OnInit {
       musical: data.musical
     };
     console.log(post);
-    // this.http
-    //   .post<{ message: string }>('http://localhost:3000/api/posts', post)
-    //   .subscribe(responseData => {
-    //     formDirective.resetForm();
-    //     this.signUpForm.reset();
-    //     this.submitted = true;
-    //     this.submitError = false;
-    //   },
-    //   err => {
-    //     this.submitted = false;
-    //     this.submitError = true;
-    //   }
-    // );
+    this.http
+      .post<{ message: string }>('http://localhost:3000/api/acting-posts', post)
+      .subscribe(responseData => {
+        formDirective.resetForm();
+        this.signUpForm.reset();
+        this.submitted = true;
+        this.submitError = false;
+      },
+      err => {
+        this.submitted = false;
+        this.submitError = true;
+      }
+    );
   }
 
 }
