@@ -19,49 +19,33 @@ export class SingingSignupComponent implements OnInit {
 
   ngOnInit() {
     this.signupForm = new FormGroup({
-      'userData': new FormGroup({
-        'name': new FormControl(null, [Validators.required]),
-        'email': new FormControl(null, [Validators.required, Validators.email]),
-        'phone': new FormControl(null, [Validators.required]),
-        'age': new FormControl(null, [Validators.required, Validators.min(5)]),
-        'grade': new FormControl(null, [Validators.required]),
-        'school': new FormControl(null, [Validators.required]),
-        'rising': new FormControl(null),
-        'individualVocal': new FormControl(null),
-        'individualInstrumental': new FormControl(null),
-        'group': new FormControl(null),
+      userData: new FormGroup({
+        name: new FormControl(null, [Validators.required]),
+        email: new FormControl(null, [Validators.required, Validators.email]),
+        phone: new FormControl(null, [Validators.required]),
+        age: new FormControl(null, [Validators.required, Validators.min(5)]),
+        grade: new FormControl(null, [Validators.required]),
+        school: new FormControl(null, [Validators.required]),
+        rising: new FormControl(null),
+        individualVocal: new FormControl(null),
+        individualInstrumental: new FormControl(null),
+        group: new FormControl(null),
       }),
     });
 
     this.signupForm.setValue({
-      'userData': {
-        'name': '',
-        'email': '',
-        'phone': '',
-        'age': null,
-        'grade': '',
-        'school': '',
-        'rising': true,
-        'individualVocal': false,
-        'individualInstrumental': true,
-        'group': false
+      userData: {
+        name: '',
+        email: '',
+        phone: '',
+        age: null,
+        grade: '',
+        school: '',
+        rising: true,
+        individualVocal: false,
+        individualInstrumental: true,
+        group: false
       },
-      // 'gender': 'male',
-      // 'hobbies': []
-    });
-    this.signupForm.patchValue({
-      'userData': {
-        'name': '',
-        'email': '',
-        'phone': '',
-        'age': null,
-        'grade': '',
-        'school': '',
-        'rising': true,
-        'individualVocal': false,
-        'individualInstrumental': true,
-        'group': false
-      }
     });
   }
 
