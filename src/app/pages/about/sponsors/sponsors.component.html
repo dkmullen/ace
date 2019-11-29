@@ -1,14 +1,15 @@
 <div id="sponsor-banner">Support our sponsors</div>
-<div class="container" fxLayoutAlign="center">
+<div class="container" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="center center" >
+  <div
+    *ngFor="let item of sponsors"
 
-    <div
-    *ngFor="let item of sponsorLogos"
-    fxFlex="16%"
     class="sponsor-box"
     fxLayoutAlign="center center">
-    <div>
-      <img src={{item}}>
-    </div>
+    <a href={{item.link}} target="_blank">
+      <div>
+        <img src={{item.logo}}>
+      </div>
+    </a>
   </div>
 </div>
 

@@ -1,21 +1,23 @@
 img {
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 
 .sponsor-box {
   border: 1px solid lightgray;
   margin: 5px;
+  padding: 5px;
+  text-align: center;
 }
 .container {
   width: 100%;
+  min-width: 600px;
   margin: 0 auto;
 }
 #sponsor-banner {
   background: black;
   color: white;
   text-align: center;
-  width: 82%;
   margin: 5px auto;
   padding: 10px;
   border-radius: 5px;
