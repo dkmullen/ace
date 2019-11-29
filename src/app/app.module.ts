@@ -26,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ActingSignupComponent } from './pages/events/acting/acting-signup/acting-signup.component';
 import { ActingTeamSignupComponent } from './pages/events/acting/acting-team-signup/acting-team-signup.component';
 import { DonorsComponent } from './pages/about/donors/donors.component';
+import { PastEventsComponent } from './pages/galleries/past-events/past-events.component';
 
 
 const appRoutes: Routes = [
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
   { path: 'battle-of-the-bands', component: BobComponent },
   { path: 'singing-gallery', component: SingingGalleryComponent },
   { path: 'acting-gallery', component: ActingGalleryComponent },
+  { path: 'past-events', component: PastEventsComponent },
   { path: 'singing-signup', component: SingingSignupComponent },
   { path: 'about/donors', component: DonorsComponent }
 
@@ -62,7 +64,8 @@ const appRoutes: Routes = [
     FooterComponent,
     ActingSignupComponent,
     ActingTeamSignupComponent,
-    DonorsComponent
+    DonorsComponent,
+    PastEventsComponent
   ],
   imports: [
     BrowserModule,
