@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { environment } from "../../../../../environments/environment";
 import { Post } from './acting-team-signup.model';
 
 @Component({
@@ -72,7 +73,7 @@ export class ActingTeamSignupComponent implements OnInit {
     };
     console.log(post);
     this.http
-      .post<{ message: string }>('http://localhost:3000/api/acting-team-posts', post)
+      .post<{ message: string }>(environment.actingTeamUrl, post)
       .subscribe(responseData => {
         formDirective.resetForm();
         this.signUpForm.reset();

@@ -1,12 +1,13 @@
 @import '../../../assets/styles/ace.scss';
 .homepage_card {
   max-width: 500px;
+  margin-bottom: 1rem;
   background: rgb(233, 233, 233);
 
   mat-card-actions {
     margin-bottom: unset;
     padding: unset;
-    margin-left: 2px;
+    margin-left: 1px;
   }
 }
 
