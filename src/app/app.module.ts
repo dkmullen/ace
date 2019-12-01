@@ -42,8 +42,8 @@ const appRoutes: Routes = [
   { path: 'acting-gallery', component: ActingGalleryComponent },
   { path: 'past-events', component: PastEventsComponent },
   { path: 'singing-signup', component: SingingSignupComponent },
-  { path: 'about/donors', component: DonorsComponent }
-
+  { path: 'about/donors', component: DonorsComponent },
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({

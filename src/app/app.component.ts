@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ace-ng';
+  title = 'ACE: Alliance for Creative Excellence';
 }

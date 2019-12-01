@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./email.component.scss']
 })
 export class EmailComponent implements OnInit {
-
+  form: any;
   constructor() { }
 
   ngOnInit() {
