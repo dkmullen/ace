@@ -27,24 +27,22 @@
     </mat-menu>
 
     <mat-menu #auditions="matMenu">
-      <button mat-menu-item [routerLink]="['/singing']"routerLinkActive="router-link-active">Singing Awards</button>
-      <button mat-menu-item [routerLink]="['/acting']"routerLinkActive="router-link-active">Acting Awards</button>
+      <button mat-menu-item [routerLink]="['/events/singing']"routerLinkActive="router-link-active">Singing Awards</button>
+      <button mat-menu-item [routerLink]="['/events/acting']"routerLinkActive="router-link-active">Acting Awards</button>
       <!-- <button mat-menu-item [routerLink]="['/battle-of-the-bands']"routerLinkActive="router-link-active">Battle of the Bands</button> -->
     </mat-menu>
 
     <mat-menu #galleries="matMenu">
-      <button mat-menu-item [routerLink]="['/singing-gallery']" routerLinkActive="router-link-active">2019 Singing Awards</button>
-      <button mat-menu-item [routerLink]="['/acting-gallery']" routerLinkActive="router-link-active">2019 Acting Awards</button>
-      <button mat-menu-item [routerLink]="['/past-events']" routerLinkActive="router-link-active">Past Contests</button>
+      <button mat-menu-item [routerLink]="['/galleries/singing-gallery']" routerLinkActive="router-link-active">2019 Singing Awards</button>
+      <button mat-menu-item [routerLink]="['/galleries/acting-gallery']" routerLinkActive="router-link-active">2019 Acting Awards</button>
+      <button mat-menu-item [routerLink]="['/galleries/past-events']" routerLinkActive="router-link-active">Past Contests</button>
+      <button mat-menu-item [routerLink]="['/galleries/2019-photo-contest']" routerLinkActive="router-link-active">2019 Photo Contest</button>
     </mat-menu>
 
     <mat-menu #about="matMenu">
       <button mat-menu-item [routerLink]="['/about/board']" routerLinkActive="router-link-active">Mission/Board</button>
       <button mat-menu-item [routerLink]="['/about/donors']" routerLinkActive="router-link-active" >Donors</button>
-      <!-- <button mat-menu-item [routerLink]="['/about/sponsors']" routerLinkActive="router-link-active" >Sponsors</button> -->
-      <!-- <button mat-menu-item [routerLink]="['/about/support']" routerLinkActive="router-link-active" >Support ACE</button> -->
       <button mat-menu-item [routerLink]="['/about/email']" routerLinkActive="router-link-active" >Email Newsletter</button>
-
     </mat-menu>
 
 

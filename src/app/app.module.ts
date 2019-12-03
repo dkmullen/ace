@@ -27,22 +27,21 @@ import { ActingSignupComponent } from './pages/events/acting/acting-signup/actin
 import { ActingTeamSignupComponent } from './pages/events/acting/acting-team-signup/acting-team-signup.component';
 import { DonorsComponent } from './pages/about/donors/donors.component';
 import { PastEventsComponent } from './pages/galleries/past-events/past-events.component';
+import { PhotoContestComponent } from './pages/galleries/photo-contest/photo-contest.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'about/sponsors', component: SponsorsComponent },
+  { path: 'events/singing', component: SingingComponent },
+  { path: 'events/acting', component: ActingComponent },
+  { path: 'events/battle-of-the-bands', component: BobComponent },
   { path: 'about/board', component: BoardComponent },
-  { path: 'about/support', component: SupportComponent },
-  { path: 'about/email', component: EmailComponent },
-  { path: 'singing', component: SingingComponent },
-  { path: 'acting', component: ActingComponent },
-  { path: 'battle-of-the-bands', component: BobComponent },
-  { path: 'singing-gallery', component: SingingGalleryComponent },
-  { path: 'acting-gallery', component: ActingGalleryComponent },
-  { path: 'past-events', component: PastEventsComponent },
-  { path: 'singing-signup', component: SingingSignupComponent },
   { path: 'about/donors', component: DonorsComponent },
+  { path: 'about/email', component: EmailComponent },
+  { path: 'galleries/singing-gallery', component: SingingGalleryComponent },
+  { path: 'galleries/acting-gallery', component: ActingGalleryComponent },
+  { path: 'galleries/past-events', component: PastEventsComponent },
+  { path: 'galleries/2019-photo-contest', component: PhotoContestComponent},
   { path: '**', redirectTo: ''}
 ];
 
@@ -65,7 +64,8 @@ const appRoutes: Routes = [
     ActingSignupComponent,
     ActingTeamSignupComponent,
     DonorsComponent,
-    PastEventsComponent
+    PastEventsComponent,
+    PhotoContestComponent
   ],
   imports: [
     BrowserModule,
