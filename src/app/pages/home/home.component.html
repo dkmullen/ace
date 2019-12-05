@@ -1,7 +1,7 @@
 <mat-card>
   <div fxLayout="row wrap" fxLayout.sm="column"
     fxLayout.xs="column" fxLayoutGap="20px"
-    fxLayoutAlign="">
+    fxLayoutAlign="center center">
     <mat-card class="homepage_card"
       *ngFor="let item of cards"
       [routerLink]="[item.routerLink]"
@@ -22,6 +22,29 @@
       </mat-card-actions>
     </mat-card>
   </div>
+  <div fxLayout="row wrap" fxLayout.sm="column"
+  fxLayout.xs="column" fxLayoutGap="20px"
+  fxLayoutAlign="center center">
+  <mat-card class="homepage_card"
+    *ngFor="let item of cards2"
+    [routerLink]="[item.routerLink]"
+    routerLinkActive="router-link-active"
+    fxFlex="1 1 calc(50% - 20px)" fxFlex.sm="100" fxFlex.xs="100">
+    <mat-card-header>
+      <div mat-card-avatar class="homepage_header-image"></div>
+      <mat-card-title>{{item.title}}</mat-card-title>
+      <mat-card-subtitle>{{item.subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{item.image}} alt={{item.alt}}>
+    <mat-card-content>
+      <p><span class="accent-text bold">{{item.message1}}</span></p>
+      <p>{{item.message2}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="accent" [disabled]=item.disabled>{{item.buttontxt}}</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
   <app-sponsors></app-sponsors>
 </mat-card>
 

@@ -27,7 +27,9 @@ export class HomeComponent implements OnInit {
       buttontxt: 'Find out more',
       routerLink: '/acting',
       disabled: false
-    },    {
+    }];
+  cards2 = [
+    {
       title: 'Battle of the Bands',
       subtitle: 'May 2020',
       image: 'assets/images/battle_of_the_bands/bofb.jpg',
@@ -48,7 +50,7 @@ export class HomeComponent implements OnInit {
       routerLink: '',
       disabled: true
     }
-  ]
+  ];
 
   constructor() { }
 
