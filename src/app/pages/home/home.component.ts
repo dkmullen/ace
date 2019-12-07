@@ -8,24 +8,25 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   cards = [
     {
+      title: 'Ace Acting Awards',
+      subtitle: 'January 25, 2020',
+      image: 'assets/images/acting_2019/a1.jpg',
+      alt: 'Photo of a young woman acting on stage',
+      message1: 'University of Tennessee',
+      message2: 'All new format for 2020',
+      buttontxt: 'Sign up today',
+      routerLink: '/events/acting',
+      disabled: false
+    },
+    {
       title: 'Ace Singing Awards',
       subtitle: 'January 11, 2020 - 7pm',
       image: 'assets/images/singing_2019/s1.jpg',
       alt: 'Photo of a young man with a guitar',
       message1: 'Bijou Theatre',
-      message2: 'For students through grade 12',
-      buttontxt: 'Sign up today',
-      routerLink: '/singing',
-      disabled: false
-    },    {
-      title: 'Ace Acting Awards',
-      subtitle: 'January 25, 2020 - 7pm',
-      image: 'assets/images/acting_2019/a1.jpg',
-      alt: 'Photo of a young woman acting on stage',
-      message1: 'Old City Performing Arts Center',
-      message2: 'All new format for 2020',
+      message2: 'Registration is closed.',
       buttontxt: 'Find out more',
-      routerLink: '/acting',
+      routerLink: '/events/singing',
       disabled: false
     }];
   cards2 = [

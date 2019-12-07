@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { environment } from "../../../../../environments/environment";
+import { environment } from '../../../../../environments/environment';
 import { Post } from './acting-team-signup.model';
 
 @Component({
@@ -15,6 +15,7 @@ export class ActingTeamSignupComponent implements OnInit {
   submitError = false;
   submitMsg = 'Thank you for entering.';
   errorMsg = 'The form was NOT submitted. Check your internet connection.';
+  waiting = false;
 
   constructor(private http: HttpClient) { }
 
@@ -55,6 +56,8 @@ export class ActingTeamSignupComponent implements OnInit {
   }
 
   onSubmit(signUpForm, formDirective) {
+    this.waiting = true;
+    this.submitError = false;
     const data = this.signUpForm.value.userData;
     const post: Post = {
       id: null,
@@ -79,10 +82,12 @@ export class ActingTeamSignupComponent implements OnInit {
         this.signUpForm.reset();
         this.submitted = true;
         this.submitError = false;
+        this.waiting = false;
       },
       err => {
         this.submitted = false;
         this.submitError = true;
+        this.waiting = false;
       }
     );
   }

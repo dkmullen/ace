@@ -68,8 +68,10 @@
         </div>
         </div>
         <div class="spacer"></div>
-        <button mat-flat-button color="primary" type="submit" [disabled]="!signupForm.valid">SUBMIT</button>
-
+        <button mat-flat-button color="primary" type="submit" [disabled]="!signupForm.valid || waiting">SUBMIT</button>
+        <div class='progress-bar' *ngIf="waiting">
+          <mat-progress-bar mode="indeterminate" color="accent" ></mat-progress-bar>
+        </div>
         <div id="message">
           <div *ngIf="submitted && !signupForm.touched" class="help-block">{{submitMsg}}</div>
           <div *ngIf="submitError" class="error">{{errorMsg}}</div>

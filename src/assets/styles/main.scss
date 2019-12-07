@@ -76,6 +76,14 @@ strong {
   margin: 10px 25px;
 }
 
+.progress-bar {
+  width: 150px;
+  margin: 20px auto -20px auto
+}
+ .highlighted-message {
+   background-color: $accent;
+   color: white;
+ }
 // .citation {
 //     font-size: .95rem;
 //     line-height: .5rem;
