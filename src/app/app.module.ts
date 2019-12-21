@@ -28,6 +28,7 @@ import { ActingTeamSignupComponent } from './pages/events/acting/acting-team-sig
 import { DonorsComponent } from './pages/about/donors/donors.component';
 import { PastEventsComponent } from './pages/galleries/past-events/past-events.component';
 import { PhotoContestComponent } from './pages/galleries/photo-contest/photo-contest.component';
+import { FinalistsComponent } from './pages/events/singing/finalists/finalists.component';
 
 
 const appRoutes: Routes = [
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
   { path: 'galleries/acting-gallery', component: ActingGalleryComponent },
   { path: 'galleries/past-events', component: PastEventsComponent },
   { path: 'galleries/2019-photo-contest', component: PhotoContestComponent},
+  { path: 'events/singing/finalists', component: FinalistsComponent},
   { path: '**', redirectTo: ''}
 ];
 
@@ -65,7 +67,8 @@ const appRoutes: Routes = [
     ActingTeamSignupComponent,
     DonorsComponent,
     PastEventsComponent,
-    PhotoContestComponent
+    PhotoContestComponent,
+    FinalistsComponent
   ],
   imports: [
     BrowserModule,

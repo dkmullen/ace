@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div>
-        <div class="event_secondary-heading">SIGN UP HERE</div>
+        <div class="event_secondary-heading">MUSICAL THEATRE AUDITION FORM</div>
       <form [formGroup]="signupForm" #formDirective="ngForm" (ngSubmit)="onSubmit(signupForm, formDirective)" id="singingForm">
         <div formGroupName="userData">
           <div class="form-group">
@@ -42,7 +42,7 @@
               <!-- <mat-error *ngIf="signupForm.get('userData.school').invalid">Damn</mat-error> -->
             </mat-form-field>
           </div>
-          <div class="event_section-header">Category (select one or more in your age range)*
+          <!-- <div class="event_section-header">Category (select one or more in your age range)*
             </div>
           <div class="checkbox-list">
           <div class="form-group">
@@ -64,8 +64,8 @@
             <mat-checkbox id="group" formControlName="group">
               Choir / A Capella (Grades 6-12)
             </mat-checkbox>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div> -->
         </div>
         <div class="spacer"></div>
         <button mat-flat-button color="primary" type="submit" [disabled]="!signupForm.valid || waiting">SUBMIT</button>

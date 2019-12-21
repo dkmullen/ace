@@ -8,6 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   cards = [
     {
+      title: 'Ace Singing Awards',
+      subtitle: 'January 11, 2020 - 7pm',
+      image: 'assets/images/singing_2019/s1.jpg',
+      alt: 'Photo of a young man with a guitar',
+      message1: 'Bijou Theatre',
+      message2: 'Registration is OPEN for Musical Theatre auditions!',
+      buttontxt: 'Register to audition',
+      routerLink: '/events/singing',
+      disabled: false
+    },
+    {
       title: 'Ace Acting Awards',
       subtitle: 'January 25, 2020',
       image: 'assets/images/acting_2019/a1.jpg',
@@ -18,24 +29,14 @@ export class HomeComponent implements OnInit {
       routerLink: '/events/acting',
       disabled: false
     },
-    {
-      title: 'Ace Singing Awards',
-      subtitle: 'January 11, 2020 - 7pm',
-      image: 'assets/images/singing_2019/s1.jpg',
-      alt: 'Photo of a young man with a guitar',
-      message1: 'Bijou Theatre',
-      message2: 'Registration is closed.',
-      buttontxt: 'Find out more',
-      routerLink: '/events/singing',
-      disabled: false
-    }];
+];
   cards2 = [
     {
       title: 'Battle of the Bands',
       subtitle: 'May 2020',
       image: 'assets/images/battle_of_the_bands/bofb.jpg',
       alt: 'Photo of a band performing on stage',
-      message1: 'The Foundary (tentative)',
+      message1: 'The Mill and Mine (tentative)',
       message2: 'This is YOUR year.',
       buttontxt: 'More info is coming',
       routerLink: '',

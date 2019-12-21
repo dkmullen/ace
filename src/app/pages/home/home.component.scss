@@ -19,3 +19,14 @@
 .live {
   cursor: pointer;
 }
+.finalists {
+  text-align: center;
+  margin: 10px auto;
+  background: $accent;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  max-width: 500px;
+  font-weight: 500;
+  cursor: pointer;
+}
