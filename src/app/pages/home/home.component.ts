@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,8 @@ export class HomeComponent implements OnInit {
       alt: 'Photo of a young man with a guitar',
       message1: 'Bijou Theatre',
       message2: 'Registration is OPEN for Musical Theatre auditions!',
-      buttontxt: 'Register to audition',
+      buttontxt: 'Audition',
+      secondBtnTxt: 'Tickets',
       routerLink: '/events/singing',
       disabled: false
     },
@@ -54,9 +56,17 @@ export class HomeComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(protected router: Router) { }
 
   ngOnInit() {
+  }
+
+  navigate(link) {
+    this.router.navigate([link]);
+  }
+
+  openTab(link) {
+    window.open(link);
   }
 
 }
