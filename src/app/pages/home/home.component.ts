@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
       alt: 'Photo of a young man with a guitar',
       message1: 'Bijou Theatre',
       message2: 'Registration is now closed.',
-      buttontxt: 'Show info',
+      buttontxt: 'Info/Finalists',
       secondBtnTxt: 'Tickets',
       routerLink: '/events/singing',
       disabled: false
