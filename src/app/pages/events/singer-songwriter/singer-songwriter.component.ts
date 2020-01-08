@@ -9,40 +9,19 @@ import { Post } from './singer-songwriter.model';
   styleUrls: ['./singer-songwriter.component.scss']
 })
 export class SingerSongwriterComponent implements OnInit {
-  counters = {
-    counter1: 0,
-    counter2: 0,
-    counter3: 0,
-    counter4: 0
-  }
-  constructor(protected http: HttpClient) { }
+  constructor() { }
 
   ngOnInit() {
-    console.log(this.counters)
+    this.shuffleArray([1, 2, 3, 4]);
   }
 
-  incrementCount(n) {
-    this.counters[n]++;
-    console.log(this.counters);
-    this.onSubmit();
-  }
-
-  onSubmit() {
-    const post: Post = {
-      artist1: this.counters.counter1,
-      artist2: this.counters.counter2,
-      artist3: this.counters.counter3,
-      artist4: this.counters.counter4,
-    };
-    this.http
-    .post<{ message: string }>(environment.singingUrl, post)
-    .subscribe(responseData => {
-      console.log(responseData);
-    },
-    err => {
-      console.log(err)
+  shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
-    );
+    console.log(array)
   }
+
 
 }
