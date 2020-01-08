@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
       image: 'assets/images/singing_2019/s1.jpg',
       alt: 'Photo of a young man with a guitar',
       message1: 'Bijou Theatre',
-      message2: 'Registration is OPEN for Musical Theatre auditions!',
-      buttontxt: 'Audition',
+      message2: 'Registration is now closed.',
+      buttontxt: 'Info/Finalists',
       secondBtnTxt: 'Tickets',
       routerLink: '/events/singing',
       disabled: false

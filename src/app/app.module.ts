@@ -29,12 +29,14 @@ import { DonorsComponent } from './pages/about/donors/donors.component';
 import { PastEventsComponent } from './pages/galleries/past-events/past-events.component';
 import { PhotoContestComponent } from './pages/galleries/photo-contest/photo-contest.component';
 import { FinalistsComponent } from './pages/events/singing/finalists/finalists.component';
+import { SingerSongwriterComponent } from './pages/events/singer-songwriter/singer-songwriter.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'events/singing', component: SingingComponent },
   { path: 'events/acting', component: ActingComponent },
+  { path: 'events/singer-songwriter', component: SingerSongwriterComponent },
   { path: 'events/battle-of-the-bands', component: BobComponent },
   { path: 'about/board', component: BoardComponent },
   { path: 'about/donors', component: DonorsComponent },
@@ -68,7 +70,8 @@ const appRoutes: Routes = [
     DonorsComponent,
     PastEventsComponent,
     PhotoContestComponent,
-    FinalistsComponent
+    FinalistsComponent,
+    SingerSongwriterComponent
   ],
   imports: [
     BrowserModule,
