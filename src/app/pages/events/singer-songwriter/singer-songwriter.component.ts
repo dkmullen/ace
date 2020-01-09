@@ -9,10 +9,13 @@ import { Post } from './singer-songwriter.model';
   styleUrls: ['./singer-songwriter.component.scss']
 })
 export class SingerSongwriterComponent implements OnInit {
+  videoArray = [];
   constructor() { }
 
   ngOnInit() {
-    this.shuffleArray([1, 2, 3, 4]);
+    this.shuffleArray([
+
+    ]);
   }
 
   shuffleArray(array) {
@@ -20,7 +23,8 @@ export class SingerSongwriterComponent implements OnInit {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
-    console.log(array)
+    this.videoArray = array;
+
   }
 
 
