@@ -1,10 +1,12 @@
 <mat-card>
   <!-- <p class="finalists" routerLink="/events/singing/finalists"
   routerLinkActive="router-link-active">Click to see the finalists for the ACE Singing Awards</p> -->
+      <p [style.margin-bottom.px]="20" class="finalists"><a href="https://www.aceknox.com/events/singer-songwriter">
+      <span class="underline">Vote now</span> in the ACE Singer-Songwriter Contest</a></p>
   <div fxLayout="row wrap" fxLayout.sm="column"
     fxLayout.xs="column" fxLayoutGap="20px"
     fxLayoutAlign="center center">
-    <mat-card class="homepage_card live"
+    <mat-card class="homepage_card "
       *ngFor="let item of cards"
       fxFlex="1 1 calc(50% - 20px)" fxFlex.sm="100" fxFlex.xs="100">
       <mat-card-header>
@@ -18,20 +20,19 @@
         <p>{{item.message2}}</p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-flat-button color="accent" [disabled]=item.disabled (click)="navigate(item.routerLink)">{{item.buttontxt}}</button>
+        <button *ngIf="item.routerLink" mat-flat-button color="accent" [disabled]=item.disabled (click)="navigate(item.routerLink)">{{item.buttontxt}}</button>
+        <button *ngIf="item.webLink" (click)="webNav(item.webLink)" mat-flat-button color="accent" [disabled]=item.disabled>{{item.buttontxt}}</button>
         <button *ngIf="item.secondBtnTxt" mat-flat-button color="primary" class="second-btn" (click)="openTab('https://knoxbijou.org/event/?id=776877')">{{item.secondBtnTxt}}</button>
       </mat-card-actions>
     </mat-card>
   </div>
-    <p [style.margin-bottom.px]="20" class="finalists"><a href="https://www.aceknox.com/events/singer-songwriter">
-      Vote now in the ACE Singer-Songwriter Contest</a></p>
+
   <div fxLayout="row wrap" fxLayout.sm="column"
   fxLayout.xs="column" fxLayoutGap="20px"
-  fxLayoutAlign="center center">
+  fxLayoutAlign="center center" id="row2">
   <mat-card class="homepage_card"
     *ngFor="let item of cards2"
-    [routerLink]="[item.routerLink]"
-    routerLinkActive="router-link-active"
+
     fxFlex="1 1 calc(50% - 20px)" fxFlex.sm="100" fxFlex.xs="100">
     <mat-card-header>
       <div mat-card-avatar class="homepage_header-image"></div>
@@ -44,7 +45,9 @@
       <p>{{item.message2}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-flat-button color="accent" [disabled]=item.disabled>{{item.buttontxt}}</button>
+      <button *ngIf="item.routerLink" mat-flat-button color="accent" [disabled]=item.disabled>{{item.buttontxt}}</button>
+      <button *ngIf="item.webLink" (click)="webNav(item.webLink)" mat-flat-button color="accent" [disabled]=item.disabled>{{item.buttontxt}}</button>
+      <button *ngIf="item.secondBtnTxt" mat-flat-button color="primary" class="second-btn" (click)="openTab('https://knoxbijou.org/event/?id=776877')">{{item.secondBtnTxt}}</button>
     </mat-card-actions>
   </mat-card>
 </div>

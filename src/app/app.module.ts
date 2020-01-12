@@ -30,6 +30,8 @@ import { PastEventsComponent } from './pages/galleries/past-events/past-events.c
 import { PhotoContestComponent } from './pages/galleries/photo-contest/photo-contest.component';
 import { FinalistsComponent } from './pages/events/singing/finalists/finalists.component';
 import { SingerSongwriterComponent } from './pages/events/singer-songwriter/singer-songwriter.component';
+import { VotingDialog } from './pages/events/singer-songwriter/singer-songwriter.component';
+
 
 
 const appRoutes: Routes = [
@@ -71,8 +73,11 @@ const appRoutes: Routes = [
     PastEventsComponent,
     PhotoContestComponent,
     FinalistsComponent,
-    SingerSongwriterComponent
+    SingerSongwriterComponent,
+    VotingDialog
+
   ],
+  entryComponents: [VotingDialog],
   imports: [
     BrowserModule,
     FlexLayoutModule,

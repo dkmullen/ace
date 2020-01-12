@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class SponsorsComponent {
   public sponsors = [
-    {
-      logo: 'assets/images/sponsors/nationalrx.png',
-      link: 'https://www.nationalrx.com/'
-    },
+    // {
+    //   logo: 'assets/images/sponsors/nationalrx.png',
+    //   link: 'https://www.nationalrx.com/'
+    // },
     {
       logo: 'assets/images/sponsors/sb.png',
       link: 'http://springboardav.com/'
@@ -19,14 +19,14 @@ export class SponsorsComponent {
       logo: 'assets/images/sponsors/sr.jpg',
       link: 'https://www.schoolofrock.com/'
     },
-    {
-      logo: 'assets/images/sponsors/tc.png',
-      link: 'http://turkeycreek.com/'
-    },
-    {
-      logo: 'assets/images/sponsors/volunteer-pharmacy.png',
-      link: 'https://volunteerpharmacy.com/'
-    }
+    // {
+    //   logo: 'assets/images/sponsors/tc.png',
+    //   link: 'http://turkeycreek.com/'
+    // },
+    // {
+    //   logo: 'assets/images/sponsors/volunteer-pharmacy.png',
+    //   link: 'https://volunteerpharmacy.com/'
+    // }
   ];
 
 }

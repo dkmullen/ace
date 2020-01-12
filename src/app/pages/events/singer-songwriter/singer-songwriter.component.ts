@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
 import { Post } from './singer-songwriter.model';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-singer-songwriter',
@@ -10,7 +12,7 @@ import { Post } from './singer-songwriter.model';
 })
 export class SingerSongwriterComponent implements OnInit {
   videoArray = [];
-  constructor() { }
+  constructor(protected dialog: MatDialog) { }
 
   ngOnInit() {
     this.shuffleArray([
@@ -27,5 +29,30 @@ export class SingerSongwriterComponent implements OnInit {
 
   }
 
+  openDialog(): void {
+    const dialogRef = this.dialog.open(VotingDialog, {
+      width: '300px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+}
+
+@Component({
+  selector: 'voting-dialog',
+  templateUrl: 'voting-dialog.html',
+})
+export class VotingDialog {
+
+  constructor(
+    public dialogRef: MatDialogRef<VotingDialog>,
+    ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 
 }

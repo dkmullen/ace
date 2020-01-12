@@ -14,25 +14,38 @@ export class HomeComponent implements OnInit {
       image: 'assets/images/singing_2019/s1.jpg',
       alt: 'Photo of a young man with a guitar',
       message1: 'Bijou Theatre',
-      message2: 'Registration is now closed.',
-      buttontxt: 'Info/Finalists',
-      secondBtnTxt: 'Tickets',
+      message2: 'Thanks for a great show!',
+      buttontxt: 'Results',
+      secondBtnTxt: null,
       routerLink: '/events/singing',
       disabled: false
     },
     {
       title: 'Ace Acting Awards',
-      subtitle: 'January 25, 2020',
+      subtitle: 'January 26, 2020 (slight change!)',
       image: 'assets/images/acting_2019/a1.jpg',
       alt: 'Photo of a young woman acting on stage',
       message1: 'University of Tennessee',
       message2: 'All new format for 2020',
       buttontxt: 'Sign up today',
       routerLink: '/events/acting',
+      webLink: null,
+      secondBtnTxt: null,
       disabled: false
     },
 ];
   cards2 = [
+    {
+      title: 'Singer-Songwriter Contest',
+      subtitle: 'Now through January 25',
+      image: 'assets/images/etc/songwriters.jpg',
+      alt: 'Photo collage of 4 students singing',
+      message1: 'Online contest',
+      message2: 'Featuring some excellent local student-artists',
+      buttontxt: 'Vote now',
+      webLink: 'https://www.aceknox.com/events/singer-songwriter',
+      disabled: false
+    },
     {
       title: 'Battle of the Bands',
       subtitle: 'May 2020',
@@ -41,7 +54,7 @@ export class HomeComponent implements OnInit {
       message1: 'The Mill and Mine (tentative)',
       message2: 'This is YOUR year.',
       buttontxt: 'More info is coming',
-      routerLink: '',
+      routerLink: 'none',
       disabled: true
     },    {
       title: 'High School Theatre Awards',
@@ -51,7 +64,9 @@ export class HomeComponent implements OnInit {
       message1: 'Bijou Theatre (tentative)',
       message2: 'Our newest event',
       buttontxt: 'More info is coming',
-      routerLink: '',
+      routerLink: 'none',
+      webLink: null,
+      secondBtnTxt: null,
       disabled: true
     }
   ];
@@ -63,6 +78,10 @@ export class HomeComponent implements OnInit {
 
   navigate(link) {
     this.router.navigate([link]);
+  }
+
+  webNav(link) {
+    window.location.href = link;
   }
 
   openTab(link) {

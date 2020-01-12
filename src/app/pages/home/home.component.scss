@@ -41,3 +41,13 @@
 .second-btn {
   margin-left: 10px;
 }
+
+#row2 {
+  margin-left: 10px;
+}
+
+@media (max-width: 959px) {
+  #row2 {
+    margin-left: unset;
+  }
+}
