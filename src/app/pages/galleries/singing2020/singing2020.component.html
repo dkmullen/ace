@@ -1,0 +1,19 @@
+  <div class="event_main-heading">ACE Singing Awards 2020</div>
+
+<div class="row"
+  fxLayout="row"
+  fxLayout.xs="column"
+  fxLayoutGap="20px"
+  fxLayoutAlign="center start">
+
+  <div class="column" fxLayout="column" fxFlex="50">
+    <mat-card *ngFor="let item of pics; index as i" [style.max-width.px]="500">
+      <img mat-card-image src="assets/images/singing_2020/{{item}}.jpg">
+    </mat-card>
+  </div>
+  <div class="column" fxLayout="column" fxFlex="50">
+    <mat-card *ngFor="let item of picsCol2; index as i" [style.max-width.px]="500">
+      <img mat-card-image src="assets/images/singing_2020/{{item}}.jpg">
+    </mat-card>
+  </div>
+</div>

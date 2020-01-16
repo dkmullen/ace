@@ -31,6 +31,7 @@ import { PhotoContestComponent } from './pages/galleries/photo-contest/photo-con
 import { FinalistsComponent } from './pages/events/singing/finalists/finalists.component';
 import { SingerSongwriterComponent } from './pages/events/singer-songwriter/singer-songwriter.component';
 import { VotingDialog } from './pages/events/singer-songwriter/singer-songwriter.component';
+import { Singing2020Component } from './pages/galleries/singing2020/singing2020.component';
 
 
 
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
   { path: 'about/donors', component: DonorsComponent },
   { path: 'about/email', component: EmailComponent },
   { path: 'galleries/singing-gallery', component: SingingGalleryComponent },
+  { path: 'galleries/singing-gallery-2020', component: Singing2020Component },
   { path: 'galleries/acting-gallery', component: ActingGalleryComponent },
   { path: 'galleries/past-events', component: PastEventsComponent },
   { path: 'galleries/2019-photo-contest', component: PhotoContestComponent},
@@ -74,7 +76,8 @@ const appRoutes: Routes = [
     PhotoContestComponent,
     FinalistsComponent,
     SingerSongwriterComponent,
-    VotingDialog
+    VotingDialog,
+    Singing2020Component
 
   ],
   entryComponents: [VotingDialog],

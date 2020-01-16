@@ -45,7 +45,7 @@
       <p>{{item.message2}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button *ngIf="item.routerLink" mat-flat-button color="accent" [disabled]=item.disabled>{{item.buttontxt}}</button>
+      <button *ngIf="item.routerLink" mat-flat-button color="accent" [disabled]=item.disabled (click)="navigate(item.routerLink)">{{item.buttontxt}}</button>
       <button *ngIf="item.webLink" (click)="webNav(item.webLink)" mat-flat-button color="accent" [disabled]=item.disabled>{{item.buttontxt}}</button>
       <button *ngIf="item.secondBtnTxt" mat-flat-button color="primary" class="second-btn" (click)="openTab('https://knoxbijou.org/event/?id=776877')">{{item.secondBtnTxt}}</button>
     </mat-card-actions>

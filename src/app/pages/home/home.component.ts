@@ -9,18 +9,6 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   cards = [
     {
-      title: 'Ace Singing Awards',
-      subtitle: 'January 11, 2020 - 7pm',
-      image: 'assets/images/singing_2019/s1.jpg',
-      alt: 'Photo of a young man with a guitar',
-      message1: 'Bijou Theatre',
-      message2: 'Thanks for a great show!',
-      buttontxt: 'Results',
-      secondBtnTxt: null,
-      routerLink: '/events/singing',
-      disabled: false
-    },
-    {
       title: 'Ace Acting Awards',
       subtitle: 'January 26, 2020 (slight change!)',
       image: 'assets/images/acting_2019/a1.jpg',
@@ -33,8 +21,6 @@ export class HomeComponent implements OnInit {
       secondBtnTxt: null,
       disabled: false
     },
-];
-  cards2 = [
     {
       title: 'Singer-Songwriter Contest',
       subtitle: 'Now through January 25',
@@ -45,6 +31,20 @@ export class HomeComponent implements OnInit {
       buttontxt: 'Vote now',
       webLink: 'https://www.aceknox.com/events/singer-songwriter',
       disabled: false
+    },
+];
+  cards2 = [
+    {
+      title: 'Ace Singing Awards',
+      subtitle: 'January 11, 2020 - 7pm',
+      image: 'assets/images/singing_2019/s1.jpg',
+      alt: 'Photo of a young man with a guitar',
+      message1: 'Bijou Theatre',
+      message2: 'Thanks for a great show!',
+      buttontxt: 'Results',
+      secondBtnTxt: null,
+      routerLink: '/events/singing',
+      disabled: false,
     },
     {
       title: 'Battle of the Bands',
