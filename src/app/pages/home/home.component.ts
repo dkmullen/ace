@@ -37,13 +37,14 @@ export class HomeComponent implements OnInit {
     {
       title: 'Ace Singing Awards',
       subtitle: 'January 11, 2020 - 7pm',
-      image: 'assets/images/singing_2019/s1.jpg',
+      image: 'assets/images/singing_2020/singing_1.jpg',
       alt: 'Photo of a young man with a guitar',
       message1: 'Bijou Theatre',
       message2: 'Thanks for a great show!',
       buttontxt: 'Results',
-      secondBtnTxt: null,
+      secondBtnTxt: 'Photos',
       routerLink: '/events/singing',
+      routerLink2: 'galleries/singing-gallery-2020',
       disabled: false,
     },
     {

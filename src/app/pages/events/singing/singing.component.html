@@ -1,8 +1,8 @@
 <div class="event_page-wrapper">
     <div class="event_main-heading">ACE Singing Awards</div>
     <img class="event_hero-img"
-      src="assets/images/singing_2019/s1.jpg"
-      alt="Photo of a young man playing a guitar and singing">
+      src="assets/images/singing_2020/singing_3.jpg"
+      alt="Photo of a young woman singing">
 
       <div class="event_secondary-heading">JANUARY 11, 2020 - BIJOU THEATRE</div>
       <!-- <div class="highlighted-message"><p>Registration is CLOSED</p></div> -->
@@ -10,7 +10,24 @@
     <p>The Alliance for Creative Excellence (ACE) hosted the <span class="bold">8th Annual ACE Singing Awards</span>
       for Knoxville area students on January 11. What a great show! Every performer listed below was outstanding!
       Choosing one winner per category is the hardest part. Thanks to all of you for making this year's show fantastic!</p>
-      <p class="pointer finalists" [routerLink]="['/galleries/singing-gallery-2020']"><span class="underline" >See photos</span> from the 2020 show.</p>
+      <!-- <p class="pointer finalists" [routerLink]="['/galleries/singing-gallery-2020']"><span class="underline" >See photos</span> from the 2020 show.</p>
+      <p><a href="https://www.youtube.com/channel/UCMYa3DHS8p9uz-HziHXyzeQ/featured?reload=9&view_as=subscriber" target="_blank">High-quality video of the Ace Awards Show and more</a></p> -->
+
+
+      <div fxLayout="row wrap" fxLayout.sm="column"
+        fxLayout.xs="column" fxLayoutGap="20px"
+        fxLayoutAlign="center center">
+        <div [routerLink]="['/galleries/singing-gallery-2020']" class="pointer">
+          <img class="link-pic" src="assets/images/singing_2020/sm_photo1.jpg">
+          <p><span class="underline">Photos</span> of the 2020 show</p>
+        </div>
+        <a href="https://www.youtube.com/channel/UCMYa3DHS8p9uz-HziHXyzeQ/featured?reload=9" target="_blank">
+        <div [style.maxWidth.px]="440">
+          <img class="link-pic" src="assets/images/singing_2020/youtube_sm.jpg">
+          <p>High quality video of the whole show plus more ACE content <span class="underline">on YouTube</span></p>
+        </div>
+      </a>
+      </div>
 
       <!-- <p><a href="https://knoxbijou.org/event/?id=776877" target="_blank">Tickets are available here</a>.</p> -->
       <!-- Participants will compete for prizes for themselves and for their school (or, -->

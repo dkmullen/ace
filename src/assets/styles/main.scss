@@ -164,6 +164,11 @@ a, a:visited {
   color: $accent;
 }
 
+.event_tagline {
+	margin: -10px 0 20px 0;
+	font-size: 90%;
+}
+
 .pointer {
   cursor: pointer;
   outline: none;
