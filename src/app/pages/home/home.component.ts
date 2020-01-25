@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   cards = [
     {
       title: 'Ace Acting Awards',
-      subtitle: 'January 26, 2020 (slight change!)',
+      subtitle: 'January 26, 2020',
       image: 'assets/images/acting_2019/a1.jpg',
       alt: 'Photo of a young woman acting on stage',
       message1: 'University of Tennessee',
@@ -23,12 +23,12 @@ export class HomeComponent implements OnInit {
     },
     {
       title: 'Singer-Songwriter Contest',
-      subtitle: 'Now through January 25',
-      image: 'assets/images/etc/songwriters.jpg',
+      subtitle: 'January 2020',
+      image: 'assets/images/etc/songwriters2.jpg',
       alt: 'Photo collage of 4 students singing',
       message1: 'Online contest',
       message2: 'Featuring some excellent local student-artists',
-      buttontxt: 'Vote now',
+      buttontxt: 'Results',
       webLink: 'https://www.aceknox.com/events/singer-songwriter',
       disabled: false
     },
