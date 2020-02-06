@@ -14,12 +14,21 @@ export class HomeComponent implements OnInit {
       image: 'assets/images/acting_2019/a1.jpg',
       alt: 'Photo of a young woman acting on stage',
       message1: 'University of Tennessee',
-      message2: 'All new format for 2020',
-      buttontxt: 'Sign up today',
-      routerLink: '/events/acting',
-      webLink: null,
-      secondBtnTxt: null,
-      disabled: false
+      message2: 'Thanks to all for participating!',
+      button1: {
+        buttontxt: 'Results',
+        link: '/events/acting',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
     },
     {
       title: 'Singer-Songwriter Contest',
@@ -28,12 +37,21 @@ export class HomeComponent implements OnInit {
       alt: 'Photo collage of 4 students singing',
       message1: 'Online contest',
       message2: 'Featuring some excellent local student-artists',
-      buttontxt: 'Results',
-      webLink: 'https://www.aceknox.com/events/singer-songwriter',
-      disabled: false
+      button1: {
+        buttontxt: 'Results',
+        link: 'events/singer-songwriter',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: 'internalWithPageLoad',
+        disabled: true,
+        display: false
+      }
     },
-];
-  cards2 = [
     {
       title: 'Ace Singing Awards',
       subtitle: 'January 11, 2020 - 7pm',
@@ -41,11 +59,20 @@ export class HomeComponent implements OnInit {
       alt: 'Photo of a young man with a guitar',
       message1: 'Bijou Theatre',
       message2: 'Thanks for a great show!',
-      buttontxt: 'Results',
-      secondBtnTxt: 'Photos',
-      routerLink: '/events/singing',
-      routerLink2: 'galleries/singing-gallery-2020',
-      disabled: false,
+      button1: {
+        buttontxt: 'Results',
+        link: 'events/singing',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
     },
     {
       title: 'Battle of the Bands',
@@ -54,39 +81,61 @@ export class HomeComponent implements OnInit {
       alt: 'Photo of a band performing on stage',
       message1: 'The Mill and Mine (tentative)',
       message2: 'This is YOUR year.',
-      buttontxt: 'More info is coming',
-      routerLink: 'none',
-      disabled: true
-    },    {
+      button1: {
+        buttontxt: 'More info is coming',
+        link: null,
+        navMethod: 'internal',
+        disabled: true,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
+    },
+    {
       title: 'High School Theatre Awards',
       subtitle: 'Spring 2020',
       image: 'assets/images/acting_2019/a43.jpg',
       alt: 'Photo of student actors on stage',
       message1: 'Bijou Theatre (tentative)',
       message2: 'Our newest event',
-      buttontxt: 'More info is coming',
-      routerLink: 'none',
-      webLink: null,
-      secondBtnTxt: null,
-      disabled: true
+      button1: {
+        buttontxt: 'More info is coming',
+        link: null,
+        navMethod: 'internal',
+        disabled: true,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
     }
-  ];
+];
 
   constructor(protected router: Router) { }
 
   ngOnInit() {
   }
 
-  navigate(link) {
-    this.router.navigate([link]);
-  }
-
-  webNav(link) {
-    window.location.href = link;
-  }
-
-  openTab(link) {
-    window.open(link);
+  navigate(link, method) {
+    switch (method) {
+      case 'internal':
+        return this.router.navigate([link]);
+      case 'external':
+        return window.open(link);
+        /* Nav to internal page but need page refresh,
+        ie, when using voting buttons */
+      case 'internalWithPageLoad':
+        return window.open(link);
+    }
   }
 
 }
