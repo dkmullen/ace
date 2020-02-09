@@ -16,49 +16,17 @@
   <mat-divider></mat-divider>
   <div class="spacer"></div>
 
-  <div class="event_secondary-heading">Comedic Monologue</div>
-  <div *ngFor="let student of comedicStudents">
+  <div *ngFor="let item of categories">
+  <div class="event_secondary-heading">{{item.category}}</div>
+  <div *ngFor="let student of item.entrants">
     <p><mat-chip *ngIf="student.notes === 'winner'" color="accent" selected>Winner!</mat-chip>
       <span class="bold accent-text">{{student.name}}</span> - {{student.school}}</p>
     <p *ngIf="student.notes === 'winner'" class="bold">Order of Distinction:</p>
   </div>
-
   <div class="spacer"></div>
   <mat-divider></mat-divider>
   <div class="spacer"></div>
-
-  <div class="event_secondary-heading">Dramatic Monologue</div>
-  <div *ngFor="let student of dramaticStudents">
-    <p><mat-chip *ngIf="student.notes === 'winner'" color="accent" selected>Winner!</mat-chip>
-      <span class="bold accent-text">{{student.name}}</span> - {{student.school}}</p>
-    <p *ngIf="student.notes === 'winner'" class="bold">Order of Distinction:</p>
   </div>
-
-  <div class="spacer"></div>
-  <mat-divider></mat-divider>
-  <div class="spacer"></div>
-
-  <div class="event_secondary-heading">Shakespeare Monologue</div>
-  <div *ngFor="let student of shakespeareStudents">
-    <p><mat-chip *ngIf="student.notes === 'winner'" color="accent" selected>Winner!</mat-chip>
-      <span class="bold accent-text">{{student.name}}</span> - {{student.school}}</p>
-    <p *ngIf="student.notes === 'winner'" class="bold">Order of Distinction:</p>
-  </div>
-
-  <div class="spacer"></div>
-  <mat-divider></mat-divider>
-  <div class="spacer"></div>
-
-  <div class="event_secondary-heading">Musical Theatre</div>
-  <div *ngFor="let student of musicalStudents">
-    <p><mat-chip *ngIf="student.notes === 'winner'" color="accent" selected>Winner!</mat-chip>
-      <span class="bold accent-text">{{student.name}}</span> - {{student.school}}</p>
-    <p *ngIf="student.notes === 'winner'" class="bold">Order of Distinction:</p>
-  </div>
-
-  <div class="spacer"></div>
-  <mat-divider></mat-divider>
-  <div class="spacer"></div>
 
   <div class="event_secondary-heading">Team Competition</div>
   <p><mat-chip color="accent" selected>Winner!</mat-chip><span class="bold accent-text">Grace Christian Academy</span></p>
