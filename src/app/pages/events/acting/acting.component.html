@@ -1,113 +1,76 @@
 <div class="event_page-wrapper">
   <div class="event_main-heading">ACE Acting Awards</div>
-  <!-- <img class="event_hero-img"
-    src="assets/images/acting_2019/a1.jpg"
-    alt="Photo of a young woman acting on stage"> -->
-
-    <div class="event_secondary-heading">RESULTS for JANUARY 26, 2020</div>
-    <!-- <div class="event_tagline">Contestants should meet in the Lobby at the Clarence Brown Theater (UT) at 12:30pm.
-       Space for spectators will be limited.
-    </div> -->
-
-  <!-- <p><strong>Have a chance to win <span class="accent-text">$500</span> for you and another
-    <span class="accent-text">$250</span> for your school!</strong></p>
-  <p>One TEAM will win <span class="accent-text">$1000!</span></p>
-
-  <ul>
-    <div class="event_section-header">Categories:</div>
-    <li>Dramatic Monologue</li>
-    <li>Comedic Monologue</li>
-    <li>Shakespeare Monologue</li>
-    <li>Musical Theatre Song</li>
-    <li><strong>*NEW* - TEAM Category</strong></li>
-  </ul>
-
-  <div class="event_section-header">Individual Competition:</div>
-  <p>All individuals can compete in any and all categories. To audition, you must have a monologue
-      or song that qualifies for the category.</p>
-  <p>Four (4) Finalists will be picked to perform in each monologue category.</p>
-  <p>We may have more finalists for the Musical Theatre Category.</p>
-
-  <div class="event_section-header">Team Competition:</div>
-  <p>Any school may enter the TEAM competition by putting together 4 individuals for each category
-      to compete as a team. These individuals will automatically be entered into the individual
-      categories as well. A school may have as many teams as they would like, but an individual
-      cannot perform in the same team category twice.<span class="accent-text">*</span></p>
-  <p>Three teams will be picked as finalists.</p>
-
-  <div class="spacer"></div>
-  <p class="reference">
-      <span class="accent-text">*</span>4 individuals could form 4 different teams, but they must each perform
-      a different category for each team. For example - a musical theatre performer would only be allowed
-      to be on one team. If he/she entered on another team, it would have to be under a different category.
-      An individual competing for a TEAM is welcome to audition for any and all other categories as an individual, but he/she may only perform on one TEAM per category.
-  </p>
-
-  <div class="spacer"></div>
-  <mat-divider></mat-divider>
-  <div class="spacer"></div> -->
-
-  <!-- <app-acting-signup></app-acting-signup> -->
+  <div class="event_secondary-heading">RESULTS for JANUARY 26, 2020</div>
 
   <div class="spacer"></div>
   <mat-divider></mat-divider>
   <div class="spacer"></div>
-<p>First a big thank you to all our contestants, to our ACE volunteers, to the teachers and parents who encouraged
+
+  <p>First a big thank you to all our contestants, to our ACE volunteers, to the teachers and parents who encouraged
   students to sign up, and especially to the <span class="bold accent-text">Clarence Brown Theatre</span> and the <span class="bold accent-text">Oak Ridge Playhouse</span> for providing the
   judges. We are also very grateful to the <span class="bold accent-text">University of Tennessee</span> for hosting this year's contest.
 </p>
 <p>Here are the winners:</p>
+
   <div class="spacer"></div>
   <mat-divider></mat-divider>
   <div class="spacer"></div>
-
-  <!-- <app-acting-team-signup></app-acting-team-signup> -->
 
   <div class="event_secondary-heading">Comedic Monologue</div>
-  <p><mat-chip color="accent" selected>Winner!</mat-chip><span class="bold accent-text">Grace Ballard  </span>      -         Maryville High School</p>
-  <p class="bold">Order of Distinction:</p>
-  <p><span class="bold accent-text">Kate Bishop</span>      -         Grace Christian Academy</p>
-  <p><span class="bold accent-text">Kyla Jernigan  </span>      -         Homeschool</p>
+  <div *ngFor="let student of comedicStudents">
+    <p><mat-chip *ngIf="student.notes === 'winner'" color="accent" selected>Winner!</mat-chip>
+      <span class="bold accent-text">{{student.name}}</span> - {{student.school}}</p>
+    <p *ngIf="student.notes === 'winner'" class="bold">Order of Distinction:</p>
+  </div>
+
   <div class="spacer"></div>
   <mat-divider></mat-divider>
   <div class="spacer"></div>
+
   <div class="event_secondary-heading">Dramatic Monologue</div>
-  <p><mat-chip color="accent" selected>Winner!</mat-chip><span class="bold accent-text">LoRen Seagrave  </span>      -         Austin East</p>
-  <p class="bold">Order of Distinction:</p>
-  <p><span class="bold accent-text">Chloe Adsit</span>      -         Heritage</p>
-  <p><span class="bold accent-text">Jackson Ahern  </span>      -         Austin East Magnet</p>
-  <p><span class="bold accent-text">Heather Bohan  </span>      -         Farragut</p>
-  <p><span class="bold accent-text">Jack Lloyd  </span>      -         Oak Ridge</p>
-  <p><span class="bold accent-text">Ella Trisler  </span>      -         Catholic</p>
+  <div *ngFor="let student of dramaticStudents">
+    <p><mat-chip *ngIf="student.notes === 'winner'" color="accent" selected>Winner!</mat-chip>
+      <span class="bold accent-text">{{student.name}}</span> - {{student.school}}</p>
+    <p *ngIf="student.notes === 'winner'" class="bold">Order of Distinction:</p>
+  </div>
+
   <div class="spacer"></div>
   <mat-divider></mat-divider>
   <div class="spacer"></div>
 
   <div class="event_secondary-heading">Shakespeare Monologue</div>
-  <p><mat-chip color="accent" selected>Winner!</mat-chip><span class="bold accent-text">Nevaeh Daniel  </span>      -         Austin East Magnet</p>
-  <p class="bold">Order of Distinction:</p>
-  <p><span class="bold accent-text">Asia Chesney</span>      -         Austin East Magnet</p>
-  <p><span class="bold accent-text">Brycen Ritchie   </span>      -         West High School</p>
+  <div *ngFor="let student of shakespeareStudents">
+    <p><mat-chip *ngIf="student.notes === 'winner'" color="accent" selected>Winner!</mat-chip>
+      <span class="bold accent-text">{{student.name}}</span> - {{student.school}}</p>
+    <p *ngIf="student.notes === 'winner'" class="bold">Order of Distinction:</p>
+  </div>
+
   <div class="spacer"></div>
   <mat-divider></mat-divider>
   <div class="spacer"></div>
+
   <div class="event_secondary-heading">Musical Theatre</div>
-  <p><mat-chip color="accent" selected>Winner!</mat-chip><span class="bold accent-text">Katelyn Hedrick  </span>      -         Homeschool</p>
-  <p class="bold">Order of Distinction:</p>
-  <p><span class="bold accent-text">Heather Bohan</span>      -         Farragut</p>
-  <p><span class="bold accent-text">Ella Trisler   </span>      -         Catholic</p>
+  <div *ngFor="let student of musicalStudents">
+    <p><mat-chip *ngIf="student.notes === 'winner'" color="accent" selected>Winner!</mat-chip>
+      <span class="bold accent-text">{{student.name}}</span> - {{student.school}}</p>
+    <p *ngIf="student.notes === 'winner'" class="bold">Order of Distinction:</p>
+  </div>
+
   <div class="spacer"></div>
   <mat-divider></mat-divider>
   <div class="spacer"></div>
+
   <div class="event_secondary-heading">Team Competition</div>
-  <p><mat-chip color="accent" selected>Winner!</mat-chip><span class="bold accent-text">Grace Christian Academy  </span> </p>
-  <p><span class="bold accent-text">Kate Bishop  </span>      -         Comedic</p>
-  <p><span class="bold accent-text">Meredith Bishop  </span>      -         Dramatic</p>
-  <p><span class="bold accent-text">Hannah Johnson  </span>      -         Shakespeare</p>
-  <p><span class="bold accent-text">Addie Peterson  </span>      -         Musical Theatre</p>  <div class="spacer"></div>
+  <p><mat-chip color="accent" selected>Winner!</mat-chip><span class="bold accent-text">Grace Christian Academy</span></p>
+  <div *ngFor="let student of winningTeam">
+    <p><span class="bold accent-text">{{student.name}}</span> - {{student.category}}</p>
+  </div>
+
+  <div class="spacer"></div>
   <mat-divider></mat-divider>
   <div class="spacer"></div>
+
   <div class="event_secondary-heading">Best in Show</div>
-  <p><mat-chip color="accent" selected>Winner!</mat-chip><span class="bold accent-text">Nevaeh Daniel  </span>      -         Austin East Magnet</p>
+  <p><mat-chip color="accent" selected>Winner!</mat-chip><span class="bold accent-text">Nevaeh Daniel</span> - Austin East Magnet</p>
 
 </div>
