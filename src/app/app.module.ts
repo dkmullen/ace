@@ -28,7 +28,6 @@ import { ActingTeamSignupComponent } from './pages/events/acting/acting-team-sig
 import { DonorsComponent } from './pages/about/donors/donors.component';
 import { PastEventsComponent } from './pages/galleries/past-events/past-events.component';
 import { PhotoContestComponent } from './pages/galleries/photo-contest/photo-contest.component';
-import { FinalistsComponent } from './pages/events/singing/finalists/finalists.component';
 import { SingerSongwriterComponent } from './pages/events/singer-songwriter/singer-songwriter.component';
 import { VotingDialog } from './pages/events/singer-songwriter/singer-songwriter.component';
 import { Singing2020Component } from './pages/galleries/singing2020/singing2020.component';
@@ -49,7 +48,6 @@ const appRoutes: Routes = [
   { path: 'galleries/acting-gallery', component: ActingGalleryComponent },
   { path: 'galleries/past-events', component: PastEventsComponent },
   { path: 'galleries/2019-photo-contest', component: PhotoContestComponent},
-  { path: 'events/singing/finalists', component: FinalistsComponent},
   { path: '**', redirectTo: ''}
 ];
 
@@ -74,7 +72,6 @@ const appRoutes: Routes = [
     DonorsComponent,
     PastEventsComponent,
     PhotoContestComponent,
-    FinalistsComponent,
     SingerSongwriterComponent,
     VotingDialog,
     Singing2020Component
