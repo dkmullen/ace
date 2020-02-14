@@ -11,8 +11,8 @@ export class HomeComponent implements OnInit {
     {
       title: 'Ace Acting Awards',
       subtitle: 'January 26, 2020',
-      image: 'assets/images/acting_2019/a1.jpg',
-      alt: 'Photo of a young woman acting on stage',
+      image: 'assets/images/acting_2020/acting_winners.jpg',
+      alt: 'Collage of four young actors',
       message1: 'University of Tennessee',
       message2: 'Thanks to all for participating!',
       button1: {
@@ -31,32 +31,10 @@ export class HomeComponent implements OnInit {
       }
     },
     {
-      title: 'Singer-Songwriter Contest',
-      subtitle: 'January 2020',
-      image: 'assets/images/etc/songwriters2.jpg',
-      alt: 'Photo collage of 4 students singing',
-      message1: 'Online contest',
-      message2: 'Featuring some excellent local student-artists',
-      button1: {
-        buttontxt: 'Results',
-        link: 'events/singer-songwriter',
-        navMethod: 'internal',
-        disabled: false,
-        display: true
-      },
-      button2: {
-        buttontxt: null,
-        link: null,
-        navMethod: 'internalWithPageLoad',
-        disabled: true,
-        display: false
-      }
-    },
-    {
       title: 'Ace Singing Awards',
       subtitle: 'January 11, 2020 - 7pm',
-      image: 'assets/images/singing_2020/singing_1.jpg',
-      alt: 'Photo of a young man with a guitar',
+      image: `assets/images/singing_2020/sl${this.getRandomInt(9)}.jpg`,
+      alt: 'Photo of a ymusical artist',
       message1: 'Bijou Theatre',
       message2: 'Thanks for a great show!',
       button1: {
@@ -70,6 +48,28 @@ export class HomeComponent implements OnInit {
         buttontxt: null,
         link: null,
         navMethod: null,
+        disabled: true,
+        display: false
+      }
+    },
+    {
+      title: 'Singer-Songwriter Contest',
+      subtitle: 'January 2020',
+      image: 'assets/images/etc/songwriters2.jpg',
+      alt: 'Photo collage of young woman with a guitar',
+      message1: 'Online contest',
+      message2: 'Featuring some excellent local student-artists',
+      button1: {
+        buttontxt: 'Results',
+        link: 'events/singer-songwriter',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: 'internalWithPageLoad',
         disabled: true,
         display: false
       }
@@ -118,11 +118,14 @@ export class HomeComponent implements OnInit {
         display: false
       }
     }
-];
+  ];
 
   constructor(protected router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max)) + 1;
   }
 
   navigate(link, method) {
