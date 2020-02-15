@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ActingComponent } from './pages/events/acting/acting.component';
-import { BobComponent } from './pages/events/bob/bob.component';
+// import { BobComponent } from './pages/events/bob/bob.component';
 import { SingingGalleryComponent } from './pages/galleries/singing/singing-gallery.component';
 import { ActingGalleryComponent } from './pages/galleries/acting-gallery/acting-gallery.component';
-import { EmailComponent } from './pages/email/email.component';
+import { EmailComponent } from './pages/about/email/email.component';
 import { DonorsComponent } from './pages/about/donors/donors.component';
 import { PastEventsComponent } from './pages/galleries/past-events/past-events.component';
 import { PhotoContestComponent } from './pages/galleries/photo-contest/photo-contest.component';
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'events/singing', component: SingingComponent },
   { path: 'events/acting', component: ActingComponent },
   { path: 'events/singer-songwriter', component: SingerSongwriterComponent },
-  { path: 'events/battle-of-the-bands', component: BobComponent },
+  // { path: 'events/battle-of-the-bands', component: BobComponent },
   { path: 'about/board', component: BoardComponent },
   { path: 'about/donors', component: DonorsComponent },
   { path: 'about/email', component: EmailComponent },
