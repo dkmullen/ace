@@ -9,20 +9,21 @@
     <p>The Alliance for Creative Excellence (ACE) hosted the <span class="bold">8th Annual ACE Singing Awards</span>
       for Knoxville area students on January 11. What a great show! Every performer listed below was outstanding!
       Choosing one winner per category is the hardest part. Thanks to all of you for making this year's show fantastic!</p>
-    
+
     <div fxLayout="row wrap" fxLayout.sm="column"
       fxLayout.xs="column" fxLayoutGap="20px"
-      fxLayoutAlign="center center">
-      <div [routerLink]="['/galleries/singing-gallery-2020']" class="pointer">
+      fxLayoutAlign="center center" class="center">
+      <div style="display: inline-block" [routerLink]="['/galleries/singing-gallery-2020']" class="pointer" >
         <img class="link-pic" src="assets/images/singing_2020/sm_photo1.jpg">
         <p><span class="underline">Photos</span> of the 2020 show</p>
       </div>
-      <a href="https://www.youtube.com/channel/UCMYa3DHS8p9uz-HziHXyzeQ/featured?reload=9" target="_blank">
-        <div [style.maxWidth.px]="440">
-          <img class="link-pic" src="assets/images/singing_2020/youtube_sm.jpg">
-          <p>High quality video of the whole show plus more ACE content <span class="underline">on YouTube</span></p>
-        </div>
-      </a>
+
+        <a href="https://www.youtube.com/channel/UCMYa3DHS8p9uz-HziHXyzeQ/featured?reload=9" target="_blank" style="display:inline-block">
+          <div [style.maxWidth.px]="440">
+            <img class="link-pic" src="assets/images/singing_2020/youtube_sm.jpg">
+            <p>High quality video of the whole show plus more ACE content <span class="underline">on YouTube</span></p>
+          </div>
+        </a>
     </div>
 
     <div class="spacer"></div>
@@ -41,5 +42,4 @@
       <div class="spacer"></div>
       <mat-divider></mat-divider>
       <div class="spacer"></div>
-      </div>
-  </div>
+    </div>

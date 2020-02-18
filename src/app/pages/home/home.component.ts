@@ -7,11 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  singingWinners = [
+    'connor.jpg', 'hope.jpg', 'joey.jpg', 'marian.jpg', 'noah.jpg'
+  ];
+  actingWinners = [
+    'grace.jpg', 'katelyn.jpg', 'loren.jpg', 'nevaeh.jpg'
+  ];
   cards = [
     {
       title: 'Ace Acting Awards',
       subtitle: 'January 26, 2020',
-      image: 'assets/images/acting_2020/acting_winners.jpg',
+      image: `assets/images/acting_2020/${this.actingWinners[this.getRandomInt(4)]}`,
       alt: 'Collage of four young actors',
       message1: 'University of Tennessee',
       message2: 'Thanks to all for participating!',
@@ -33,7 +39,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'Ace Singing Awards',
       subtitle: 'January 11, 2020 - 7pm',
-      image: `assets/images/singing_2020/sl${this.getRandomInt(9)}.jpg`,
+      image: `assets/images/singing_2020/${this.singingWinners[this.getRandomInt(5)]}`,
       alt: 'Photo of a ymusical artist',
       message1: 'Bijou Theatre',
       message2: 'Thanks for a great show!',
@@ -95,28 +101,6 @@ export class HomeComponent implements OnInit {
         disabled: true,
         display: false
       }
-    },
-    {
-      title: 'High School Theatre Awards',
-      subtitle: 'Spring 2020',
-      image: 'assets/images/acting_2019/a43.jpg',
-      alt: 'Photo of student actors on stage',
-      message1: 'Bijou Theatre (tentative)',
-      message2: 'Our newest event',
-      button1: {
-        buttontxt: 'More info is coming',
-        link: null,
-        navMethod: 'internal',
-        disabled: true,
-        display: true
-      },
-      button2: {
-        buttontxt: null,
-        link: null,
-        navMethod: null,
-        disabled: true,
-        display: false
-      }
     }
   ];
 
@@ -125,7 +109,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {}
 
   getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max)) + 1;
+    console.log(Math.floor(Math.random() * Math.floor(max)))
+    return Math.floor(Math.random() * Math.floor(max));
   }
 
   navigate(link, method) {
