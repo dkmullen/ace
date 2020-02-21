@@ -15,11 +15,11 @@ import { ActingSignupComponent } from './acting/acting-signup/acting-signup.comp
 import { ActingTeamSignupComponent } from './acting/acting-team-signup/acting-team-signup.component';
 
 @NgModule({
-  declarations: [ 
-    SingingComponent, 
-    ActingComponent, 
+  declarations: [
+    SingingComponent,
+    ActingComponent,
     SingerSongwriterComponent,
-    VotingDialog, 
+    VotingDialog,
     BobComponent,
     SingingSignupComponent,
     ActingSignupComponent,

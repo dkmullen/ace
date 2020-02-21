@@ -109,7 +109,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {}
 
   getRandomInt(max) {
-    console.log(Math.floor(Math.random() * Math.floor(max)))
     return Math.floor(Math.random() * Math.floor(max));
   }
 
