@@ -175,6 +175,16 @@ a, a:visited {
   }
 }
 
+.accent-banner {
+  text-align: center;
+  margin: 10px auto;
+  background: $accent;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
 // Logo
 #ace-logo {
   width: 100%;

@@ -13,6 +13,7 @@ import { BobComponent } from './bob/bob.component';
 import { SingingSignupComponent } from './singing/singing-signup/singing-signup.component';
 import { ActingSignupComponent } from './acting/acting-signup/acting-signup.component';
 import { ActingTeamSignupComponent } from './acting/acting-team-signup/acting-team-signup.component';
+import { Acting2020Component } from './classes/acting2020/acting2020.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ActingTeamSignupComponent } from './acting/acting-team-signup/acting-te
     BobComponent,
     SingingSignupComponent,
     ActingSignupComponent,
-    ActingTeamSignupComponent
+    ActingTeamSignupComponent,
+    Acting2020Component
   ],
   entryComponents: [VotingDialog],
   imports: [

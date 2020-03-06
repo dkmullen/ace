@@ -1,0 +1,78 @@
+<div class="event_page-wrapper">
+  <div class="event_main-heading">THEATRE CAMP</div>
+  <div class="event_secondary-heading higher">for young people</div>
+
+  <div class="spacer"></div>
+
+  <div class="accent-banner">The Alliance for Creative Excellence is holding a Knoxville Theatre Workshop</div>
+  <div class="spacer"></div>
+
+  <p>
+    Theatre Camp is designed to give
+your child the full theatre experience.
+<span class="bold accent-text">From physical, vocal and imaginative
+improvisation, to writing, directing
+and performing their own unique
+show</span>, your child will do it all during
+the course of this camp.
+  </p>
+
+  <div class="spacer"></div>
+
+<div class="strong">
+  March 28—May 2 (Six Saturdays)<br />
+  Ages 6-9: 8am-11am<br />
+  Ages 10-14: 1pm-4pm<br />
+  Cost: $195
+</div>
+
+ <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div>
+    The camp will take place at 4434 Middlebrook Pike.<br />
+For more information contact Jay Apking (<a href="mailto:jay@aceknox.com">jay@aceknox.com</a>)
+  </div>
+
+<div class="spacer"></div>
+<mat-divider></mat-divider>
+<div class="spacer"></div>
+
+<form [formGroup]="signUpForm" #formDirective="ngForm"
+  (ngSubmit)="onSubmit(signUpForm, formDirective)"
+  id="signUpForm">
+  <div formGroupName="userData">
+    <!-- <div class="form-group"> -->
+      <mat-form-field class="full-width">
+        <input matInput type="text" id="name" formControlName="name" class="formcontrol" placeholder="Name of Parent or Guardian" required>
+        <!-- <mat-error *ngIf="!signUpForm.get('userData.name').valid && signUpForm.get('userData.name').touched"></mat-error> -->
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="text" id="phone" placeholder="Phone" formControlName="phone" required>
+      </mat-form-field>
+    <!-- </div> -->
+    <mat-form-field class="full-width">
+      <input matInput type="text" id="email" formControlName="email" class="formcontrol" placeholder="Email" required>
+      <!-- <mat-error *ngIf="!signUpForm.get('userData.name').valid && signUpForm.get('userData.name').touched"></mat-error> -->
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput type="text" id="phone" placeholder="Phone" formControlName="phone" required>
+    </mat-form-field>
+
+  </div>
+  <!-- <div class="spacer"></div>
+  <button mat-flat-button color="primary" type="submit" [disabled]="!signUpForm.valid || waiting">SUBMIT INDIVIDUAL FORM</button>
+  <div class='progress-bar' *ngIf="waiting">
+    <mat-progress-bar mode="indeterminate" color="accent" ></mat-progress-bar>
+  </div>
+  <div id="message">
+    <div *ngIf="submitted && !signUpForm.touched" class="help-block">{{submitMsg}}</div>
+    <div *ngIf="submitError" class="error">{{errorMsg}}</div>
+  </div> -->
+</form>
+
+
+
+  <div id="paypal-button-container"></div>
+</div>
