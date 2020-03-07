@@ -15,6 +15,28 @@ export class HomeComponent implements OnInit {
   ];
   cards = [
     {
+      title: 'Ace Theatre Camp',
+      subtitle: 'Starting March 28',
+      image: `assets/images/tcamp.jpg`,
+      alt: '',
+      message1: 'Ages 6-14',
+      message2: 'Six Saturdays of great experience',
+      button1: {
+        buttontxt: 'Find Out More',
+        link: '/events/theatre-camp',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
+    },
+    {
       title: 'Ace Acting Awards',
       subtitle: 'January 26, 2020',
       image: `assets/images/acting_2020/${this.actingWinners[this.getRandomInt(4)]}`,
