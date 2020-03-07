@@ -43,36 +43,65 @@ For more information contact Jay Apking (<a href="mailto:jay@aceknox.com">jay@ac
   (ngSubmit)="onSubmit(signUpForm, formDirective)"
   id="signUpForm">
   <div formGroupName="userData">
-    <!-- <div class="form-group"> -->
+    <div class="form-group">
       <mat-form-field class="full-width">
-        <input matInput type="text" id="name" formControlName="name" class="formcontrol" placeholder="Name of Parent or Guardian" required>
-        <!-- <mat-error *ngIf="!signUpForm.get('userData.name').valid && signUpForm.get('userData.name').touched"></mat-error> -->
+        <input matInput type="text" id="parent" formControlName="parent" class="formcontrol" placeholder="Name of Parent or Guardian" required>
       </mat-form-field>
       <mat-form-field class="full-width">
         <input matInput type="text" id="phone" placeholder="Phone" formControlName="phone" required>
       </mat-form-field>
-    <!-- </div> -->
-    <mat-form-field class="full-width">
-      <input matInput type="text" id="email" formControlName="email" class="formcontrol" placeholder="Email" required>
-      <!-- <mat-error *ngIf="!signUpForm.get('userData.name').valid && signUpForm.get('userData.name').touched"></mat-error> -->
-    </mat-form-field>
-    <mat-form-field class="full-width">
-      <input matInput type="text" id="phone" placeholder="Phone" formControlName="phone" required>
-    </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="text" id="email" formControlName="email" class="formcontrol" placeholder="Email" required>
+      </mat-form-field>
+    </div>
 
+    <div class="form-group">
+      <mat-form-field class="med-width">
+        <input matInput type="text" id="student1Name" formControlName="student1Name" class="formcontrol" placeholder="Student" required>
+      </mat-form-field>
+      <mat-form-field class="sm-width">
+        <input matInput type="number" id="student1Age" formControlName="student1Age" class="formcontrol" placeholder="Age" required>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="med-width">
+        <input matInput type="text" id="student2Name" formControlName="student2Name" class="formcontrol" placeholder="Student2" >
+      </mat-form-field>
+      <mat-form-field class="sm-width">
+        <input matInput type="number" id="student2Age" formControlName="student2Age" class="formcontrol" placeholder="Age" >
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="med-width">
+        <input matInput type="text" id="student3Name" formControlName="student3Name" class="formcontrol" placeholder="Student 3" >
+      </mat-form-field>
+      <mat-form-field class="sm-width">
+        <input matInput type="number" id="student3Age" formControlName="student3Age" class="formcontrol" placeholder="Age" >
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="med-width">
+        <input matInput type="text" id="student4Name" formControlName="student4Name" class="formcontrol" placeholder="Student 4" >
+      </mat-form-field>
+      <mat-form-field class="sm-width">
+        <input matInput type="number" id="student4Age" formControlName="student4Age" class="formcontrol" placeholder="Age" >
+      </mat-form-field>
+    </div>
   </div>
-  <!-- <div class="spacer"></div>
-  <button mat-flat-button color="primary" type="submit" [disabled]="!signUpForm.valid || waiting">SUBMIT INDIVIDUAL FORM</button>
+  <div class="spacer"></div>
+  <button mat-flat-button color="primary" type="submit" [disabled]="!signUpForm.valid || waiting">SUBMIT</button>
   <div class='progress-bar' *ngIf="waiting">
     <mat-progress-bar mode="indeterminate" color="accent" ></mat-progress-bar>
   </div>
   <div id="message">
     <div *ngIf="submitted && !signUpForm.touched" class="help-block">{{submitMsg}}</div>
     <div *ngIf="submitError" class="error">{{errorMsg}}</div>
-  </div> -->
+  </div>
+  <div class="spacer"></div>
 </form>
-
-
 
   <div id="paypal-button-container"></div>
 </div>
