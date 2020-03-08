@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { PayComponent } from './pages/misc/pay/pay.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
     MenuComponent,
     HomeComponent,
     FooterComponent,
+    PayComponent,
   ],
   imports: [
     BrowserModule,
