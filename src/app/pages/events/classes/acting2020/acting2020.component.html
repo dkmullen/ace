@@ -26,10 +26,13 @@ the course of this camp.
   Ages 10-14: 1pm-4pm<br />
   Cost: $195
 </div>
+<div class="spacer"></div>
 
+<p>Already registered? You can <a [routerLink]="['/pay']"><strong>pay online here</strong></a> to reserve your child's spot. If not,
+register first, below.</p>
  <div class="spacer"></div>
-  <mat-divider></mat-divider>
-  <div class="spacer"></div>
+  <!-- <mat-divider></mat-divider>
+  <div class="spacer"></div> -->
 
   <div>
     The camp will take place at 4434 Middlebrook Pike.<br />
@@ -37,11 +40,7 @@ For more information contact Jay Apking (<a href="mailto:jay@aceknox.com">jay@ac
   </div>
   <div class="spacer"></div>
 
-  <div>Online payment is coming soon. Or reserve your spot by sending a check or e-check ($195 per child) to:
-    <div class="spacer"></div>
 
-    <p> ACE: Alliance for Creative Excellence<br />
-    234 Morrell Rd #189<br/>Knoxville, TN 37919</p> </div>
 
 <div class="spacer"></div>
 <mat-divider></mat-divider>
@@ -109,5 +108,6 @@ For more information contact Jay Apking (<a href="mailto:jay@aceknox.com">jay@ac
     <div *ngIf="submitError" class="error">{{errorMsg}}</div>
   </div>
   <div class="spacer"></div>
+  <button *ngIf="submitted && !signUpForm.touched" mat-flat-button color="accent" [routerLink]="['/pay']">{{'Pay Online' | uppercase}}</button>
 </form>
 </div>
