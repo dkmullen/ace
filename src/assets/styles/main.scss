@@ -165,9 +165,10 @@ a, a:visited {
   color: white;
   padding: 5px;
   border-radius: 5px;
-  max-width: 500px;
+  // max-width: 100px;
   font-weight: 500;
-  cursor: pointer;
+  // cursor: pointer;
+  font-size: 1rem;
 
   a {
     color: white;
@@ -217,7 +218,9 @@ a, a:visited {
     color: $light !important;
   }
 }
-
+.italic {
+  font-style: italic;
+}
 mat-chip {
   padding: 5px;
   border-radius: 15px;

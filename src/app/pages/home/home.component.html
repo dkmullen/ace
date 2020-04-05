@@ -1,8 +1,11 @@
 <mat-card>
-  <!-- <p [style.margin-bottom.px]="20" class="announcement"><a href="https://www.aceknox.com/events/singer-songwriter">
-    <span class="underline">Vote now</span> in the ACE Singer-Songwriter Contest</a>
-  </p> -->
-
+  <div class="event_page-wrapper">
+    <div class="event_secondary-heading">ACE <span class="accent-text">Safer@Home</span> Arts Contest</div> 
+  <p [style.margin-bottom.px]="20" class="announcement">
+    For Knoxville area students. Be safe, create art,
+    and have a chance to win prizes. 
+  </p>
+</div>
   <div fxLayout="row wrap" fxLayout.sm="column"
     fxLayout.xs="column" fxLayoutGap="20px"
     fxLayoutAlign="center center">
@@ -11,10 +14,11 @@
       fxFlex="1 1 calc(50% - 20px)" fxFlex.sm="100" fxFlex.xs="100">
       <mat-card-header>
         <div mat-card-avatar class="homepage_header-image"></div>
-        <mat-card-title>{{item.title}}</mat-card-title>
+        <mat-card-title class="title-text">{{ item.title }}</mat-card-title>
         <mat-card-subtitle>{{item.subtitle}}</mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image src={{item.image}} alt={{item.alt}}>
+      <div class="photocredit" *ngIf="item.photocredit">{{item.photocredit}}</div>
       <mat-card-content>
         <p><span class="accent-text bold">{{item.message1}}</span></p>
         <p>{{item.message2}}</p>

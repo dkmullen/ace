@@ -25,6 +25,13 @@
   margin-left: 10px;
 }
 
+.photocredit {
+  position: absolute;
+  right: 10px;
+  font-size: x-small;
+  margin-top: -10px;
+}
+
 #row2 {
   margin-left: 10px;
 }
@@ -32,5 +39,17 @@
 @media (max-width: 959px) {
   #row2 {
     margin-left: unset;
+  }
+}
+
+@media (max-width: 500px) {
+  .photocredit {
+    display: none;
+  }
+  .title-text {
+    font-size: 1rem !important;
+  }
+  .announcement {
+    font-size: 12px;
   }
 }

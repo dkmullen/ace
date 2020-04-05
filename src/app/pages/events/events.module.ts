@@ -14,6 +14,10 @@ import { SingingSignupComponent } from './singing/singing-signup/singing-signup.
 import { ActingSignupComponent } from './acting/acting-signup/acting-signup.component';
 import { ActingTeamSignupComponent } from './acting/acting-team-signup/acting-team-signup.component';
 import { Acting2020Component } from './classes/acting2020/acting2020.component';
+import { InstrumentalComponent } from './safeathome/instrumental/instrumental.component';
+import { PhotographyComponent } from './safeathome/photography/photography.component';
+import { WritingComponent } from './safeathome/writing/writing.component';
+import { DanceComponent } from './safeathome/dance/dance.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { Acting2020Component } from './classes/acting2020/acting2020.component';
     SingingSignupComponent,
     ActingSignupComponent,
     ActingTeamSignupComponent,
-    Acting2020Component
+    Acting2020Component,
+    InstrumentalComponent,
+    PhotographyComponent,
+    WritingComponent,
+    DanceComponent
   ],
   entryComponents: [VotingDialog],
   imports: [
