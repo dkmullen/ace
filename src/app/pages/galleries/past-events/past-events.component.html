@@ -1,39 +1,41 @@
-<div class="row"
-  fxLayout="row"
-  fxLayout.xs="column"
-  fxLayoutGap="20px"
-  fxLayoutAlign="center start">
+<div class="gallery_page-wrapper">
+  <div class="row"
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutGap="20px"
+    fxLayoutAlign="center start">
 
-  <div class="column" fxLayout="column" fxFlex="33">
-    <mat-card *ngFor="let item of pics; index as i" [style.max-width.px]="500">
-      <img mat-card-image src="assets/images/past_events/{{item}}.jpg">
-      <p>{{names[i]}}</p>
-    </mat-card>
+    <div class="column" fxLayout="column" fxFlex="33">
+      <mat-card *ngFor="let item of pics; index as i" [style.max-width.px]="500">
+        <img mat-card-image src="assets/images/past_events/{{item}}.jpg">
+        <p>{{names[i]}}</p>
+      </mat-card>
+    </div>
+    <div class="column" fxLayout="column" fxFlex="33">
+      <mat-card *ngFor="let item of picsCol2; index as i" [style.max-width.px]="500">
+        <img mat-card-image src="assets/images/past_events/{{item}}.jpg">
+        <p>{{names2[i]}}</p>
+      </mat-card>
+    </div>
+    <div class="column" fxLayout="column" fxFlex="33">
+      <mat-card *ngFor="let item of picsCol3; index as i" [style.max-width.px]="500">
+        <img mat-card-image src="assets/images/past_events/{{item}}.jpg">
+        <p>{{names3[i]}}</p>
+      </mat-card>
+    </div>
   </div>
-  <div class="column" fxLayout="column" fxFlex="33">
-    <mat-card *ngFor="let item of picsCol2; index as i" [style.max-width.px]="500">
-      <img mat-card-image src="assets/images/past_events/{{item}}.jpg">
-      <p>{{names2[i]}}</p>
-    </mat-card>
+  <div class="spacer"></div>
+  <div class="video-container">
+    <iframe width="931" height="524" src="https://www.youtube.com/embed/1vh6SzjvYfE"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
   </div>
-  <div class="column" fxLayout="column" fxFlex="33">
-    <mat-card *ngFor="let item of picsCol3; index as i" [style.max-width.px]="500">
-      <img mat-card-image src="assets/images/past_events/{{item}}.jpg">
-      <p>{{names3[i]}}</p>
-    </mat-card>
+  <div class="spacer"></div>
+  <div class="video-container">
+    <iframe width="931" height="524" src="https://www.youtube.com/embed/ymgW7ZeUvSc"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
   </div>
-</div>
-<div class="spacer"></div>
-<div class="video-container">
-  <iframe width="931" height="524" src="https://www.youtube.com/embed/1vh6SzjvYfE"
-    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
-<div class="spacer"></div>
-<div class="video-container">
-  <iframe width="931" height="524" src="https://www.youtube.com/embed/ymgW7ZeUvSc"
-    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
 </div>

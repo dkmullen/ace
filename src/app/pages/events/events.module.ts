@@ -17,6 +17,7 @@ import { Acting2020Component } from './classes/acting2020/acting2020.component';
 import { InstrumentalComponent } from './safeathome/instrumental/instrumental.component';
 import { PhotographyComponent } from './safeathome/photography/photography.component';
 import { WritingComponent } from './safeathome/writing/writing.component';
+import { InputComponent } from '../../components/input/input.component';
 import { DanceComponent } from './safeathome/dance/dance.component';
 
 @NgModule({
@@ -33,7 +34,8 @@ import { DanceComponent } from './safeathome/dance/dance.component';
     InstrumentalComponent,
     PhotographyComponent,
     WritingComponent,
-    DanceComponent
+    DanceComponent,
+    InputComponent
   ],
   entryComponents: [VotingDialog],
   imports: [

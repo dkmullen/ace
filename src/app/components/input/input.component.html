@@ -1,0 +1,20 @@
+<div class="control">
+    <input 
+        matInput
+        class="input"
+        [formControl]="control"
+        [placeholder]="placeholder"
+        [ngClass]="{ 'is-danger': showErrors()}"    
+    />
+    <ng-container *ngIf="showErrors()">
+        <mat-error *ngIf="control.errors.required">This field is required</mat-error>
+        <mat-error *ngIf="control.errors.minlength">
+            Minimum length is {{ control.errors.minlength.requiredLength}} characters
+        </mat-error>
+        <mat-error *ngIf="control.errors.maxlength">
+            Maximum length is {{ control.errors.maxlength.requiredLength}} characters
+        </mat-error>
+        <mat-error *ngIf="control.errors.pattern">Invalid format</mat-error>
+        <mat-error *ngIf="control.errors.email">Invalid email address format</mat-error>
+    </ng-container>
+</div>
