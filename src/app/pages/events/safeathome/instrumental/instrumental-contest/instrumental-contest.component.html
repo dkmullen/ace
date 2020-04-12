@@ -1,0 +1,151 @@
+<div class="event_page-wrapper">
+  <div class="event_secondary-heading">ACE <span class="accent-text">Safer@Home</span> Instrumental Contest</div>
+  <p>Nine very talented young artists from the Knoxville area have shared their work with us. Give it a listen, and vote for your favorites. 
+    You can vote for more than one artist, and you should be able to vote once a day. <span class="bold">Voting ends Friday, April 17 at 9pm.</span>
+  </p>
+  <!-- <p id="voting" (click)="openDialog()">Trouble voting?</p> -->
+  <div class="spacer"></div>
+  <div class="accent-text bold">Find an artist</div>
+  <div id="chips">
+  <mat-chip-list>
+      <mat-chip 
+        color="primary"
+        selected
+        *ngFor="let contestant of videoArray"
+        (click)="scrollToElement(contestant.id)"
+      >
+      {{ contestant.name }}
+      </mat-chip>
+  </mat-chip-list>
+</div>
+<div class="spacer"></div>
+
+  
+  <div class="video-container" id="catelyn">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NWmwJ4FtmWQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Catelyn Woody</span> - Senior - Farragut High School</div>
+  <!-- LikeBtn.com BEGIN -->
+  <span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="catelyn_woody_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79"></span>
+  <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+  <!-- LikeBtn.com END -->
+    <span class="follow">Vote for Catelyn</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="geoffrey">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/00xolk2uHDg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Geoffrey Helveston</span> - Senior - Berean Christian High School</div>
+  <!-- LikeBtn.com BEGIN -->
+  <span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="geoffrey_helveston_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79"></span>
+  <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Geoffrey</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="max">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XdoQn3Cg6JY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Max Harper</span> - Sophomore - L&N STEM Academy</div>
+  <!-- LikeBtn.com BEGIN -->
+  <span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="max_harper_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79"></span>
+  <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Max</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="joey">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/EEFPx-FMH04" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Joey Nieman</span> - 6th Grade - Farragut Middle School</div>
+  <!-- LikeBtn.com BEGIN -->
+  <span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="joey_nieman_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79"></span>
+  <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Joey</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="joseph">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BaXd1Gg7ye4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Joseph Blair</span> - Freshman - Oak Ridge High School</div>
+  <!-- LikeBtn.com BEGIN -->
+  <span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="joseph_blair_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79"></span>
+  <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Joseph</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="marian">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/u0292ayYpMg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Marian Vacaliuc</span> - Junior - Oak Ridge High School</div>
+  <!-- LikeBtn.com BEGIN -->
+  <span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="marian_vacaliuc_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79"></span>
+  <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Marian</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="abigail">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/uf2WVeZTryo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Abigail Kelley</span> - Junior - Grace Christian Academy</div>
+  <!-- LikeBtn.com BEGIN -->
+  <span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="abigail_kelley_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79"></span>
+  <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Abigail</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="addie">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vEbdDk7xBUs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Addie Peterson</span> - Junior - Grace Christian Academy</div>
+  <!-- LikeBtn.com BEGIN -->
+  <span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="addie_peterson_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79"></span>
+  <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Addie</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="jackson">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/C8tj0QbGYG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Jackson Frazier</span> - Sophomore - Hardin Valley Academy</div>
+  <!-- LikeBtn.com BEGIN -->
+  <span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="jackson_frazier_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79"></span>
+  <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Jackson</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+</div>
+  

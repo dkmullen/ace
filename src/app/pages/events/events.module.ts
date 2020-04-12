@@ -19,6 +19,7 @@ import { PhotographyComponent } from './safeathome/photography/photography.compo
 import { WritingComponent } from './safeathome/writing/writing.component';
 import { InputComponent } from '../../components/input/input.component';
 import { DanceComponent } from './safeathome/dance/dance.component';
+import { InstrumentalContestComponent } from './safeathome/instrumental/instrumental-contest/instrumental-contest.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { DanceComponent } from './safeathome/dance/dance.component';
     PhotographyComponent,
     WritingComponent,
     DanceComponent,
-    InputComponent
+    InputComponent,
+    InstrumentalContestComponent
   ],
   entryComponents: [VotingDialog],
   imports: [

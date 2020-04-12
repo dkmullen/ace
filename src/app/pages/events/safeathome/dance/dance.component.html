@@ -16,10 +16,9 @@
     <div class="spacer"></div>
 
     <div>
-        Post your video to YouTube, and send <span class="accent-text bold">the link, your name</span> and 
-        the <span class="accent-text bold">name of your school</span> to <a href="mailto:jay@aceknox.com">jay@aceknox.com</a>. 
-        We will embed it here at <span class="accent-text bold">aceknox.com</span>, where people can vote for it as their favorite. 
-        Judges will take a look at it too.
+        Post your video to YouTube, and send <span class="accent-text bold">fill out the form below</span>.
+        We will embed your video here at <span class="accent-text bold">aceknox.com</span>, where people can vote for it as their favorite. 
+        Judges will take a look at it too. Questions? Contact <a href="mailto:jay@aceknox.com">jay@aceknox.com</a>.
     </div>
 
 
@@ -34,6 +33,54 @@
     <div>Videos are due by  <span class="accent-text bold">9:00pm on Saturday, May 2, 2020</span>. Audience voting will run from 
         <span class="accent-text bold">Sunday, May 3 at Noon</span>
         through  <span class="accent-text bold">Friday, May 8 at 9:00pm</span>.</div>
+    <div class="spacer"></div>
+
+    <div class="spacer"></div>
+
+    <form [formGroup]="signUpForm" #formDirective="ngForm"
+        (ngSubmit)="onSubmit(signUpForm, formDirective)"
+        id="signUpForm">
+        <div formGroupName="userData">
+            <div class="form-group">
+                <mat-form-field>
+                    <input matInput type="text" id="name" formControlName="name" class="formcontrol" placeholder="Name" required>
+                    <mat-error *ngIf="!signUpForm.get('userData.name').valid && signUpForm.get('userData.name').touched"></mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="number" id="age" placeholder="Age" formControlName="age" required>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field>
+                    <input matInput type="text" id="grade" placeholder="Grade in school" formControlName="grade" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" id="school" placeholder="Name of your school" formControlName="school" required>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field>
+                    <input matInput type="text" id="email" placeholder="Email" formControlName="email" required>
+                    <mat-error *ngIf="signUpForm.get('userData.email').invalid">Enter a valid email address</mat-error>
+                </mat-form-field>
+            </div>
+            <!-- <div class="form-group"> -->
+                <mat-form-field class="wide">
+                    <textarea matInput type="textarea" id="link" placeholder="Link to your video" formControlName="link" required></textarea>
+                </mat-form-field>
+            <!-- </div> -->
+
+        </div>
+        <div class="spacer"></div>
+        <button mat-flat-button color="primary" type="submit" [disabled]="!signUpForm.valid || waiting">SUBMIT</button>
+        <div class='progress-bar' *ngIf="waiting">
+            <mat-progress-bar mode="indeterminate" color="accent" ></mat-progress-bar>
+        </div>
+        <div id="message">
+            <div *ngIf="submitted && !signUpForm.touched" class="help-block">{{submitMsg}}</div>
+            <div *ngIf="submitError" class="error">{{errorMsg}}</div>
+        </div>
+    </form>
     <div class="spacer"></div>
 
     <div class="note"><span class="accent-text bold">*</span>Please observe all current recommendations about social distancing. This is designed to be an 

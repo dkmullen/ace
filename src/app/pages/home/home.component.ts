@@ -18,16 +18,16 @@ export class HomeComponent implements OnInit {
   cards = [
     {
       title: 'Safer@Home Instrumental Contest',
-      subtitle: 'Entries due April 11, 2020',
+      subtitle: 'Vote now through April 17',
       image: `assets/images/safe@home2020/instrument.jpg`,
       alt: 'Girl playing a keyboard',
       photocredit: 'Photo by Fitsum Admasu on Unsplash',
       message1: 'Students thru Grade 12',
       message2: 'Prizes: $150, $100',
       button1: {
-        buttontxt: 'More',
-        link: '/events/instrumental',
-        navMethod: 'internal',
+        buttontxt: 'Vote Now',
+        link: 'https://www.aceknox.com/events/instrumental',
+        navMethod: 'internalWithPageLoad',
         disabled: false,
         display: true
       },
@@ -215,7 +215,7 @@ export class HomeComponent implements OnInit {
         /* Nav to internal page but need page refresh,
         ie, when using voting buttons */
       case 'internalWithPageLoad':
-        return window.open(link);
+        return window.open(link, '_self');
     }
   }
 

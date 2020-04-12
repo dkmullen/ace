@@ -6,7 +6,7 @@ import { ActingComponent } from './acting/acting.component';
 import { SingerSongwriterComponent } from './singer-songwriter/singer-songwriter.component';
 import { SingingComponent } from './singing/singing.component';
 import { Acting2020Component } from './classes/acting2020/acting2020.component';
-import { InstrumentalComponent } from './safeathome/instrumental/instrumental.component';
+import { InstrumentalContestComponent } from './safeathome/instrumental/instrumental-contest/instrumental-contest.component';
 import { PhotographyComponent } from './safeathome/photography/photography.component';
 import { WritingComponent } from './safeathome/writing/writing.component';
 import { DanceComponent } from './safeathome/dance/dance.component';
@@ -17,7 +17,8 @@ const routes: Routes = [
   { path: 'acting', component: ActingComponent },
   { path: 'singer-songwriter', component: SingerSongwriterComponent },
   // { path: 'theatre-camp', component: Acting2020Component },
-  { path: 'instrumental', component: InstrumentalComponent },
+  // { path: 'instrumental', component: InstrumentalComponent },
+  { path: 'instrumental', component: InstrumentalContestComponent },
   { path: 'photography', component: PhotographyComponent },
   { path: 'writing', component: WritingComponent },
   { path: 'dance', component: DanceComponent }
