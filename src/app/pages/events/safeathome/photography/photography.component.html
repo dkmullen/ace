@@ -1,18 +1,120 @@
-<div class="event_page-wrapper">
+<div class="event_page-wrapper-photos">
+    <div class="text-wrapper">
     <div class="event_secondary-heading">ACE <span class="accent-text">Safer@Home</span> Photography Contest</div> 
     <p [style.margin-bottom.px]="20" class="announcement">
       For students through grade 12 in Knox County, Tennessee and surrounding counties. 
     </p>
-    <div>
+    <!-- <div>
         <img src="assets/images/safe@home2020/photography.jpg" alt="Woman photographing cherry blossoms">
     </div>
-    <div class="photo-credit">Photo by kazuend on Unsplash</div>
+    <div class="photo-credit">Photo by kazuend on Unsplash</div> -->
+
+    <div>The theme: How has being out of school changed your life the most? (No words. Just a picture).
+    <span class="bold"> Below are the five finalists.</span>
+    Vote now through <span class="accent-text bold">Friday, April 24 at 9:00pm</span>.</div>
+
+    <div class="spacer"></div>
+    <div class="accent-text bold">Find an artist</div>
+    <div id="chips">
+    <mat-chip-list>
+        <mat-chip 
+          color="primary"
+          selected
+          *ngFor="let contestant of picArray"
+          (click)="scrollToElement(contestant.id)"
+        >
+        {{ contestant.name }}
+        </mat-chip>
+    </mat-chip-list>
+  </div>
+  <div class="spacer"></div>
+</div>
 
     <div class="spacer"></div>
     <mat-divider></mat-divider>
     <div class="spacer"></div>
 
-    <div>Here's your theme:</div>
+    <div id="leah"><img src="assets/images/safe@home2020/photo_contest/l-kahre.jpeg" 
+        id="pic1"></div>
+    <div class="event_secondary-heading">
+        <p class="accent-text">{{'Leah Kahre' | uppercase}}</p>
+        <p>William Blount High School - 9th Grade</p>
+    </div>
+    <!-- LikeBtn.com BEGIN -->
+<span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="leah_kahre_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79" data-voting_enabled="true"></span>
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+<!-- LikeBtn.com END -->
+<span class="follow">Vote for Leah</span>
+
+    <div class="spacer"></div>
+    <mat-divider></mat-divider>
+    <div class="spacer"></div>
+
+    <div id="sydney"><img src="assets/images/safe@home2020/photo_contest/s-feistner.jpeg" 
+        id="pic2"></div>
+    <div class="event_secondary-heading">
+        <p class="accent-text">{{'Sydney Feistner' | uppercase}}</p>
+        <p>Grace Christian Academy - 12th Grade</p>
+    </div>
+    <!-- LikeBtn.com BEGIN -->
+<span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="sydney_feistner_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79" data-voting_enabled="true"></span>
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+<!-- LikeBtn.com END -->
+<span class="follow">Vote for Sydney</span>
+
+    <div class="spacer"></div>
+    <mat-divider></mat-divider>
+    <div class="spacer"></div>
+
+    <div id="ella"><img src="assets/images/safe@home2020/photo_contest/e_pinchok.jpeg" 
+        id="pic2"></div>
+    <div class="event_secondary-heading">
+        <p class="accent-text">{{'Ella Pinchok' | uppercase}}</p>
+        <p>Farragut High School - 9th Grade</p>
+    </div>
+    <!-- LikeBtn.com BEGIN -->
+<span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="ella_pinchok_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79" data-voting_enabled="true"></span>
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+<!-- LikeBtn.com END -->
+<span class="follow">Vote for Ella</span>
+
+    <div class="spacer"></div>
+    <mat-divider></mat-divider>
+    <div class="spacer"></div>
+
+    <div id="isabella"><img src="assets/images/safe@home2020/photo_contest/i_murrell.jpeg" 
+        id="pic2"></div>
+    <div class="event_secondary-heading">
+        <p class="accent-text">{{'Isabella Murrell' | uppercase}}</p>
+        <p>Grace Christian Academy - 11th Grade</p>
+    </div>
+    <!-- LikeBtn.com BEGIN -->
+<span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="isabella_murrell_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79" data-voting_enabled="true"></span>
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+<!-- LikeBtn.com END -->
+<span class="follow">Vote for Isabella</span>
+
+    <div class="spacer"></div>
+    <mat-divider></mat-divider>
+    <div class="spacer"></div>
+
+    <div id="elizabeth"><img src="assets/images/safe@home2020/photo_contest/e-newman.jpeg" 
+        id="pic5"></div>
+    <div class="event_secondary-heading">
+        <p class="accent-text">{{'Elizabeth Newman' | uppercase}}</p>
+        <p>Loudon High School - 10th Grade</p>
+    </div>
+    <!-- LikeBtn.com BEGIN -->
+<span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_l_c="#000000" data-icon_l_c_v="#bb2d53" data-identifier="elizabeth_newman_apr_2020" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-voting_frequency="85000" data-loader_show="true" data-site_id="5e151493943ec9fb10be9a79" data-voting_enabled="true"></span>
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+<!-- LikeBtn.com END -->
+<span class="follow">Vote for Elizabeth</span>
+
+    <div class="spacer"></div>
+    <mat-divider></mat-divider>
+    <div class="spacer"></div>
+
+    <!-- <div>Here's your theme:</div>
     <div>How has being out of school changed your life the most? 
     <span class="accent-text bold">No words. Just a picture</span>.</div>
     <div class="spacer"></div>
@@ -40,7 +142,7 @@
 
     <div class="note"><span class="accent-text bold">*</span>Please observe all current recommendations about social distancing. This is designed to be an 
         individual contest which does not require a gathering of people.</div>
-    <div class="spacer"></div>
+    <div class="spacer"></div> -->
 
   </div>
   

@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { EventsModule } from './pages/events/events.module';
 import { GalleriesModule } from './pages/galleries/galleries.module';
 import { AboutModule } from './pages/about/about.module';
+import { FeaturesModule } from './pages/features/features.module';
+import { FeaturesRoutingModule } from './pages/features/features-routing.module';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -24,7 +26,7 @@ import { StyleDemoComponent } from './pages/misc/style-demo/style-demo.component
     HomeComponent,
     FooterComponent,
     PayComponent,
-    StyleDemoComponent,
+    StyleDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +38,8 @@ import { StyleDemoComponent } from './pages/misc/style-demo/style-demo.component
     EventsModule,
     GalleriesModule,
     AboutModule,
+    FeaturesModule,
+    FeaturesRoutingModule,
     AppRoutingModule // Keep this last so its wildcard route (**) is chosen last, after all other routes fail
   ],
   providers: [],

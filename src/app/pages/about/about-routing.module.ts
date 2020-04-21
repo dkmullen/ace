@@ -5,7 +5,7 @@ import { BoardComponent } from './board/board.component';
 import { DonorsComponent } from './donors/donors.component';
 import { EmailComponent } from './email/email.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
-import {SupportComponent } from './support/support.component';
+import { SupportComponent } from './support/support.component';
 
 const routes: Routes = [
   { path: 'board', component: BoardComponent },

@@ -58,7 +58,7 @@ export class InstrumentalComponent {
     };
     console.log(post);
     this.http
-      .post<{ message: string }>(environment.instrumentalUrl, post)
+      .post<{ message: string }>(environment.shakespeareUrl, post)
       .subscribe(responseData => {
         this.waiting = false;
         formDirective.resetForm();

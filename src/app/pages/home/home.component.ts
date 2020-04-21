@@ -17,17 +17,40 @@ export class HomeComponent implements OnInit {
   ];
   cards = [
     {
-      title: 'Safer@Home Instrumental Contest',
-      subtitle: 'Vote now through April 17',
-      image: `assets/images/safe@home2020/instrument.jpg`,
-      alt: 'Girl playing a keyboard',
-      photocredit: 'Photo by Fitsum Admasu on Unsplash',
+      title: 'Safer@Home Photography Contest',
+      subtitle: 'Vote now through April 25',
+      image: `assets/images/safe@home2020/photography.jpg`,
+      alt: 'Woman photographing cherry blossoms',
+      photocredit: 'Photo by kazuend on Unsplash',
       message1: 'Students thru Grade 12',
       message2: 'Prizes: $150, $100',
       button1: {
-        buttontxt: 'Vote Now',
-        link: 'https://www.aceknox.com/events/instrumental',
+        buttontxt: 'Vote',
+        link: 'https://www.aceknox.com/events/photography',
         navMethod: 'internalWithPageLoad',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
+    },    
+    {
+      title: 'Interview: Actor Kate Arrington',
+      subtitle: 'of the Steppenwolf Theatre Company',
+      image: `assets/images/jay_kate.jpg`,
+      alt: '',
+      // photocredit: 'Photo by Jessica Pamp on Unsplash',
+      message1: 'The perspective and experience',
+      message2: 'of a seasoned professional',
+      button1: {
+        buttontxt: 'Watch',
+        link: '/features/kate-arrington',
+        navMethod: 'internal',
         disabled: false,
         display: true
       },
@@ -40,17 +63,40 @@ export class HomeComponent implements OnInit {
       }
     },
     {
-      title: 'Safer@Home Photography Contest',
-      subtitle: 'Entries due April 18, 2020',
-      image: `assets/images/safe@home2020/photography.jpg`,
-      alt: 'Woman photographing cherry blossoms',
-      photocredit: 'Photo by kazuend on Unsplash',
+      title: 'Safer@Home Shakespeare Contest',
+      subtitle: 'Entries due April 23, 2020',
+      image: `assets/images/safe@home2020/shakespeare.jpg`,
+      alt: 'Shakespeare chalk drawing',
+      photocredit: 'Photo by Jessica Pamp on Unsplash',
+      message1: 'Students thru Grade 12',
+      message2: '2 Prizes: $100 ea.',
+      button1: {
+        buttontxt: 'More',
+        link: '/events/shakespeare',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: 'Learn How',
+        link: 'shakes',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      }
+    },
+    {
+      title: 'Safer@Home Instrumental Contest',
+      subtitle: 'Thanks to all our participants',
+      image: `assets/images/safe@home2020/instrument.jpg`,
+      alt: 'Girl playing a keyboard',
+      photocredit: 'Photo by Fitsum Admasu on Unsplash',
       message1: 'Students thru Grade 12',
       message2: 'Prizes: $150, $100',
       button1: {
-        buttontxt: 'More',
-        link: '/events/photography',
-        navMethod: 'internal',
+        buttontxt: 'Results',
+        link: 'https://www.aceknox.com/events/instrumental',
+        navMethod: 'internalWithPageLoad',
         disabled: false,
         display: true
       },
