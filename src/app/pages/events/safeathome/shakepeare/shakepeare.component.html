@@ -1,0 +1,78 @@
+<div class="event_page-wrapper">
+    <div class="event_secondary-heading">ACE <span class="accent-text">Safer@Home</span> Shakespeare Contest</div>
+    <p>
+      <span class="bold">We've got some great actors here.</span> Here they are in the order we 
+      received them. Judges will pick two winners this weekend, each of whom will receive a 
+      <span class="bold accent-text">$100 gift card</span>.
+    </p>
+    <!-- <p id="voting" (click)="openDialog()">Trouble voting?</p> -->
+    <div class="spacer"></div>
+    <div class="accent-text bold">Find an artist</div>
+    <div id="chips">
+    <mat-chip-list>
+        <mat-chip 
+          color="primary"
+          selected
+          *ngFor="let contestant of videoArray"
+          (click)="scrollToElement(contestant.id)"
+        >
+        {{ contestant.name }}
+        </mat-chip>
+    </mat-chip-list>
+  </div>
+  <div class="spacer"></div>
+  
+  <!-- <p [style.margin-bottom.px]="20" class="announcement">
+    Judges' Prize: ???
+  </p> -->
+  <div class="video-container" id="bella">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/J5FDJzUE5eI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Bella Patterson</span> - 8th Grade - Tate's School</div>
+    <p style="font-size: small;">Emilia's monologue from <span class="bold">Othello</span></p>
+  
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+  
+  <div class="video-container" id="brycen">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ct219i8s_iA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Brycen Ritchie</span> - Senior - West High School</div>
+    <p style="font-size: small;">Emilia's monologue from <span class="bold">Othello</span></p>
+  
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="meredith">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/c5Aae4pUKe8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Meredith Bishop</span> - Junior - Grace Christian Academy</div>
+    <p style="font-size: small;">Emilia's monologue from <span class="bold">Othello</span></p>
+  
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="heather">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7EeijXvJlmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Heather Bohan</span> - Senior - Farragut High School</div>
+    <p style="font-size: small;">Emilia's monologue from <span class="bold">Othello</span></p>
+  
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="marian">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PINGq2heEp8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="artist"><span class="bold accent-text">Marian Vacaliuc</span> - Junior - Oak Ridge High School</div>
+    <p style="font-size: small;">Portia's monologue from <span class="bold">The Merchant of Venice</span></p>
+  
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+  
+  </div>

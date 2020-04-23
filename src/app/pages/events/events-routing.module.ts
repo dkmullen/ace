@@ -11,14 +11,14 @@ import { PhotographyComponent } from './safeathome/photography/photography.compo
 import { WritingComponent } from './safeathome/writing/writing.component';
 import { DanceComponent } from './safeathome/dance/dance.component';
 import { InstrumentalComponent } from './safeathome/instrumental/instrumental.component';
-
+import { ShakepeareComponent } from './safeathome/shakepeare/shakepeare.component';
 
 const routes: Routes = [
   { path: 'singing', component: SingingComponent },
   { path: 'acting', component: ActingComponent },
   { path: 'singer-songwriter', component: SingerSongwriterComponent },
   // { path: 'theatre-camp', component: Acting2020Component },
-  { path: 'shakespeare', component: InstrumentalComponent },
+  { path: 'shakespeare', component: ShakepeareComponent },
   { path: 'instrumental', component: InstrumentalContestComponent },
   { path: 'photography', component: PhotographyComponent },
   { path: 'writing', component: WritingComponent },

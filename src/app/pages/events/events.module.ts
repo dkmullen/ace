@@ -20,6 +20,7 @@ import { WritingComponent } from './safeathome/writing/writing.component';
 import { InputComponent } from '../../components/input/input.component';
 import { DanceComponent } from './safeathome/dance/dance.component';
 import { InstrumentalContestComponent } from './safeathome/instrumental/instrumental-contest/instrumental-contest.component';
+import { ShakepeareComponent } from './safeathome/shakepeare/shakepeare.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { InstrumentalContestComponent } from './safeathome/instrumental/instrume
     WritingComponent,
     DanceComponent,
     InputComponent,
-    InstrumentalContestComponent
+    InstrumentalContestComponent,
+    ShakepeareComponent
   ],
   entryComponents: [VotingDialog],
   imports: [
