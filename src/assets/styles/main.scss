@@ -60,6 +60,15 @@ ul {
 strong {
     font-weight: 700;
 }
+
+.smaller-text {
+  font-size: smaller;;
+}
+
+.left-justify {
+  text-align: left;
+  padding: 0 10px;
+}
 /////////////////////////////////////////////////
 
 // Theme settings
@@ -154,7 +163,7 @@ hr {
 }
 
 a, a:visited {
-    color: $primary;
+    color: $accent;
     font-weight: 500;
     text-decoration: underline;
 }
@@ -290,6 +299,10 @@ mat-chip {
   .event_secondary-heading {
     font-size: 2rem;
   }
+  .left-justify {
+    text-align: left;
+    padding: 0 80px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -304,7 +317,7 @@ mat-chip {
   }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 920px) {
   .mat-menu-item {
     font-size: 1.1rem !important;
   }

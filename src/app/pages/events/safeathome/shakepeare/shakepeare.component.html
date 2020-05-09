@@ -1,30 +1,42 @@
 <div class="event_page-wrapper">
     <div class="event_secondary-heading">ACE <span class="accent-text">Safer@Home</span> Shakespeare Contest</div>
     <p>
-      <span class="bold">We've got some great actors here.</span> Here they are in the order we 
-      received them. Judges will pick two winners this weekend, each of whom will receive a 
-      <span class="bold accent-text">$100 gift card</span>.
+      <span class="bold">RESULTS:</span> As promised, we have two winners, each of whom will receive a
+      <span class="bold accent-text">$100 gift card</span>. In addition, we picked two actors for Honorable
+      Mention who will each receive a  <span class="bold accent-text">$50 gift card</span>. To ALL our
+      contestants, <span class="bold">thank you so much for entering</span>. All of the entries showed talent 
+      and promise, and we appreciate your courage in taking part. Even if you didn't make it to this page, keep
+      acting, keep improving!
     </p>
-    <!-- <p id="voting" (click)="openDialog()">Trouble voting?</p> -->
+
+    <!-- <div class="spacer"></div> -->
+    <p class="announcement">
+      Here they are! (Click an actor to scroll to their video)
+    </p>
     <div class="spacer"></div>
-    <div class="accent-text bold">Find an artist</div>
-    <div id="chips">
-    <mat-chip-list>
-        <mat-chip 
-          color="primary"
-          selected
-          *ngFor="let contestant of videoArray"
-          (click)="scrollToElement(contestant.id)"
-        >
-        {{ contestant.name }}
-        </mat-chip>
-    </mat-chip-list>
-  </div>
+
+    <div fxLayout fxLayout.xs="column" fxLayoutGap="10px">
+      <div class="pointer" fxFlex="50%" (click)="scrollToElement('bella')">
+        <img src="assets/images/safe@home2020/s-a.jpg">
+        <div class="smaller-text label">Winner: <span class="accent-text">Bella Patterson</span></div>
+      </div>
+      <div class="pointer" fxFlex="50%" (click)="scrollToElement('heather')">
+        <img src="assets/images/safe@home2020/s-1.jpg">
+        <div class="smaller-text label">Winner: <span class="accent-text">Heather Bohan</span></div>
+      </div>
+    </div>
+    <div fxLayout fxLayout.xs="column" fxLayoutGap="10px">
+      <div class="pointer" fxFlex="50%" (click)="scrollToElement('meredith')">
+        <img src="assets/images/safe@home2020/sr-a.jpg">
+        <div class="smaller-text label">Honorable Mention: <span class="accent-text">Meredith Bisop</span></div>
+      </div>
+      <div class="pointer" fxFlex="50%" (click)="scrollToElement('marian')">
+        <img src="assets/images/safe@home2020/sr-1.jpg">
+        <div class="smaller-text label">Honorable Mention: <span class="accent-text">Marian Vacaliuc</span></div>
+      </div>
+    </div>
   <div class="spacer"></div>
   
-  <!-- <p [style.margin-bottom.px]="20" class="announcement">
-    Judges' Prize: ???
-  </p> -->
   <div class="video-container" id="bella">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/J5FDJzUE5eI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
@@ -34,17 +46,17 @@
   <div class="spacer"></div>
   <mat-divider></mat-divider>
   <div class="spacer"></div>
-  
-  <div class="video-container" id="brycen">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ct219i8s_iA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <div class="video-container" id="heather">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XPVQ_k98RqQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-  <div class="artist"><span class="bold accent-text">Brycen Ritchie</span> - Senior - West High School</div>
+  <div class="artist"><span class="bold accent-text">Heather Bohan</span> - Senior - Farragut High School</div>
     <p style="font-size: small;">Emilia's monologue from <span class="bold">Othello</span></p>
   
   <div class="spacer"></div>
   <mat-divider></mat-divider>
   <div class="spacer"></div>
-
+  
   <div class="video-container" id="meredith">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/c5Aae4pUKe8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
@@ -55,18 +67,8 @@
   <mat-divider></mat-divider>
   <div class="spacer"></div>
 
-  <div class="video-container" id="heather">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/7EeijXvJlmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <div class="artist"><span class="bold accent-text">Heather Bohan</span> - Senior - Farragut High School</div>
-    <p style="font-size: small;">Emilia's monologue from <span class="bold">Othello</span></p>
-  
-  <div class="spacer"></div>
-  <mat-divider></mat-divider>
-  <div class="spacer"></div>
-
   <div class="video-container" id="marian">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/PINGq2heEp8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BE3F9eTkuGc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div class="artist"><span class="bold accent-text">Marian Vacaliuc</span> - Junior - Oak Ridge High School</div>
     <p style="font-size: small;">Portia's monologue from <span class="bold">The Merchant of Venice</span></p>

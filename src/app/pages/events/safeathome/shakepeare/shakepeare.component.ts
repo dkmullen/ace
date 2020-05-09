@@ -12,7 +12,6 @@ export class ShakepeareComponent implements OnInit {
   ngOnInit() {
     this.shuffleArray([
       {name: 'Bella Patterson', id: 'bella'},
-      {name: 'Brycen Ritchie', id: 'brycen'},
       {name: 'Meredith Bishop', id: 'meredith'},
       {name: 'Heather Bohan', id: 'heather'},
       {name: 'Marian Vacaliuc', id: 'marian'},

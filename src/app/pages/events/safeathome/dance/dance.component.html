@@ -1,9 +1,27 @@
 <div class="event_page-wrapper">
     <div class="event_secondary-heading">ACE <span class="accent-text">Safer@Home</span> Dance Contest</div> 
-    <p [style.margin-bottom.px]="20" class="announcement">
+    <!-- <p [style.margin-bottom.px]="20" class="announcement">
       For students through grade 12 in Knox County, Tennessee and surrounding counties. 
-    </p>
-    <div>
+    </p> -->
+    <p>
+        We had only <span class="bold">one entry</span> to our dance competition, but it is a good one! We congratulate Addie
+        and thank her for this great entry and for her excellent piano piece in our <span><a href="https://www.aceknox.com/events/instrumental">Instrumental Contest</a></span>.
+      </p>
+      <div class="spacer"></div>
+
+
+    <p [style.margin-bottom.px]="20" class="announcement">
+        Judges' Prize: Addie Peterson - $150
+      </p>
+      <div class="video-container" id="addie">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-xzOQFCTlWs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+      <div class="artist"><span class="bold accent-text">Addie Peterson</span> - Junior - Grace Christian Academy</div>
+      
+      <div class="spacer"></div>
+      <mat-divider></mat-divider>
+      <div class="spacer"></div>
+    <!-- <div>
         <img src="assets/images/safe@home2020/dance.jpg" alt="A young man dancing">
     </div>
     <div class="photo-credit">Photo by Marc A. Sporys on Unsplash</div>
@@ -64,13 +82,13 @@
                     <mat-error *ngIf="signUpForm.get('userData.email').invalid">Enter a valid email address</mat-error>
                 </mat-form-field>
             </div>
-            <!-- <div class="form-group"> -->
-                <mat-form-field class="wide">
+             <div class="form-group"> -->
+                <!-- <mat-form-field class="wide">
                     <textarea matInput type="textarea" id="link" placeholder="Link to your video" formControlName="link" required></textarea>
-                </mat-form-field>
+                </mat-form-field> -->
             <!-- </div> -->
 
-        </div>
+        <!-- </div>
         <div class="spacer"></div>
         <button mat-flat-button color="primary" type="submit" [disabled]="!signUpForm.valid || waiting">SUBMIT</button>
         <div class='progress-bar' *ngIf="waiting">
@@ -85,7 +103,7 @@
 
     <div class="note"><span class="accent-text bold">*</span>Please observe all current recommendations about social distancing. This is designed to be an 
         individual contest which does not require a gathering of people.</div>
-    <div class="spacer"></div>
+    <div class="spacer"></div> -->
 
   </div>
   

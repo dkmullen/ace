@@ -8,6 +8,7 @@
     <mat-menu #topLevel="matMenu">
       <button mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >Home</button>
       <button mat-menu-item [matMenuTriggerFor]="auditions">Events</button>
+      <button mat-menu-item [matMenuTriggerFor]="features">Features</button>
       <button mat-menu-item [matMenuTriggerFor]="galleries">Galleries</button>
       <button mat-menu-item [matMenuTriggerFor]="about">About ACE</button>
     </mat-menu>
@@ -16,6 +17,7 @@
       <div id="full-menu">
         <button mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >Home</button>
         <button mat-menu-item [matMenuTriggerFor]="auditions">Events</button>
+        <button mat-menu-item [matMenuTriggerFor]="features">Features</button>
         <button mat-menu-item [matMenuTriggerFor]="galleries">Galleries</button>
         <button mat-menu-item [matMenuTriggerFor]="about">About ACE</button>
       </div>
@@ -32,6 +34,10 @@
       <button mat-menu-item [routerLink]="['/events/acting']"routerLinkActive="router-link-active">Acting Awards</button>
       <button mat-menu-item [routerLink]="['/events/singer-songwriter']"routerLinkActive="router-link-active">Singer-SongWriter Contest</button>
       <!-- <button mat-menu-item [routerLink]="['/events/battle-of-the-bands']"routerLinkActive="router-link-active">Battle of the Bands</button> -->
+    </mat-menu>
+
+    <mat-menu #features="matMenu">
+      <button mat-menu-item [routerLink]="['/features/videos']"routerLinkActive="router-link-active">Interviews</button>
     </mat-menu>
 
     <mat-menu #galleries="matMenu">

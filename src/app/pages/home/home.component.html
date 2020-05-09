@@ -1,10 +1,10 @@
 <mat-card>
   <div class="event_page-wrapper">
-    <div class="event_secondary-heading">ACE <span class="accent-text">Safer@Home</span> Arts Contest</div> 
+    <!-- <div class="event_secondary-heading">ACE <span class="accent-text">Safer@Home</span> Arts Contest</div> 
   <p [style.margin-bottom.px]="20" class="announcement">
     For Knoxville area students. Be safe, create art,
     and have a chance to win prizes. 
-  </p>
+  </p> -->
 </div>
 <div fxLayout="row wrap" fxLayout.sm="column"
   fxLayout.xs="column" fxLayoutGap="20px"
@@ -25,7 +25,7 @@
     </mat-card-content>
     <mat-card-actions>
       <button *ngIf="item.button1.display" mat-flat-button color="accent" [disabled]=item.button1.disabled
-        (click)="navigate(item.button1.link, item.button1.navMethod)">{{item.button1.buttontxt}}</button>
+        (click)="navigate(item.button1.link, item.button1.navMethod, item.button1.fragment)">{{item.button1.buttontxt}}</button>
       <button style="margin-left: 5px" *ngIf="item.button2.display" mat-flat-button color="primary" class="second-btn"
         (click)="navigate(item.button2.link, item.button2.navMethod)">{{item.button2.buttontxt}}</button>
     </mat-card-actions>

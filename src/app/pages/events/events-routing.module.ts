@@ -12,7 +12,9 @@ import { WritingComponent } from './safeathome/writing/writing.component';
 import { DanceComponent } from './safeathome/dance/dance.component';
 import { InstrumentalComponent } from './safeathome/instrumental/instrumental.component';
 import { ShakepeareComponent } from './safeathome/shakepeare/shakepeare.component';
-
+import { IsabellaFransiscoComponent } from './safeathome/writing/isabella-fransisco/isabella-fransisco.component';
+import { ElizabethNewmanComponent } from './safeathome/writing/elizabeth-newman/elizabeth-newman.component';
+ 
 const routes: Routes = [
   { path: 'singing', component: SingingComponent },
   { path: 'acting', component: ActingComponent },
@@ -21,6 +23,8 @@ const routes: Routes = [
   { path: 'shakespeare', component: ShakepeareComponent },
   { path: 'instrumental', component: InstrumentalContestComponent },
   { path: 'photography', component: PhotographyComponent },
+  { path: 'writing/first', component: IsabellaFransiscoComponent },
+  { path: 'writing/second', component: ElizabethNewmanComponent },
   { path: 'writing', component: WritingComponent },
   { path: 'dance', component: DanceComponent }
 ];

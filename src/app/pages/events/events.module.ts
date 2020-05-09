@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../../modules/material.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { EventsRoutingModule } from './events-routing.module';
 import { SingingComponent } from './singing/singing.component';
@@ -21,6 +22,8 @@ import { InputComponent } from '../../components/input/input.component';
 import { DanceComponent } from './safeathome/dance/dance.component';
 import { InstrumentalContestComponent } from './safeathome/instrumental/instrumental-contest/instrumental-contest.component';
 import { ShakepeareComponent } from './safeathome/shakepeare/shakepeare.component';
+import { IsabellaFransiscoComponent } from './safeathome/writing/isabella-fransisco/isabella-fransisco.component';
+import { ElizabethNewmanComponent } from './safeathome/writing/elizabeth-newman/elizabeth-newman.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,9 @@ import { ShakepeareComponent } from './safeathome/shakepeare/shakepeare.componen
     DanceComponent,
     InputComponent,
     InstrumentalContestComponent,
-    ShakepeareComponent
+    ShakepeareComponent,
+    IsabellaFransiscoComponent,
+    ElizabethNewmanComponent
   ],
   entryComponents: [VotingDialog],
   imports: [
@@ -48,6 +53,7 @@ import { ShakepeareComponent } from './safeathome/shakepeare/shakepeare.componen
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
+    FlexLayoutModule,
     HttpClientModule
   ]
 })
