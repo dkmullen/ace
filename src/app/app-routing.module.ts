@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { PayComponent } from './pages/misc/pay/pay.component';
 import { StyleDemoComponent } from './pages/misc/style-demo/style-demo.component';
-import { ShakespeareComponent } from './pages/features/shakespeare/shakespeare.component';
+import { FormComponent } from './components/form/form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,8 +12,8 @@ const routes: Routes = [
   { path: 'galleries', loadChildren: () => import ('./pages/galleries/galleries.module').then((m) => m.GalleriesModule)},
   { path: 'features', loadChildren: () => import ('./pages/features/features.module').then((m) => m.FeaturesModule)},
   { path: 'pay', component: PayComponent },
-  { path: 'shakes', component: ShakespeareComponent },
   { path: 'style-demo', component: StyleDemoComponent },
+  { path: 'form', component: FormComponent },
   { path: '**', redirectTo: ''}
 ];
 

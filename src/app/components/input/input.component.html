@@ -2,7 +2,8 @@
     <input 
         matInput
         class="input"
-        [formControl]="control"
+        [type]="inputType"
+        [formControlName]="control"
         [placeholder]="placeholder"
         [ngClass]="{ 'is-danger': showErrors()}"    
     />

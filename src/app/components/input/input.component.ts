@@ -7,6 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent {
+  @Input() type: string;
   @Input() control: FormControl;
   @Input() placeholder: string;
 

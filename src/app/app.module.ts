@@ -18,6 +18,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { PayComponent } from './pages/misc/pay/pay.component';
 import { StyleDemoComponent } from './pages/misc/style-demo/style-demo.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { StyleDemoComponent } from './pages/misc/style-demo/style-demo.component
     HomeComponent,
     FooterComponent,
     PayComponent,
-    StyleDemoComponent
+    StyleDemoComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

@@ -4,9 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { VideosComponent } from './videos/videos.component';
 
 const routes: Routes = [
-  { path: 'kate-arrington', component: VideosComponent },
   { path: 'videos', component: VideosComponent },
-
 ]
 
 @NgModule({
