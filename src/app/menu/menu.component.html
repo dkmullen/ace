@@ -29,11 +29,10 @@
     </mat-menu>
 
     <mat-menu #auditions="matMenu">
-      <!-- <button mat-menu-item [routerLink]="['/events/theatre-camp']"routerLinkActive="router-link-active">Theatre Camp for Kids</button> -->
       <button mat-menu-item [routerLink]="['/events/singing']"routerLinkActive="router-link-active">Singing Awards</button>
       <button mat-menu-item [routerLink]="['/events/acting']"routerLinkActive="router-link-active">Acting Awards</button>
       <button mat-menu-item [routerLink]="['/events/singer-songwriter']"routerLinkActive="router-link-active">Singer-SongWriter Contest</button>
-      <!-- <button mat-menu-item [routerLink]="['/events/battle-of-the-bands']"routerLinkActive="router-link-active">Battle of the Bands</button> -->
+      <button mat-menu-item [matMenuTriggerFor]="safer">Safer@Home Contests</button>
     </mat-menu>
 
     <mat-menu #features="matMenu">
@@ -54,5 +53,12 @@
       <button mat-menu-item [routerLink]="['/about/email']" routerLinkActive="router-link-active" >Email Newsletter</button>
     </mat-menu>
 
+    <mat-menu #safer="matMenu">
+      <button mat-menu-item [routerLink]="['/events/instrumental']" routerLinkActive="router-link-active">Instrumental Contest</button>
+      <button mat-menu-item [routerLink]="['/events/photography']" routerLinkActive="router-link-active">Photography Contest</button>
+      <button mat-menu-item [routerLink]="['/events/shakespeare']" routerLinkActive="router-link-active" >Shakespeare</button>
+      <button mat-menu-item [routerLink]="['/events/writing']" routerLinkActive="router-link-active" >Writing Contest</button>
+      <button mat-menu-item [routerLink]="['/events/dance']" routerLinkActive="router-link-active" >Dance Contest</button>
+    </mat-menu>
 
 
