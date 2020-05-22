@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'events', loadChildren: () => import ('./pages/events/events.module').then((m) => m.EventsModule)},
   { path: 'galleries', loadChildren: () => import ('./pages/galleries/galleries.module').then((m) => m.GalleriesModule)},
   { path: 'features', loadChildren: () => import ('./pages/features/features.module').then((m) => m.FeaturesModule)},
+  { path: 'coaching', loadChildren: () => import ('./pages/coaching/coaching.module').then((m) => m.CoachingModule)},
   { path: 'pay', component: PayComponent },
   { path: 'style-demo', component: StyleDemoComponent },
   { path: 'form', component: FormComponent },

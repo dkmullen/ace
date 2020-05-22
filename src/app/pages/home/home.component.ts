@@ -18,6 +18,30 @@ export class HomeComponent implements OnInit {
   cards = [
     {
       title: 'NEW: ACE Interviews',
+      subtitle: 'Actor Chelsea LeValley',
+      image: `assets/images/c_levalley.jpg`,
+      alt: 'Actor Chelsea LeValley',
+      photocredit: '',
+      message1: 'A successful Seattle-based actor',
+      message2: 'Career advice and the need for diverse skills',
+      button1: {
+        buttontxt: 'Watch',
+        link: '/features/videos',
+        fragment: 'chelsea_levalley',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
+    }, 
+    {
+      title: 'NEW: ACE Interviews',
       subtitle: 'Actor Kim Martin-Cotten',
       image: `assets/images/kim-martin-cotten.jpg`,
       alt: 'Actor Kim Martin-Cotten',
