@@ -5,7 +5,7 @@ import { CoachingComponent } from './coaching.component';
 import { ASmithComponent } from './a-smith/a-smith.component';
 import { MLytleComponent } from './m-lytle/m-lytle.component';
 import { CLeValleyComponent } from './c-le-valley/c-le-valley.component';
-import { CLucianComponent } from './c-lucian/c-lucian.component';
+import { CLucienComponent } from './c-lucien/c-lucien.component';
 
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'anna-smith', component: ASmithComponent },
   { path: 'matt-lytle', component: MLytleComponent },
   { path: 'chelsea-levalley', component: CLeValleyComponent },
-  { path: 'courtney-lucian', component: CLucianComponent },      
+  { path: 'coaching/courtney-lucien', component: CLucienComponent },      
 ];
 
 @NgModule({

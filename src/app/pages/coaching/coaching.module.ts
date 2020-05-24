@@ -7,7 +7,7 @@ import { CoachingComponent } from './coaching.component';
 import { ASmithComponent } from './a-smith/a-smith.component';
 import { MLytleComponent } from './m-lytle/m-lytle.component';
 import { CLeValleyComponent } from './c-le-valley/c-le-valley.component';
-import { CLucianComponent } from './c-lucian/c-lucian.component';
+import { CLucienComponent } from './c-lucien/c-lucien.component';
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import { CLucianComponent } from './c-lucian/c-lucian.component';
     ASmithComponent,
     MLytleComponent,
     CLeValleyComponent,
-    CLucianComponent
+    CLucienComponent
   ],
   imports: [
     CommonModule,

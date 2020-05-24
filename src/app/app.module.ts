@@ -10,9 +10,7 @@ import { EventsModule } from './pages/events/events.module';
 import { GalleriesModule } from './pages/galleries/galleries.module';
 import { AboutModule } from './pages/about/about.module';
 import { FeaturesModule } from './pages/features/features.module';
-import { FeaturesRoutingModule } from './pages/features/features-routing.module';
 import { CoachingModule } from './pages/coaching/coaching.module';
-// import { CoachingRoutingModule } from './pages/coaching/coaching-routing.module';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -44,8 +42,6 @@ import { FormComponent } from './components/form/form.component';
     AboutModule,
     FeaturesModule,
     CoachingModule,
-    FeaturesRoutingModule,
-    // CoachingRoutingModule,
     AppRoutingModule // Keep this last so its wildcard route (**) is chosen last, after all other routes fail
   ],
   providers: [],

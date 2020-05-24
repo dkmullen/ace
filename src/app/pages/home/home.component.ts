@@ -18,6 +18,78 @@ export class HomeComponent implements OnInit {
   cards = [
     {
       title: 'NEW: ACE Interviews',
+      subtitle: 'Musician Olivia DaPonte',
+      image: `assets/images/olivia_daponte.jpg`,
+      alt: 'Musician Olivia DaPonte',
+      photocredit: '',
+      message1: 'Knoxville-area musician',
+      message2: 'Balancing art and learning',
+      button1: {
+        buttontxt: 'Watch',
+        link: '/features/videos',
+        fragment: 'oliva-daponte',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
+    },
+    {
+      title: 'NEW: ACE Interviews',
+      subtitle: 'Actor Anna Catherine Smith',
+      image: `assets/images/anna-smith.jpg`,
+      alt: 'Actor Anna Catherine Smith',
+      photocredit: '',
+      message1: 'ACE Awards alum and acting professional',
+      message2: 'Getting started in theatre',
+      button1: {
+        buttontxt: 'Watch',
+        link: '/features/videos',
+        fragment: 'anna-smith',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
+    },
+    {
+      title: 'NEW: ACE Interviews',
+      subtitle: 'Actor/Professor Jed Diamond',
+      image: `assets/images/j_diamond.jpg`,
+      alt: 'Jed Diamond',
+      photocredit: '',
+      message1: 'University of Tennessee Professor and Actor',
+      message2: 'Invaluable advice for young actors',
+      button1: {
+        buttontxt: 'Watch',
+        link: '/features/videos',
+        fragment: 'jed diamond',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
+    },
+    {
+      title: 'NEW: ACE Interviews',
       subtitle: 'Actor Chelsea LeValley',
       image: `assets/images/c_levalley.jpg`,
       alt: 'Actor Chelsea LeValley',
@@ -27,7 +99,7 @@ export class HomeComponent implements OnInit {
       button1: {
         buttontxt: 'Watch',
         link: '/features/videos',
-        fragment: 'chelsea_levalley',
+        fragment: 'chelsea-levalley',
         navMethod: 'internal',
         disabled: false,
         display: true
