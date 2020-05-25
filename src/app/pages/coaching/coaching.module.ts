@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { CoachingRoutingModule } from './coaching-routing.module';
 
@@ -20,7 +21,8 @@ import { CLucienComponent } from './c-lucien/c-lucien.component';
   ],
   imports: [
     CommonModule,
-    CoachingRoutingModule
+    CoachingRoutingModule,
+    FlexLayoutModule
   ]
 })
 export class CoachingModule { }
