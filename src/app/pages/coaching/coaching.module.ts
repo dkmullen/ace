@@ -9,6 +9,7 @@ import { ASmithComponent } from './a-smith/a-smith.component';
 import { MLytleComponent } from './m-lytle/m-lytle.component';
 import { CLeValleyComponent } from './c-le-valley/c-le-valley.component';
 import { CLucienComponent } from './c-lucien/c-lucien.component';
+import { JApkingComponent } from './j-apking/j-apking.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CLucienComponent } from './c-lucien/c-lucien.component';
     ASmithComponent,
     MLytleComponent,
     CLeValleyComponent,
-    CLucienComponent
+    CLucienComponent,
+    JApkingComponent
   ],
   imports: [
     CommonModule,
