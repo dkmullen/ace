@@ -28,3 +28,26 @@ img.img-chelsea, img.img-anna, img.img-jay {
         margin: 0 auto;
     }
 }
+
+mat-card {
+    max-width: 500px;
+    margin-bottom: 15px;
+    background: rgb(226, 226, 226);
+}
+
+.name {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.ace {
+    position: relative;
+    top: 5px;
+    margin-right: 15px;
+}
+
+.description {
+    font-size: 1.3rem;
+    margin: 0 auto 1.2rem auto;
+    width: 85%;
+}

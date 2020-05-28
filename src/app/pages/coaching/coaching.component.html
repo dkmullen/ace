@@ -1,5 +1,37 @@
-<div [routerLink]="['anna-smith']">Anna</div>
-<div [routerLink]="['chelsea-levalley']">Chelsea</div>
-<div [routerLink]="['matt-lytle']">Matt</div>
-<div [routerLink]="['courtney-lucien']">Courtney</div>
-<div [routerLink]="['jay-apking']">Jay</div>
+<div class="gallery_page-wrapper">
+    <div class="event_main-heading">ACE <span class="accent-text">COACHING</span></div>
+    <p class="description">
+        I'm baby poutine wayfarers unicorn heirloom. Kale chips 3 wolf moon hexagon thundercats. Letterpress seitan venmo organic. Blog neutra readymade authentic, iPhone four loko irony taiyaki single-origin coffee. Authentic ramps selvage retro craft beer squid.
+        Cloud bread bitters occupy godard. Celiac woke tote bag vexillologist prism. Before they sold out fixie snackwave, put a bird on it pour-over +1 af pork belly drinking vinegar bespoke kitsch letterpress. 
+        <span class="accent-text bold">Click on any coach to learn more</span>.
+    </p>
+    <div class="row"
+      fxLayout="row"
+      fxLayout.xs="column"
+      fxLayoutGap="20px"
+      fxLayoutAlign="center start">
+  
+      <div class="column" fxLayout="column" fxFlex="50">
+        <mat-card class="pointer" *ngFor="let item of coaches; index as i" class="pointer" 
+            [routerLink]="[item.link]">
+            <img mat-card-image src="{{item.photo}}">
+            <p class="name">
+                <img class="ace" src="/assets/images/ace.png" height="35px" width="auto">
+                <span class="accent-text">{{item.firstname | uppercase}}</span> {{item.lastname}}
+            </p>
+        </mat-card>
+      </div>
+      <div class="column" fxLayout="column" fxFlex="50">
+        <mat-card class="pointer" *ngFor="let item of coaches2; index as i" class="pointer" 
+            [routerLink]="[item.link]">
+            <img mat-card-image src="{{item.photo}}">
+            <p class="name">
+                <img class="ace" src="/assets/images/ace.png" height="35px" width="auto">
+                <span class="accent-text">{{item.firstname | uppercase}}</span> {{item.lastname}}
+            </p>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+

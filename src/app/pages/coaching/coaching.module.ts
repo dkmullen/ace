@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../../modules/material.module';
+
 
 import { CoachingRoutingModule } from './coaching-routing.module';
 
@@ -24,7 +26,8 @@ import { JApkingComponent } from './j-apking/j-apking.component';
   imports: [
     CommonModule,
     CoachingRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MaterialModule
   ]
 })
 export class CoachingModule { }
