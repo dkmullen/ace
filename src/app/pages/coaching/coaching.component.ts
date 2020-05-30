@@ -10,7 +10,7 @@ export class CoachingComponent implements OnInit {
   coaches = [
     {firstname: 'Anna', lastname: 'Smith', link: 'anna-smith', photo: `${this.photoLink}anna_smith2.jpg`},
     {firstname: 'Courtney', lastname: 'Lucien', link: 'courtney-lucien', photo: `${this.photoLink}courtney_lucien.jpg`},
-    {firstname: 'Chelsea', lastname: 'LeValley', link: 'chelsea-levalley', photo: `${this.photoLink}chelsea_levalley2.jpg`},
+    // {firstname: 'Chelsea', lastname: 'LeValley', link: 'chelsea-levalley', photo: `${this.photoLink}chelsea_levalley2.jpg`},
   ]
   coaches2 = [
     {firstname: 'Matt', lastname: 'Lytle', link: 'matt-lytle', photo: `${this.photoLink}matt_lytle2.jpg`},
@@ -31,6 +31,6 @@ export class CoachingComponent implements OnInit {
         [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
-}
+  }
 
 }
