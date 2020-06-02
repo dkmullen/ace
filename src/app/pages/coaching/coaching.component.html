@@ -1,58 +1,53 @@
 <div class="gallery_page-wrapper">
     <div class="event_main-heading">ACE <span class="accent-text">COACHES & MENTORS</span></div>
     <div class="description">
-      <p>The various teachers you see on this page have a wide background in performance education and expertise. 
-      We have combined to perform in almost every state and in multiple countries, and based on our knowledge, 
-      we now join forces to develop a teaching formula that works perfectly for any audition including monologues, 
-      songs or readings.</p>
-
       <p>
-        First and foremost, we will help you pick the pieces that are right for YOU, or help you with the specific 
-        pieces you have been given to prepare.
+        The various teachers you see on this page have a wide background in <span class="accent-text bold">performance, education, and expertise</span>. 
+        We have combined to perform in almost every state and in multiple countries, and based on our <span class="accent-text bold">knowledge</span>, 
+        we now join forces to develop a <span class="accent-text bold">teaching formula</span> that works perfectly for any audition 
+        including <span class="accent-text bold">monologues, songs or readings</span>.
       </p>
-      <p>
-        We then delve into our formula which include the understanding, the focus, the objective, and the 
-        tactics of YOU in the piece.
-      </p>
-      <p>
-        We then add the layers of character including the who, where, when and how that will make your piece stand out.
-      </p>
-      <p>
-        Finally, we turn our attention on the rules of entering an audition, auditioning, and leaving the audition. 
-      </p>
-      <p>
-        This formula, which has come from decades of auditioning, directing and coaching, will give you the complete preparation you need to unleash your talent in an audition.
-      </p>      
-      <p>
-      We have seen and made many mistakes in our careers. We know what directors and colleges want to see. Let us help you perfect this important skill of auditioning. <span class="accent-text bold">Click on any coach to learn more</span>.
-      </p>      
+   
     </div>
-    <div class="row"
-      fxLayout="row"
-      fxLayout.xs="column"
-      fxLayoutGap="20px"
-      fxLayoutAlign="center start">
-  
-      <div class="column" fxLayout="column" fxFlex="50">
-        <mat-card class="pointer" *ngFor="let item of coaches; index as i" class="pointer" 
-            [routerLink]="[item.link]">
-            <img mat-card-image src="{{item.photo}}">
-            <p class="name">
-                <img class="ace" src="/assets/images/ace.png" height="35px" width="auto">
-                <span class="accent-text">{{item.firstname | uppercase}}</span> {{item.lastname}}
-            </p>
-        </mat-card>
-      </div>
-      <div class="column" fxLayout="column" fxFlex="50">
-        <mat-card class="pointer" *ngFor="let item of coaches2; index as i" class="pointer" 
-            [routerLink]="[item.link]">
-            <img mat-card-image src="{{item.photo}}">
-            <p class="name">
-                <img class="ace" src="/assets/images/ace.png" height="35px" width="auto">
-                <span class="accent-text">{{item.firstname | uppercase}}</span> {{item.lastname}}
-            </p>
-        </mat-card>
-      </div>
+
+    <div id="coaches-grid">
+      <mat-card class="card pointer" *ngFor="let item of coaches; index as i"
+          [routerLink]="[item.link]">
+          <img class="coach" mat-card-image src="{{item.photo}}">
+          <img class="ace" src="/assets/images/ace.png" height="auto" width="15%">
+          <p class="name">
+              <span class="accent-text">{{item.firstname | uppercase}}<br /></span> {{item.lastname}}
+          </p>
+      </mat-card>
+    </div>
+
+    <h5><span class="accent-text bold">Click on any coach to learn more</span></h5>
+    <div class="spacer"></div>
+    <div class="description">
+      <p>
+        <span class="accent-text bold">First and foremost</span>, we will help you pick the pieces that are right for 
+        <span class="accent-text bold">YOU</span>, or help 
+        you with the specific pieces you have been given to prepare.
+      </p>
+      <p>
+        We then delve into our <span class="accent-text bold">formula</span> which includes the <span class="accent-text bold">understanding</span>, 
+        the <span class="accent-text bold">focus</span>, the <span class="accent-text bold">objective</span>, and the <span class="accent-text bold">tactics</span> 
+        of <span class="accent-text bold">YOU</span> in the piece.
+      </p>
+      <p>
+        We then add the layers of character including the <span class="accent-text bold">who, where, when and how</span> that will make your piece stand out.
+      </p>
+      <p>
+        Finally, we turn our attention on the <span class="accent-text bold">guidelines</span> of entering the audition, auditioning, and leaving the audition. 
+      </p>
+      <p>
+        This <span class="accent-text bold">formula</span>, which has come from decades of auditioning, directing and coaching, will give you the 
+        <span class="accent-text bold">complete preparation</span> you need to unleash your talent in an audition.
+      </p>      
+      <p>
+      We have seen and made many mistakes in our careers. We know what directors and colleges want to see. Let us help you 
+      <span class="accent-text bold">perfect this important skill of auditioning</span>.
+      </p>      
     </div>
   </div>
 
