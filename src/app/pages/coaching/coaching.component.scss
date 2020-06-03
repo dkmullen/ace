@@ -68,3 +68,48 @@ mat-card {
         bottom: 25px;
     }
 }
+
+.jay-class-grid {
+    display: grid;
+    grid-row-gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    grid-template-columns: 55% 45%;
+    grid-template-areas: "header header"
+                         "weekly dates-times";
+}
+
+.jay-header {
+    grid-area: header;
+}
+
+.jay-weekly {
+    grid-area: weekly;
+    text-align: left;
+    padding: 10px;
+    padding-right: 50px;
+    border-right: 1px solid black;
+}
+
+.jay-dates-times {
+    grid-area: dates-times;
+    padding: 10px;
+}
+
+.register {
+    margin-top: 10px;
+}
+
+@media (max-width: 649px) {
+    .jay-class-grid {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header"
+                             "weekly"
+                             "dates-times"
+    }
+    .jay-weekly {
+        border-right: unset;
+        background: lightgrey;
+    }
+}
