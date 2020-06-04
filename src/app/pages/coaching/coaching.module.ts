@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../../modules/material.module';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { CoachingRoutingModule } from './coaching-routing.module';
 
@@ -12,6 +12,7 @@ import { MLytleComponent } from './m-lytle/m-lytle.component';
 import { CLeValleyComponent } from './c-le-valley/c-le-valley.component';
 import { CLucienComponent } from './c-lucien/c-lucien.component';
 import { JApkingComponent } from './j-apking/j-apking.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -21,13 +22,16 @@ import { JApkingComponent } from './j-apking/j-apking.component';
     MLytleComponent,
     CLeValleyComponent,
     CLucienComponent,
-    JApkingComponent
+    JApkingComponent,
+    CheckoutComponent
   ],
   imports: [
     CommonModule,
     CoachingRoutingModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class CoachingModule { }
