@@ -100,6 +100,12 @@ mat-card {
     margin-top: 10px;
 }
 
+.video-intro {
+    max-width: 500px;
+    margin: 1rem auto;
+    font-size: smaller;
+}
+
 @media (max-width: 649px) {
     .jay-class-grid {
         grid-template-columns: 100%;
@@ -111,5 +117,13 @@ mat-card {
     .jay-weekly {
         border-right: unset;
         background: lightgrey;
+    }
+}
+
+
+@media (max-width: 585px) {
+    iframe {
+        max-width: 80%;
+        max-height: 80%;
     }
 }
