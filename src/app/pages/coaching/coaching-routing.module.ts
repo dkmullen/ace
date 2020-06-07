@@ -8,7 +8,7 @@ import { CLeValleyComponent } from './c-le-valley/c-le-valley.component';
 import { CLucienComponent } from './c-lucien/c-lucien.component';
 import { JApkingComponent } from './j-apking/j-apking.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-
+import { PayComponent } from './pay/pay.component';
 
 const routes: Routes = [
   { path: 'coaching', component: CoachingComponent },
@@ -17,7 +17,8 @@ const routes: Routes = [
   { path: 'chelsea-levalley', component: CLeValleyComponent },
   { path: 'courtney-lucien', component: CLucienComponent },      
   { path: 'jay-apking', component: JApkingComponent },
-  { path: 'checkout', component: CheckoutComponent }
+  { path: 'checkout', component: CheckoutComponent },
+  { path: 'pay', component: PayComponent }
 ];
 
 @NgModule({

@@ -13,6 +13,7 @@ import { CLeValleyComponent } from './c-le-valley/c-le-valley.component';
 import { CLucienComponent } from './c-lucien/c-lucien.component';
 import { JApkingComponent } from './j-apking/j-apking.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { PayComponent } from './pay/pay.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     CLeValleyComponent,
     CLucienComponent,
     JApkingComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    PayComponent
   ],
   imports: [
     CommonModule,
