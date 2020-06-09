@@ -14,7 +14,7 @@
       <mat-card class="card pointer" *ngFor="let item of coaches; index as i"
           [routerLink]="[item.link]">
           <img class="coach" mat-card-image src="{{item.photo}}">
-          <img class="ace" src="/assets/images/ace.png" height="auto" width="15%">
+          <!-- <img class="ace" src="/assets/images/ace.png" height="auto" width="15%"> -->
           <p class="name">
               <span class="accent-text">{{item.firstname | uppercase}}<br /></span> {{item.lastname}}
           </p>

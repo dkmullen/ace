@@ -2,11 +2,11 @@
     <div class="container">
     <div class="row">
       <div>
-        <div class="event_secondary-heading">{{ classTitle }}</div>
-        <div>{{ classTeacher }}</div>
+        <div class="event_secondary-heading">{{ classInfo.classTitle }}</div>
+        <div>{{ classInfo.classTeacher }}</div>
         <div class="spacer"></div>
 
-        <p innerHTML="{{classDescription}}"></p>
+        <p innerHTML="{{classInfo.classDescription}}"></p>
       
         <form [formGroup]="signupForm" #formDirective="ngForm" (ngSubmit)="onSubmit(signupForm, formDirective)" id="checkoutForm">
           <div formGroupName="userData">
@@ -29,6 +29,11 @@
                 <mat-error *ngIf="signupForm.get('userData.email').invalid">Enter a valid email address</mat-error>
               </mat-form-field>
               </div>
+              <div class="form-group">
+              <mat-form-field>
+                <input matInput type="text" id="teacher" placeholder="Coach" formControlName="teacher" value={{classInfo.classTeacher}} readonly>
+              </mat-form-field>
+            </div>
               <!-- <div class="form-group">
               <mat-form-field>
                 <input matInput type="text" id="phone" placeholder="Phone" formControlName="phone" required>

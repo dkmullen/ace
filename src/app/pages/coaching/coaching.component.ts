@@ -12,7 +12,8 @@ export class CoachingComponent implements OnInit {
     {firstname: 'Courtney', lastname: 'Lucien', link: 'courtney-lucien', photo: `${this.photoLink}c_lucien_600.jpg`},
     // {firstname: 'Chelsea', lastname: 'LeValley', link: 'chelsea-levalley', photo: `${this.photoLink}chelsea_levalley2.jpg`},
     {firstname: 'Matt', lastname: 'Lytle', link: 'matt-lytle', photo: `${this.photoLink}matt_lytle2.jpg`},
-    {firstname: 'Jay', lastname: 'Apking', link: 'jay-apking', photo: `${this.photoLink}jay_apking.jpg`}
+    {firstname: 'Jay', lastname: 'Apking', link: 'jay-apking', photo: `${this.photoLink}jay_apking.jpg`},
+    {firstname: 'Aleah', lastname: 'Vassell', link: 'aleah-vassell', photo: `${this.photoLink}aleah_vassell2.jpg`}
   ]
   coaches2 = [
     {firstname: 'Matt', lastname: 'Lytle', link: 'matt-lytle', photo: `${this.photoLink}matt_lytle2.jpg`},

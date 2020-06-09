@@ -14,6 +14,7 @@ import { CLucienComponent } from './c-lucien/c-lucien.component';
 import { JApkingComponent } from './j-apking/j-apking.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PayComponent } from './pay/pay.component';
+import { AVassellComponent } from './a-vassell/a-vassell.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PayComponent } from './pay/pay.component';
     CLucienComponent,
     JApkingComponent,
     CheckoutComponent,
-    PayComponent
+    PayComponent,
+    AVassellComponent
   ],
   imports: [
     CommonModule,

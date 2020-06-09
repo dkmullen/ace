@@ -36,9 +36,9 @@ mat-card {
 #coaches-grid {
     display: grid;
     max-width: 90vw;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(5, 20%);
     grid-template-rows: auto;
-    grid-gap: 10px;
+    grid-gap: 8px;
 }
 
 @media (max-width: 959px) {
@@ -69,7 +69,7 @@ mat-card {
     }
 }
 
-.jay-class-grid {
+.class-grid {
     display: grid;
     grid-row-gap: 40px;
     max-width: 1100px;
@@ -79,11 +79,11 @@ mat-card {
                          "weekly dates-times";
 }
 
-.jay-header {
+.class-header {
     grid-area: header;
 }
 
-.jay-weekly {
+.class-weekly {
     grid-area: weekly;
     text-align: left;
     padding: 10px;
@@ -91,7 +91,7 @@ mat-card {
     border-right: 1px solid black;
 }
 
-.jay-dates-times {
+.class-dates-times {
     grid-area: dates-times;
     padding: 10px;
 }
@@ -107,14 +107,14 @@ mat-card {
 }
 
 @media (max-width: 649px) {
-    .jay-class-grid {
+    .class-grid {
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto;
         grid-template-areas: "header"
                              "weekly"
                              "dates-times"
     }
-    .jay-weekly {
+    .class-weekly {
         border-right: unset;
         background: lightgrey;
     }
