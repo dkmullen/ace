@@ -3,10 +3,11 @@
     <div class="row">
       <div>
         <div class="event_secondary-heading">{{ classInfo.classTitle }}</div>
-        <div>{{ classInfo.classTeacher }}</div>
+        <div>with {{ classInfo.classTeacher }}</div>
         <div class="spacer"></div>
 
         <p innerHTML="{{classInfo.classDescription}}"></p>
+        <p>Confirmation and receipt will be emailed to you.</p>
       
         <form [formGroup]="signupForm" #formDirective="ngForm" (ngSubmit)="onSubmit(signupForm, formDirective)" id="checkoutForm">
           <div formGroupName="userData">
@@ -30,10 +31,14 @@
               </mat-form-field>
               </div>
               <div class="form-group">
-              <mat-form-field>
+              <mat-form-field class="hidden">
                 <input matInput type="text" id="teacher" placeholder="Coach" formControlName="teacher" value={{classInfo.classTeacher}} readonly>
               </mat-form-field>
             </div>
+            <mat-form-field class="hidden">
+              <input matInput type="text" id="classname" placeholder="Class" formControlName="classname" value={{classInfo.classTitle}} readonly>
+            </mat-form-field>
+          </div>
               <!-- <div class="form-group">
               <mat-form-field>
                 <input matInput type="text" id="phone" placeholder="Phone" formControlName="phone" required>
@@ -57,8 +62,8 @@
             <div *ngIf="submitted && !signupForm.touched" class="help-block">{{submitMsg}}</div>
             <div *ngIf="submitError" class="error">{{errorMsg}}</div>
           </div>
+          <p>Contact <a href="mailto:jay@aceknox.com">jay@aceknox.com</a> with any questions.</p>
 
-        </div>
         
         </form>
   </div>

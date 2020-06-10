@@ -237,6 +237,11 @@ a, a:visited {
   font-size: 48px;
 }
 //menu
+
+.accent {
+  background-color: $accent !important;
+}
+
 .mat-menu-item {
   font-size: 1.1rem !important;
   font-weight: 300 !important;

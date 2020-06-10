@@ -7,8 +7,8 @@
 
     <mat-menu #topLevel="matMenu">
       <button mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >Home</button>
+      <button mat-menu-item [matMenuTriggerFor]="features">NEW</button>
       <button mat-menu-item [matMenuTriggerFor]="auditions">Events</button>
-      <button mat-menu-item [matMenuTriggerFor]="features">Features</button>
       <!-- <button mat-menu-item [matMenuTriggerFor]="coaching">Coaching</button> -->
       <button mat-menu-item [matMenuTriggerFor]="galleries">Galleries</button>
       <button mat-menu-item [matMenuTriggerFor]="about">About ACE</button>
@@ -17,8 +17,8 @@
     <ng-template #fullMenu>
       <div id="full-menu">
         <button mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >Home</button>
+        <button class="accent"  mat-menu-item [matMenuTriggerFor]="features">NEW</button>
         <button mat-menu-item [matMenuTriggerFor]="auditions">Events</button>
-        <button mat-menu-item [matMenuTriggerFor]="features">Features</button>
         <!-- <button mat-menu-item [matMenuTriggerFor]="coaching">Coaching</button> -->
         <button mat-menu-item [matMenuTriggerFor]="galleries">Galleries</button>
         <button mat-menu-item [matMenuTriggerFor]="about">About ACE</button>
@@ -38,10 +38,11 @@
     </mat-menu>
 
     <mat-menu #features="matMenu">
+      <button mat-menu-item [routerLink]="['/coaching']"routerLinkActive="router-link-active">Coaching</button>
       <button mat-menu-item [routerLink]="['/features/videos']"routerLinkActive="router-link-active">Interviews</button>
     </mat-menu>
-
-    <!-- <mat-menu #coaching="matMenu">
+<!-- 
+    <mat-menu #coaching="matMenu">
       <button mat-menu-item [routerLink]="['/coaching']"routerLinkActive="router-link-active">Coaching</button>
     </mat-menu> -->
 

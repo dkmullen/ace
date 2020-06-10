@@ -36,7 +36,7 @@ mat-card {
 #coaches-grid {
     display: grid;
     max-width: 90vw;
-    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: repeat(3, 33%);
     grid-template-rows: auto;
     grid-gap: 8px;
 }
@@ -51,11 +51,11 @@ mat-card {
     }
 }
 
-@media (max-width: 899px) {
-    #coaches-grid {
-        grid-template-columns: repeat(2, 50%);
-    }
-}
+// @media (max-width: 899px) {
+//     #coaches-grid {
+//         grid-template-columns: repeat(2, 50%);
+//     }
+// }
 
 @media (max-width: 500px) {
     #coaches-grid {
