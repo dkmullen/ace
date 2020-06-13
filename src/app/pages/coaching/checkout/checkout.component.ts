@@ -11,6 +11,7 @@ interface Post {
   age: number;
   teacher: string;
   classname: string;
+  coachemail: string;
 }
 
 @Component({
@@ -32,6 +33,7 @@ export class CheckoutComponent implements OnInit {
       jay: {
         classTitle: 'Shakespeare Monologues Made Easy',
         classTeacher: 'Jay Apking',
+        email: 'jay@aceknox.com',
         classDescription: `
         A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Mondays</span>, July 6 - August 3,
                   <span class="bold">4pm-5pm EDT</span> on Zoom. The cost is <span class="accent-text bold">$75</span> and
@@ -41,6 +43,7 @@ export class CheckoutComponent implements OnInit {
       matt: {
         classTitle: 'From Page to the Stage: Perfecting your Monologue',
         classTeacher: 'Matt Lytle',
+        email: 'lytle.matthew@gmail.com',
         classDescription: `
         A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Tuesdays</span>, June 16 - Kuly 13,
                   <span class="bold">1pm-2:30pm EDT</span> on Zoom. The cost is <span class="accent-text bold">$75</span> and
@@ -50,6 +53,27 @@ export class CheckoutComponent implements OnInit {
       courtney: {
         classTitle: 'From Page to the Stage: Perfecting your Monologue',
         classTeacher: 'Courtney Lucien',
+        email: 'cjlucien@gmail.com',
+        classDescription: `
+        A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Saturdays</span>, June 20, 27, July 11, 18 and 25,
+                  <span class="bold">11am-12:30pm EDT</span> on Zoom. The cost is <span class="accent-text bold">$75</span> and
+                  the class will be limited to four students.
+        `
+      },
+      anna: {
+        classTitle: 'Musical Theatre',
+        classTeacher: 'Anna Catherine Smith',
+        email: 'msannasmithhh@gmail.com',
+        classDescription: `
+        A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Saturdays</span>, June 20, 27, July 11, 18 and 25,
+                  <span class="bold">11am-12:30pm EDT</span> on Zoom. The cost is <span class="accent-text bold">$75</span> and
+                  the class will be limited to four students.
+        `
+      },
+      aleah: {
+        classTitle: 'Musical Theatre',
+        classTeacher: 'Aleah Vassell',
+        email: 'aleah@aceknox.com',
         classDescription: `
         A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Saturdays</span>, June 20, 27, July 11, 18 and 25,
                   <span class="bold">11am-12:30pm EDT</span> on Zoom. The cost is <span class="accent-text bold">$75</span> and
@@ -71,7 +95,8 @@ export class CheckoutComponent implements OnInit {
         email: new FormControl(null, [Validators.required, Validators.email]),
         age: new FormControl(null, [Validators.required, Validators.min(5)]),
         teacher: new FormControl(this.classInfo.classTeacher),
-        classname: new FormControl(this.classInfo.classTitle)
+        classname: new FormControl(this.classInfo.classTitle),
+        coachemail: new FormControl(this.classInfo.email)
       })
     });
 
@@ -81,7 +106,8 @@ export class CheckoutComponent implements OnInit {
         email: '',
         age: null,
         teacher: this.classInfo.classTeacher,
-        classname: this.classInfo.classTitle
+        classname: this.classInfo.classTitle,
+        coachemail: this.classInfo.email
       }
     });
   }
@@ -96,7 +122,8 @@ export class CheckoutComponent implements OnInit {
       email: data.email,
       age: data.age,
       teacher: data.teacher,
-      classname: data.classname
+      classname: data.classname,
+      coachemail: data.coachemail
     };
     this.http
     .post<{ message: string }>(environment.shakespeareUrl, post)

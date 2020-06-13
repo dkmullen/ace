@@ -17,6 +17,30 @@ export class HomeComponent implements OnInit {
   ];
   cards = [
     {
+      title: 'Meet Aleah Vassell',
+      subtitle: 'ACE\'s new Managing Director',
+      image: `assets/images/aleah.jpg`,
+      alt: 'Aleah Vassell',
+      photocredit: 'Darnell Bennett Photography',
+      message1: 'Recent UT graduate (MFA in Acting)',
+      message2: 'Experienced performer and teacher',
+      button1: {
+        buttontxt: 'Learn More',
+        link: '/coaching/aleah-vassell',
+        fragment: '',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
+    },
+    {
       title: 'NEW: ACE Interviews',
       subtitle: 'Musician Olivia DaPonte',
       image: `assets/images/olivia_daponte.jpg`,

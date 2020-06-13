@@ -28,7 +28,7 @@ export class DonorsComponent {
       amount: '$500 - 999',
       donors: [
         'Leslie Hull',
-        'Penny and Kimbro Lynch',
+        'Penny Lynch and Kimbro Maguire',
         'Sue and David Reller',
         'Martha Breazeale',
         'Tammy Prince',
@@ -59,10 +59,12 @@ export class DonorsComponent {
         'Teresa and David Debusk',
         'Haley and Patrick Relford',
         'Georgene Wade',
+        'Gary Wade',
         'Helen Smith',
         'Michael and Betty Copeland',
         'Linda Gouge',
-        'Carl and Tricia Ritter'
+        'Carl and Tricia Ritter',
+        'The Butlers'
       ]
     },
     {
