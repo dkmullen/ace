@@ -31,7 +31,6 @@ const routes: Routes = [
   { path: 'courtney-lucien', component: CLucienComponent },      
   { path: 'jay-apking', component: JApkingComponent },
   { path: 'aleah-vassell', component: AVassellComponent },
-  // { path: 'checkout', component: CheckoutComponent },
   { path: 'pay', component: PayComponent }
 ];
 

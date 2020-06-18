@@ -1,13 +1,25 @@
 <mat-card>
   <div class="event_page-wrapper">
+    <div class="event_secondary-heading">ACE Training & <span class="accent-text">National Theatre Contest</span></div> 
+
+    <!-- The Alliance for Creative Excellence Announces ACE Training Program combined with ACE’s First National 
+    Theatre Contest -->
+
+    <p>Most artists know how to perform, but not how to <span class="accent-text bold">audition</span>. This is a skill that 
+    is <span class="accent-text bold">critical to a performer who wants to work or get bigger and better roles</span>. 
+    ACE knows that performers of all ages will benefit from learning this skill now, so we have created our first 
+    audition classes with a team of highly trained 
+    professional coaches from across the country. </p>
+    
+    <p>They are open now for you <span class="accent-text bold">at a special price through this Saturday</span>. 
+      Learn more <a [routerLink]="['/coaching']">here.</a></p>
+    
+    <div class="spacer"></div>
+    <mat-divider></mat-divider>
+    <div class="spacer"></div>
+
     <div class="event_secondary-heading">ACE <span class="accent-text">Interviews</span></div> 
-  <p [style.margin-bottom.px]="20" class="announcement">
-    Watch here or on our <a href="https://www.youtube.com/channel/UCMYa3DHS8p9uz-HziHXyzeQ" target="_blank">YouTube Channel</a> 
-    or subscribe to the audio podcast on
-    <a href="https://podcasts.apple.com/us/podcast/ace-interviews/id1512605724" target="_blank">Apple</a>, 
-    <a href="https://podcasts.google.com/?feed=aHR0cDovL2FjZWtub3guY29tL2ludGVydmlld3MvZmVlZC9wb2RjYXN0Lw" target="_blank">Google</a>, or
-    <a href="http://subscribeonandroid.com/aceknox.com/interviews/feed/podcast/" title="Subscribe on Android">Android</a>.
-  </p>
+
 </div>
 <div fxLayout="row wrap" fxLayout.sm="column"
   fxLayout.xs="column" fxLayoutGap="20px"
@@ -33,6 +45,13 @@
         (click)="navigate(item.button2.link, item.button2.navMethod)">{{item.button2.buttontxt}}</button>
     </mat-card-actions>
   </mat-card>
+  <p [style.margin-bottom.px]="20" class="announcement">
+    Watch interviews here or on our <a href="https://www.youtube.com/channel/UCMYa3DHS8p9uz-HziHXyzeQ" target="_blank">YouTube Channel</a> 
+    or subscribe to the audio podcast on
+    <a href="https://podcasts.apple.com/us/podcast/ace-interviews/id1512605724" target="_blank">Apple</a>, 
+    <a href="https://podcasts.google.com/?feed=aHR0cDovL2FjZWtub3guY29tL2ludGVydmlld3MvZmVlZC9wb2RjYXN0Lw" target="_blank">Google</a>, or
+    <a href="http://subscribeonandroid.com/aceknox.com/interviews/feed/podcast/" title="Subscribe on Android">Android</a>.
+  </p>
 </div>
 
 
