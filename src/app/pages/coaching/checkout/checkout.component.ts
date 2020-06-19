@@ -66,7 +66,7 @@ export class CheckoutComponent implements OnInit {
         email: 'msannasmithhh@gmail.com',
         classDescription: `
         A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Saturdays</span>, July 6 - August 3,
-                  <span class="bold">6:30-7:30pm EDT</span> on Zoom. The cost is <span class="accent-text bold">$49</span> ($75 after June 20) and
+                  <span class="bold">6:30-8pm EDT</span> on Zoom. The cost is <span class="accent-text bold">$49</span> ($75 after June 20) and
                   the class will be limited to four students.
         `
       },
