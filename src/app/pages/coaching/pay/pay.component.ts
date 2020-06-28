@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PayComponent implements OnInit {
   classTitle = 'ACE Summer Song / Monlogue Classes';
   classTeacher = '';
-  classDescription = `Checkout: <span class="accent-text bold">$49 (thru June 20)</span>`
+  classDescription = `Checkout: <span class="accent-text bold">$75</span>`
 
   constructor() { }
 

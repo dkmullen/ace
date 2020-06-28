@@ -36,7 +36,7 @@ export class CheckoutComponent implements OnInit {
         email: 'jay@aceknox.com',
         classDescription: `
         A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Mondays</span>, July 6 - August 3,
-                  <span class="bold">4pm-5pm EDT</span> on Zoom. The cost is <span class="accent-text bold">$49</span> ($75 after June 20) and
+                  <span class="bold">4pm-5pm EDT</span> on Zoom. The cost is $75 and
                   the class will be limited to four students.
         `
       },
@@ -46,7 +46,7 @@ export class CheckoutComponent implements OnInit {
         email: 'lytle.matthew@gmail.com',
         classDescription: `
         A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Tuesdays</span>, June 16 - July 13,
-                  <span class="bold">1pm-2:30pm EDT</span> on Zoom. The cost is <span class="accent-text bold">$49</span> ($75 after June 20) and
+                  <span class="bold">5pm-6:30pm EDT</span> on Zoom. The cost is $75 and
                   the class will be limited to four students.
         `
       },
@@ -56,7 +56,7 @@ export class CheckoutComponent implements OnInit {
         email: 'cjlucien@gmail.com',
         classDescription: `
         A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Saturdays</span>, June 20, 27, July 11, 18 and 25,
-                  <span class="bold">11am-12:30pm EDT</span> on Zoom. The cost is <span class="accent-text bold">$49</span> ($75 after June 20) and
+                  <span class="bold">11am-12:30pm EDT</span> on Zoom. The cost is $75 and
                   the class will be limited to four students.
         `
       },
@@ -66,7 +66,7 @@ export class CheckoutComponent implements OnInit {
         email: 'msannasmithhh@gmail.com',
         classDescription: `
         A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Saturdays</span>, July 6 - August 3,
-                  <span class="bold">6:30-8pm EDT</span> on Zoom. The cost is <span class="accent-text bold">$49</span> ($75 after June 20) and
+                  <span class="bold">6:30-8pm EDT</span> on Zoom. The cost is $75 and
                   the class will be limited to four students.
         `
       },
@@ -76,7 +76,7 @@ export class CheckoutComponent implements OnInit {
         email: 'aleah@aceknox.com',
         classDescription: `
         A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Saturdays</span>, July 7 - August 4,
-                  <span class="bold">2pm-3pm EDT</span> on Zoom. The cost is <span class="accent-text bold">$49</span> ($75 after June 20) and
+                  <span class="bold">2pm-3pm EDT</span> on Zoom. The cost is $75 and
                   the class will be limited to four students.
         `
       },
