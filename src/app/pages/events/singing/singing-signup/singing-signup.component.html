@@ -1,7 +1,17 @@
-<div class="container">
+<div class="event_page-wrapper">
+
+  <div class="event_secondary-heading">The National</div>
+  <div class="event_main-heading"> ACE Theatre Awards</div>
+  <div class="event_secondary-heading accent-text">
+      ENTRY FORM
+  </div>
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="container">
   <div class="row">
     <div>
-      <div class="event_secondary-heading">ACE SINGING AWARDS AUDITION FORM</div>
       <form [formGroup]="signupForm" #formDirective="ngForm" (ngSubmit)="onSubmit(signupForm, formDirective)" id="singingForm">
         <div formGroupName="userData">
           <div class="form-group">
@@ -25,26 +35,37 @@
           </div>
           <div class="form-group">
             <mat-form-field>
+              <input matInput type="text" id="city" placeholder="City" formControlName="city" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="text" id="state" placeholder="State" formControlName="state" required>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field>
               <input matInput type="text" id="grade" placeholder="Grade in school" formControlName="grade" required>
             </mat-form-field>
             <mat-form-field>
               <input matInput type="text" id="school" placeholder="Name of your school" formControlName="school" required>
             </mat-form-field>
           </div>
-          <div class="event_section-header">Category (select one or more in your age range)*
+          <mat-form-field class="wide">
+            <textarea matInput type="textarea" id="videolink" placeholder="Link to your video" formControlName="videolink" required></textarea>
+        </mat-form-field>
+          <div class="event_section-header">Category
             </div>
           <div class="checkbox-list">
           <div class="form-group">
-            <mat-checkbox id="rising" formControlName="rising">
-              Rising Star (Up though grade 8)
+            <mat-checkbox id="musical" formControlName="musical">
+              Musical Theatre
             </mat-checkbox>
           </div>
           <div class="form-group">
-            <mat-checkbox id="i-vocal" formControlName="individualVocal">
-              Individual Vocal (Grades 9-12)
+            <mat-checkbox id="monologue" formControlName="monologue">
+              Monologue
             </mat-checkbox>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <mat-checkbox id="i-instrumental" formControlName="individualInstrumental">
               Individual Instrumental (Grades 9-12)
             </mat-checkbox>
@@ -53,7 +74,7 @@
             <mat-checkbox id="group" formControlName="group">
               Choir / A Capella (Grades 6-12)
             </mat-checkbox>
-          </div>
+          </div> -->
         </div>
         <div class="spacer"></div>
         <button mat-flat-button color="primary" type="submit" [disabled]="!signupForm.valid || waiting">SUBMIT</button>
@@ -65,3 +86,5 @@
           <div *ngIf="submitError" class="error">{{errorMsg}}</div>
         </div>
 </div>
+</form>
+    </div>

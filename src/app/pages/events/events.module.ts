@@ -22,6 +22,7 @@ import { InstrumentalContestComponent } from './safeathome/instrumental/instrume
 import { ShakepeareComponent } from './safeathome/shakepeare/shakepeare.component';
 import { IsabellaFransiscoComponent } from './safeathome/writing/isabella-fransisco/isabella-fransisco.component';
 import { ElizabethNewmanComponent } from './safeathome/writing/elizabeth-newman/elizabeth-newman.component';
+import { NationalComponent } from './national/national.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ElizabethNewmanComponent } from './safeathome/writing/elizabeth-newman/
     InstrumentalContestComponent,
     ShakepeareComponent,
     IsabellaFransiscoComponent,
-    ElizabethNewmanComponent
+    ElizabethNewmanComponent,
+    NationalComponent
   ],
   entryComponents: [VotingDialog],
   imports: [

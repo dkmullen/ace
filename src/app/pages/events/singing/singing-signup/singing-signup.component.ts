@@ -28,10 +28,13 @@ export class SingingSignupComponent implements OnInit {
         age: new FormControl(null, [Validators.required, Validators.min(5)]),
         grade: new FormControl(null, [Validators.required]),
         school: new FormControl(null, [Validators.required]),
-        rising: new FormControl(null),
-        individualVocal: new FormControl(null),
-        individualInstrumental: new FormControl(null),
-        group: new FormControl(null),
+        city: new FormControl(null, [Validators.required]),
+        state: new FormControl(null, [Validators.required]),
+        videolink: new FormControl(null, [Validators.required]),
+        musical: new FormControl(null),
+        monologue: new FormControl(null),
+        // individualInstrumental: new FormControl(null),
+        // group: new FormControl(null),
       }),
     });
 
@@ -43,10 +46,13 @@ export class SingingSignupComponent implements OnInit {
         age: null,
         grade: '',
         school: '',
-        rising: true,
-        individualVocal: false,
-        individualInstrumental: true,
-        group: false
+        city: '',
+        state: '',
+        videolink: '',
+        musical: true,
+        monologue: false,
+        // individualInstrumental: true,
+        // group: false
       },
     });
   }
@@ -63,13 +69,16 @@ export class SingingSignupComponent implements OnInit {
       age: data.age,
       grade: data.grade,
       school: data.school,
-      rising: data.rising,
-      individualVocal: data.individualVocal,
-      individualInstrumental: data.individualInstrumental,
-      group: data.group
+      city: data.city,
+      state: data.state,
+      videolink: data.videolink,
+      musical: data.musical,
+      monologue: data.monologue,
+      // individualInstrumental: data.individualInstrumental,
+      // group: data.group
     };
     this.http
-    .post<{ message: string }>(environment.singingUrl, post)
+    .post<{ message: string }>(environment.nationalUrl, post)
     .subscribe(responseData => {
       formDirective.resetForm();
       this.signupForm.reset();
