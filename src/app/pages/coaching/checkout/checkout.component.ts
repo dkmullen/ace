@@ -35,7 +35,7 @@ export class CheckoutComponent implements OnInit {
         classTeacher: 'Jay Apking',
         email: 'jay@aceknox.com',
         classDescription: `
-        A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Mondays</span>, July 6 - August 3,
+        A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Mondays</span>, August 3-31,
                   <span class="bold">4pm-5pm EDT</span> on Zoom. The cost is $75 and
                   the class will be limited to four students.
         `

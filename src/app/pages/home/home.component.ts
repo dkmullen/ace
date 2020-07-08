@@ -17,6 +17,30 @@ export class HomeComponent implements OnInit {
   ];
   cards = [
     {
+      title: 'National ACE Theatre Awards',
+      subtitle: 'Registration is open!',
+      image: `assets/images/theatre.jpg`,
+      alt: 'A theater as seen from the stage',
+      photocredit: 'Mark Thompson on Unsplash',
+      message1: 'Our first-ever NATIONAL contest',
+      message2: 'For high-school-age and younger',
+      button1: {
+        buttontxt: 'Learn More',
+        link: '/national',
+        fragment: '',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
+    },
+    {
       title: 'Meet Aleah Vassell',
       subtitle: 'ACE\'s new Managing Director',
       image: `assets/images/aleah.jpg`,

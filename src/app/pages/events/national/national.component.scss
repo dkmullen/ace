@@ -1,0 +1,22 @@
+#grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    grid-gap: 8px;
+}
+
+.actor {
+    width: 100%;
+    height: auto;
+}
+
+.less-margin {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 699px) {
+    #grid1 {
+        grid-template-columns: 100%;
+
+    }
+}

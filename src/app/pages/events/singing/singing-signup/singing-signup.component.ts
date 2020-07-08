@@ -13,7 +13,7 @@ export class SingingSignupComponent implements OnInit {
   signupForm: FormGroup;
   submitted = false;
   submitError = false;
-  submitMsg = 'Thank you for entering. Don\'t forget to send your video too.';
+  submitMsg = 'Thank you for entering.';
   errorMsg = 'The form was NOT submitted. Check your internet connection.';
   waiting = false;
 
@@ -49,7 +49,7 @@ export class SingingSignupComponent implements OnInit {
         city: '',
         state: '',
         videolink: '',
-        musical: true,
+        musical: false,
         monologue: false,
         // individualInstrumental: true,
         // group: false

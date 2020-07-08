@@ -5,6 +5,7 @@
   <div class="event_secondary-heading accent-text">
       ENTRY FORM
   </div>
+  <span class="bold">Enter by September 30, 2020 - 11:59pm (Eastern Time)</span> 
   <div class="spacer"></div>
   <mat-divider></mat-divider>
   <div class="spacer"></div>
@@ -77,7 +78,8 @@
           </div> -->
         </div>
         <div class="spacer"></div>
-        <button mat-flat-button color="primary" type="submit" [disabled]="!signupForm.valid || waiting">SUBMIT</button>
+        <button mat-stroked-button color="primary" type="button" style="margin-right: 10px" [routerLink]="['/national']">Cancel</button>
+        <button mat-flat-button color="accent" type="submit" [disabled]="!signupForm.valid || waiting">SUBMIT</button>
         <div class='progress-bar' *ngIf="waiting">
           <mat-progress-bar mode="indeterminate" color="accent" ></mat-progress-bar>
         </div>
@@ -87,4 +89,7 @@
         </div>
 </div>
 </form>
+<p>
+  For any questions, please contact <a href="mailto:jay@aceknox.com">jay@aceknox.com</a>.
+</p>
     </div>
