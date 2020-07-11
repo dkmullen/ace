@@ -45,7 +45,7 @@ h5 {
 h6 {
     font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: .3rem;
+    margin-bottom: 1rem;
 }
 
 p {
@@ -158,7 +158,7 @@ strong {
 }
 
 hr {
-    opacity: .3;
+    opacity: .15;
     margin: 1.5rem 0;
 }
 
@@ -177,8 +177,12 @@ a, a:visited {
 .spacer {
   height: 1.5rem;
 }
+
 .underline {
   text-decoration: underline;
+}
+.button-row {
+  margin: 1.5rem auto;
 }
 
 .pointer {

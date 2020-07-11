@@ -16,7 +16,6 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './footer/footer.component';
-import { PayComponent } from './pages/misc/pay/pay.component';
 import { StyleDemoComponent } from './pages/misc/style-demo/style-demo.component';
 import { FormComponent } from './components/form/form.component';
 
@@ -26,7 +25,6 @@ import { FormComponent } from './components/form/form.component';
     MenuComponent,
     HomeComponent,
     FooterComponent,
-    PayComponent,
     StyleDemoComponent,
     FormComponent,
   ],
