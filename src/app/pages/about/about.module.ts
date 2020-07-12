@@ -9,6 +9,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { SupportComponent } from './support/support.component';
 import { EmailComponent } from './email/email.component';
 import { DonorsComponent } from './donors/donors.component';
+import { FormComponent } from '../../components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DonorsComponent } from './donors/donors.component';
     SponsorsComponent,
     SupportComponent,
     EmailComponent,
-    DonorsComponent
+    DonorsComponent,
+    FormComponent
   ],
   imports: [
     CommonModule,

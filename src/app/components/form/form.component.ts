@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { environment } from '../../../environments/environment';
@@ -10,11 +10,18 @@ import { Post } from './signup.model';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
+  @Input() preTitle: string;
+  @Input() pageTitle: string;
+  @Input() formTitle: string;
+  @Input() description: string;
+  @Input() submitMsg = 'Thank you for entering.';
+  @Input() submitPath: string;
+
+  errorMsg = 'The form was NOT submitted. Check your internet connection.';
+
   signupForm: FormGroup;
   submitted = false;
   submitError = false;
-  submitMsg = 'Thank you for entering.';
-  errorMsg = 'The form was NOT submitted. Check your internet connection.';
   waiting = false;
 
   constructor(private http: HttpClient) { }
@@ -60,6 +67,8 @@ export class FormComponent implements OnInit {
   onSubmit(signupForm, formDirective) {
     this.waiting = true;
     this.submitError = false;
+    const url = environment[this.submitPath];
+    console.log(url)
     const data = this.signupForm.value.userData;
     const post: Post = {
       id: null,
@@ -78,19 +87,20 @@ export class FormComponent implements OnInit {
       // group: data.group
     };
     this.http
-    .post<{ message: string }>(environment.nationalUrl, post)
-    .subscribe(responseData => {
-      formDirective.resetForm();
-      this.signupForm.reset();
-      this.submitted = true;
-      this.submitError = false;
-      this.waiting = false;
-    },
-    err => {
-      this.submitted = false;
-      this.submitError = true;
-      this.waiting = false;
-    }
+    .post<{ message: string }>(url, post)
+    .subscribe(
+      responseData => {
+        formDirective.resetForm();
+        this.signupForm.reset();
+        this.submitted = true;
+        this.submitError = false;
+        this.waiting = false;
+      },
+      err => {
+        this.submitted = false;
+        this.submitError = true;
+        this.waiting = false;
+      }
     );
   }
 
