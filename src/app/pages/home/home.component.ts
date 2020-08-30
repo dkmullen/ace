@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'National ACE Theatre Awards',
       subtitle: 'Registration is open!',
-      image: `assets/images/theatre.jpg`,
+      image: `assets/images/homepage/theatre.jpg`,
       alt: 'A theater as seen from the stage',
       photocredit: 'Mark Thompson on Unsplash',
       message1: 'Our first-ever NATIONAL contest',
@@ -39,11 +39,33 @@ export class HomeComponent implements OnInit {
         disabled: true,
         display: false
       }
-    },
-    {
+    },{
+      title: 'Help For Your Next Audition',
+      subtitle: 'ACE now offers professional coaching',
+      image: `assets/images/homepage/audition.jpg`,
+      alt: 'Film actors getting ready to perform',
+      photocredit: 'Avel Chuklanov on Unsplash',
+      message1: 'Real-time video coaching',
+      message2: 'From experienced performers',
+      button1: {
+        buttontxt: 'Learn More',
+        link: '/coaching',
+        fragment: '',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: null,
+        link: null,
+        navMethod: null,
+        disabled: true,
+        display: false
+      }
+    },{
       title: 'Meet Aleah Vassell',
       subtitle: 'ACE\'s new Managing Director',
-      image: `assets/images/aleah.jpg`,
+      image: `assets/images/homepage/aleah.jpg`,
       alt: 'Aleah Vassell',
       photocredit: 'Darnell Bennett Photography',
       message1: 'Recent UT graduate (MFA in Acting)',
@@ -67,7 +89,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'NEW: ACE Interviews',
       subtitle: 'Musician Olivia DaPonte',
-      image: `assets/images/olivia_daponte.jpg`,
+      image: `assets/images/homepage/olivia_daponte.jpg`,
       alt: 'Musician Olivia DaPonte',
       photocredit: '',
       message1: 'Knoxville-area musician',
@@ -91,7 +113,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'NEW: ACE Interviews',
       subtitle: 'Actor Anna Catherine Smith',
-      image: `assets/images/anna-smith.jpg`,
+      image: `assets/images/homepage/anna-smith.jpg`,
       alt: 'Actor Anna Catherine Smith',
       photocredit: '',
       message1: 'ACE Awards alum and acting professional',
@@ -115,7 +137,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'NEW: ACE Interviews',
       subtitle: 'Actor/Professor Jed Diamond',
-      image: `assets/images/j_diamond.jpg`,
+      image: `assets/images/homepage/j_diamond.jpg`,
       alt: 'Jed Diamond',
       photocredit: '',
       message1: 'University of Tennessee Professor and Actor',
@@ -139,7 +161,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'NEW: ACE Interviews',
       subtitle: 'Actor Chelsea LeValley',
-      image: `assets/images/c_levalley.jpg`,
+      image: `assets/images/homepage/c_levalley.jpg`,
       alt: 'Actor Chelsea LeValley',
       photocredit: '',
       message1: 'A successful Seattle-based actor',
@@ -163,7 +185,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'NEW: ACE Interviews',
       subtitle: 'Actor Kim Martin-Cotten',
-      image: `assets/images/kim-martin-cotten.jpg`,
+      image: `assets/images/homepage/kim-martin-cotten.jpg`,
       alt: 'Actor Kim Martin-Cotten',
       photocredit: 'Photo by Lois Greenfield',
       message1: 'An extensive theatre career',
@@ -187,7 +209,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'NEW: ACE Interviews',
       subtitle: 'Actor Matt Lytle',
-      image: `assets/images/m_lytle.jpg`,
+      image: `assets/images/homepage/m_lytle.jpg`,
       alt: 'Actor Matt Lytle',
       photocredit: '',
       message1: 'The art and business of acting',
@@ -211,7 +233,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'NEW: ACE Interviews',
       subtitle: 'Actor Courtney Lucien',
-      image: `assets/images/c_lucien.jpg`,
+      image: `assets/images/homepage/c_lucien.jpg`,
       alt: 'Actor Courtney Lucien',
       photocredit: 'Popio-Stumpf Photography',
       message1: 'The acting experience and craft',
@@ -235,7 +257,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'NEW: ACE Interviews',
       subtitle: 'Author Alan Gratz',
-      image: `assets/images/a_gratz.jpg`,
+      image: `assets/images/homepage/a_gratz.jpg`,
       alt: 'Author Alan Gratz',
       photocredit: 'Alan Gratz photo by Wes Stitt',
       message1: 'The creative process and ideas',
@@ -259,7 +281,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'NEW: ACE Interviews',
       subtitle: 'Musical Theatre: Four Perspectives',
-      image: `assets/images/four.jpg`,
+      image: `assets/images/homepage/four.jpg`,
       alt: 'Four actors',
       photocredit: '',
       message1: 'From high school to Broadway',
@@ -279,103 +301,11 @@ export class HomeComponent implements OnInit {
         disabled: true,
         display: false
       }
-    },
-    // {
-    //   title: 'Safer@Home Dance Contest',
-    //   subtitle: 'Congratulations to our winner!',
-    //   image: `assets/images/safe@home2020/dance.jpg`,
-    //   alt: 'Young man dancing',
-    //   photocredit: 'Photo by Marc A. Sporys on Unsplash',
-    //   message1: 'Students thru Grade 12',
-    //   message2: 'Prizes: $150, $100',
-    //   button1: {
-    //     buttontxt: 'Results',
-    //     link: '/events/dance',
-    //     navMethod: 'internal',
-    //     disabled: false,
-    //     display: true
-    //   },
-    //   button2: {
-    //     buttontxt: null,
-    //     link: null,
-    //     navMethod: null,
-    //     disabled: true,
-    //     display: false
-    //   }
-    // },
-    // {
-    //   title: 'Safer@Home Writing Contest',
-    //   subtitle: 'Thanks to all our writers!',
-    //   image: `assets/images/safe@home2020/write.jpg`,
-    //   alt: 'Several women writing',
-    //   photocredit: 'Photo by Alexis Brown on Unsplash',
-    //   message1: 'Students thru Grade 12',
-    //   message2: 'Prizes: $150, $100',
-    //   button1: {
-    //     buttontxt: 'Results',
-    //     link: '/events/writing',
-    //     navMethod: 'internal',
-    //     disabled: false,
-    //     display: true
-    //   },
-    //   button2: {
-    //     buttontxt: null,
-    //     link: null,
-    //     navMethod: null,
-    //     disabled: true,
-    //     display: false
-    //   }
-    // },
-    // {
-    //   title: 'Safer@Home Shakespeare Contest',
-    //   subtitle: 'Entries due April 23, 2020',
-    //   image: `assets/images/safe@home2020/shakespeare.jpg`,
-    //   alt: 'Shakespeare chalk drawing',
-    //   photocredit: 'Photo by Jessica Pamp on Unsplash',
-    //   message1: 'Students thru Grade 12',
-    //   message2: '2 Prizes: $100 ea.',
-    //   button1: {
-    //     buttontxt: 'Results',
-    //     link: '/events/shakespeare',
-    //     navMethod: 'internal',
-    //     disabled: false,
-    //     display: true
-    //   },
-    //   button2: {
-    //     buttontxt: null,
-    //     link: null,
-    //     navMethod: null,
-    //     disabled: true,
-    //     display: false
-    //   }
-    // },
-    // {
-    //   title: 'Safer@Home Photography Contest',
-    //   subtitle: 'Voting has ended',
-    //   image: `assets/images/safe@home2020/photography.jpg`,
-    //   alt: 'Woman photographing cherry blossoms',
-    //   photocredit: 'Photo by kazuend on Unsplash',
-    //   message1: 'Students thru Grade 12',
-    //   message2: 'Prizes: $150, $100',
-    //   button1: {
-    //     buttontxt: 'Results',
-    //     link: '/events/photography',
-    //     navMethod: 'internal',
-    //     disabled: false,
-    //     display: true
-    //   },
-    //   button2: {
-    //     buttontxt: null,
-    //     link: null,
-    //     navMethod: null,
-    //     disabled: true,
-    //     display: false
-    //   }
-    // },    
+    },  
     {
       title: 'Interview: Actor Kate Arrington',
       subtitle: 'of the Steppenwolf Theatre Company',
-      image: `assets/images/kate_arrington.jpg`,
+      image: `assets/images/homepage/kate_arrington.jpg`,
       alt: '',
       // photocredit: 'Photo by Jessica Pamp on Unsplash',
       message1: 'The perspective and experience',
@@ -395,118 +325,7 @@ export class HomeComponent implements OnInit {
         disabled: true,
         display: false
       }
-    },
-    // {
-    //   title: 'Safer@Home Instrumental Contest',
-    //   subtitle: 'Thanks to all our participants',
-    //   image: `assets/images/safe@home2020/instrument.jpg`,
-    //   alt: 'Girl playing a keyboard',
-    //   photocredit: 'Photo by Fitsum Admasu on Unsplash',
-    //   message1: 'Students thru Grade 12',
-    //   message2: 'Prizes: $150, $100',
-    //   button1: {
-    //     buttontxt: 'Results',
-    //     link: 'https://www.aceknox.com/events/instrumental',
-    //     navMethod: 'internalWithPageLoad',
-    //     disabled: false,
-    //     display: true
-    //   },
-    //   button2: {
-    //     buttontxt: null,
-    //     link: null,
-    //     navMethod: null,
-    //     disabled: true,
-    //     display: false
-    //   }
-    // },
-    // {
-    //   title: 'Ace Acting Awards',
-    //   subtitle: 'January 26, 2020',
-    //   image: `assets/images/acting_2020/${this.actingWinners[this.getRandomInt(4)]}`,
-    //   alt: 'Young actor',
-    //   message1: 'University of Tennessee',
-    //   message2: 'Thanks to all for participating!',
-    //   button1: {
-    //     buttontxt: 'Results',
-    //     link: '/events/acting',
-    //     navMethod: 'internal',
-    //     disabled: false,
-    //     display: true
-    //   },
-    //   button2: {
-    //     buttontxt: null,
-    //     link: null,
-    //     navMethod: null,
-    //     disabled: true,
-    //     display: false
-    //   }
-    // },
-    // {
-    //   title: 'Ace Singing Awards',
-    //   subtitle: 'January 11, 2020 - 7pm',
-    //   image: `assets/images/singing_2020/${this.singingWinners[this.getRandomInt(5)]}`,
-    //   alt: 'Photo of a musical artist',
-    //   message1: 'Bijou Theatre',
-    //   message2: 'Thanks for a great show!',
-    //   button1: {
-    //     buttontxt: 'Results',
-    //     link: 'events/singing',
-    //     navMethod: 'internal',
-    //     disabled: false,
-    //     display: true
-    //   },
-    //   button2: {
-    //     buttontxt: null,
-    //     link: null,
-    //     navMethod: null,
-    //     disabled: true,
-    //     display: false
-    //   }
-    // },
-    // {
-    //   title: 'Singer-Songwriter Contest',
-    //   subtitle: 'January 2020',
-    //   image: 'assets/images/etc/songwriters2.jpg',
-    //   alt: 'Photo collage of young woman with a guitar',
-    //   message1: 'Online contest',
-    //   message2: 'Featuring some excellent local student-artists',
-    //   button1: {
-    //     buttontxt: 'Results',
-    //     link: 'events/singer-songwriter',
-    //     navMethod: 'internal',
-    //     disabled: false,
-    //     display: true
-    //   },
-    //   button2: {
-    //     buttontxt: null,
-    //     link: null,
-    //     navMethod: 'internalWithPageLoad',
-    //     disabled: true,
-    //     display: false
-    //   }
-    // },
-    // {
-    //   title: 'Battle of the Bands',
-    //   subtitle: 'May 2020',
-    //   image: 'assets/images/battle_of_the_bands/bofb.jpg',
-    //   alt: 'Photo of a band performing on stage',
-    //   message1: 'Online contest in May',
-    //   message2: 'This is YOUR year.',
-    //   button1: {
-    //     buttontxt: 'More info is coming',
-    //     link: null,
-    //     navMethod: 'internal',
-    //     disabled: true,
-    //     display: true
-    //   },
-    //   button2: {
-    //     buttontxt: null,
-    //     link: null,
-    //     navMethod: null,
-    //     disabled: true,
-    //     display: false
-    //   }
-    // }
+    }
   ];
 
   constructor(protected router: Router) { }
