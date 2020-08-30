@@ -9,8 +9,9 @@ export interface Post {
   city: string;
   state: string;
   videolink: string;
-  musical: boolean;
-  monologue: boolean;
+  // musical: boolean;
+  // monologue: boolean;
+  entryType: string;
   // individualInstrumental: boolean;
   // group: boolean;
 }

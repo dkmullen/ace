@@ -56,7 +56,7 @@
           <div class="event_section-header">Category
             </div>
           <div class="checkbox-list">
-          <div class="form-group">
+          <!-- <div class="form-group">
             <mat-checkbox id="musical" formControlName="musical">
               Musical Theatre
             </mat-checkbox>
@@ -65,6 +65,12 @@
             <mat-checkbox id="monologue" formControlName="monologue">
               Monologue
             </mat-checkbox>
+          </div> -->
+          <div class="form-group">
+            <mat-radio-group aria-label="Select one" formControlName="entryType" required>
+              <mat-radio-button value="Musical Theatre">Musical Theatre</mat-radio-button><br />
+              <mat-radio-button value="Monologue">Monologue</mat-radio-button>
+            </mat-radio-group>
           </div>
           <!-- <div class="form-group">
             <mat-checkbox id="i-instrumental" formControlName="individualInstrumental">

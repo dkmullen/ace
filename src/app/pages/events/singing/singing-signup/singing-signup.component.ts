@@ -31,8 +31,9 @@ export class SingingSignupComponent implements OnInit {
         city: new FormControl(null, [Validators.required]),
         state: new FormControl(null, [Validators.required]),
         videolink: new FormControl(null, [Validators.required]),
-        musical: new FormControl(null),
-        monologue: new FormControl(null),
+        // musical: new FormControl(null),
+        // monologue: new FormControl(null),
+        entryType: new FormControl(null),
         // individualInstrumental: new FormControl(null),
         // group: new FormControl(null),
       }),
@@ -49,8 +50,9 @@ export class SingingSignupComponent implements OnInit {
         city: '',
         state: '',
         videolink: '',
-        musical: false,
-        monologue: false,
+        // musical: false,
+        // monologue: false,
+        entryType: ''
         // individualInstrumental: true,
         // group: false
       },
@@ -72,8 +74,9 @@ export class SingingSignupComponent implements OnInit {
       city: data.city,
       state: data.state,
       videolink: data.videolink,
-      musical: data.musical,
-      monologue: data.monologue,
+      // musical: data.musical,
+      // monologue: data.monologue,
+      entryType: data.entryType
       // individualInstrumental: data.individualInstrumental,
       // group: data.group
     };
