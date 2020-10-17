@@ -11,6 +11,7 @@ import { GalleriesModule } from './pages/galleries/galleries.module';
 import { AboutModule } from './pages/about/about.module';
 import { FeaturesModule } from './pages/features/features.module';
 import { CoachingModule } from './pages/coaching/coaching.module';
+import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -38,6 +39,7 @@ import { StyleDemoComponent } from './pages/misc/style-demo/style-demo.component
     AboutModule,
     FeaturesModule,
     CoachingModule,
+    ComponentsModule,
     AppRoutingModule // Keep this last so its wildcard route (**) is chosen last, after all other routes fail
   ],
   providers: [],

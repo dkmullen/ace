@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { StyleDemoComponent } from './pages/misc/style-demo/style-demo.component';
-import { FormComponent } from './components/form/form.component';
+import { SignUpFormComponent } from './components/forms/sign-up-form/sign-up-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'features', loadChildren: () => import ('./pages/features/features.module').then((m) => m.FeaturesModule)},
   { path: 'coaching', loadChildren: () => import ('./pages/coaching/coaching.module').then((m) => m.CoachingModule)},
   { path: 'style-demo', component: StyleDemoComponent },
-  { path: 'form', component: FormComponent },
+  { path: 'signup-form', component: SignUpFormComponent },
   { path: '**', redirectTo: ''}
 ];
 

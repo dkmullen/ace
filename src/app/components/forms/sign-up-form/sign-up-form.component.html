@@ -1,0 +1,83 @@
+<div class="event_page-wrapper">
+    <div class="event_secondary-heading">The National</div>
+    <div class="event_main-heading">ACE Theatre Awards</div>
+    <div class="event_secondary-heading accent-text">ENTRY FORM </div>
+    <span class="bold">Enter by September 30, 2020 - 11:59pm (Eastern Time)</span>
+
+    <div class="spacer"></div>
+    <mat-divider></mat-divider>
+    <div class="spacer"></div>
+  
+    <div class="container">
+        <form [formGroup]="signupForm" #formDirective="ngForm" (ngSubmit)="onSubmit(signupForm, formDirective)" id="singingForm">
+            <div class="form-group">
+                <mat-form-field>
+                    <input matInput type="text" id="name" formControlName="name" class="formcontrol" placeholder="Name" required>
+                    <mat-error *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched"></mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="number" id="age" placeholder="Age" formControlName="age" required>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field>
+                    <input matInput type="text" id="email" placeholder="Email" formControlName="email" >
+                    <mat-error *ngIf="signupForm.get('email').invalid">Enter a valid email address</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" id="phone" placeholder="Phone" formControlName="phone" >
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field>
+                    <input matInput type="text" id="city" placeholder="City" formControlName="city" >
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" id="state" placeholder="State" formControlName="state" >
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field>
+                    <input matInput type="text" id="grade" placeholder="Grade in school" formControlName="grade" >
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" id="school" placeholder="Name of your school" formControlName="school" >
+                </mat-form-field>
+            </div>
+            <mat-form-field class="wide">
+              <textarea matInput type="textarea" id="videolink" placeholder="Link to your video" formControlName="videolink" ></textarea>
+          </mat-form-field>
+            <div class="event_section-header">Category</div>
+            <div class="checkbox-list">
+                <div class="form-group">
+                    <mat-radio-group aria-label="Select one" formControlName="entryType" >
+                        <mat-radio-button value="Musical Theatre">Musical Theatre</mat-radio-button><br />
+                        <mat-radio-button value="Monologue">Monologue</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="form-group">
+                <button mat-stroked-button type="button" (click)="filePicker.click()">Pick image</button>
+                <input type="file" #filePicker (change)="onImagePicked($event)">
+                <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && signupForm.get('image').valid">
+                    <img [src]="imagePreview" [alt]="signupForm.value.title">
+                </div>
+            </div>
+  
+            <div class="spacer"></div>
+
+            <button mat-stroked-button color="primary" type="button" style="margin-right: 10px" 
+                [routerLink]="['/national']">Cancel</button>
+            <button mat-flat-button color="accent" type="submit" [disabled]="!signupForm.valid || waiting">SUBMIT</button>
+            <div class='progress-bar' *ngIf="waiting">
+                <mat-progress-bar mode="indeterminate" color="accent" ></mat-progress-bar>
+            </div>
+            <div id="message">
+                <div *ngIf="submitted && !signupForm.touched" class="help-block">{{submitMsg}}</div>
+                <div *ngIf="submitError" class="error">{{errorMsg}}</div>
+            </div>
+        </form>        
+    </div>
+    <p>For any questions, please contact <a href="mailto:jay@aceknox.com">jay@aceknox.com</a>.</p>
+</div>

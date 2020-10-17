@@ -11,6 +11,7 @@ export interface Post {
   videolink?: string;
   musical?: boolean;
   monologue?: boolean;
+  entryType: string;
   // individualInstrumental: boolean;
   // group: boolean;
 }

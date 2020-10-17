@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 import { MaterialModule } from '../modules/material.module';
 
-import { FormComponent } from './form/form.component';
+import { SignUpFormComponent } from './forms/sign-up-form/sign-up-form.component';
 
 @NgModule({
   declarations: [
-    FormComponent
+    SignUpFormComponent
   ],
   imports: [
     CommonModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [
-    FormComponent
   ]
 })
 export class ComponentsModule { }
