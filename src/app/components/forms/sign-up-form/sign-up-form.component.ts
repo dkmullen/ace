@@ -70,27 +70,23 @@ export class SignUpFormComponent implements OnInit {
     this.submitError = false;
     const data = this.signupForm.value;
     const postData = new FormData();
-    console.log(data.name, data.age, data.image)
+    console.log(data)
     postData.append('name', data.name);
     postData.append('age', data.age);
-    postData.append('image', data.image);
-    // const post: Post = {
-    //   id: null,
-    //   name: data.name,
-    //   email: data.email,
-    //   phone: data.phone,
-    //   age: data.age,
-    //   grade: data.grade,
-    //   school: data.school,
-    //   city: data.city,
-    //   state: data.state,
-    //   videolink: data.videolink,
-    //   entryType: data.entryType
-    // };
+    postData.append('email', data.email);
+    postData.append('phone', data.phone);
+    postData.append('grade', data.grade);
+    postData.append('school', data.school);
+    postData.append('city', data.city);
+    postData.append('state', data.state);
+    postData.append('videolink', data.videolink);
+    postData.append('entryType', data.entryType);
+    postData.append('image', data.image, data.name);
     this.http
     .post<{ message: string, post: Post }>(environment.signupUrl, postData)
     .subscribe(responseData => {
       console.log(responseData)
+
       formDirective.resetForm();
       this.signupForm.reset();
       this.submitted = true;

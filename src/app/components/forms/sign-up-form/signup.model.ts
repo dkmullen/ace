@@ -12,6 +12,7 @@ export interface Post {
   musical?: boolean;
   monologue?: boolean;
   entryType: string;
+  imagePath: string;
   // individualInstrumental: boolean;
   // group: boolean;
 }

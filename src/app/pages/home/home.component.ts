@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
       },
       button2: {
         buttontxt: 'Contest details',
-        link: '/signup-form',
+        link: '/national',
         navMethod: 'internal',
         disabled: false,
         display: true
