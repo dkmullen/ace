@@ -25,19 +25,19 @@ export class HomeComponent implements OnInit {
       message1: 'Our first-ever NATIONAL contest',
       message2: 'For high-school-age and younger',
       button1: {
-        buttontxt: 'Registration is closed',
+        buttontxt: 'Sign up',
         link: '/national',
         fragment: '',
         navMethod: 'internal',
-        disabled: true,
+        disabled: false,
         display: true
       },
       button2: {
         buttontxt: 'Contest details',
-        link: '/national',
+        link: '/signup-form', // my test link for generic signup for
         navMethod: 'internal',
-        disabled: false,
-        display: true
+        disabled: true,
+        display: false
       }
     },{
       title: 'Help For Your Next Audition',

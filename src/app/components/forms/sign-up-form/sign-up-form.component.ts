@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { mimeType } from '../../../validators/mime-type-validator';
 import { environment } from '../../../../environments/environment';
@@ -100,6 +101,41 @@ export class SignUpFormComponent implements OnInit {
       this.waiting = false;
     }
     );
+  }
+
+  onGet() {
+    this.http
+    .get<{ message: string, posts: any }>(environment.signupUrl)
+    .pipe(
+      map((postData) => {
+        return postData.posts.map(post => {
+          return {
+            id: post._id,
+            name: post.name,
+            email: post.email,
+            phone: post.phone,
+            age: post.age,
+            grade: post.grade,
+            school: post.school,
+            city: post.city,
+            state: post.state,
+            videolink: post.videolink,
+            musical: post.musical,
+            monologue: post.monologue,
+            entryType: post.entryType,
+            imagePath: post.imagePath
+          }
+        })
+      })
+    )
+    .subscribe(postData => {
+      console.log(postData)
+    }),
+
+    
+    err => {
+      console.log(err)
+    }
   }
 
 }
