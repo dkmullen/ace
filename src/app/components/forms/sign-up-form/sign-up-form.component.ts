@@ -19,6 +19,7 @@ export class SignUpFormComponent implements OnInit {
   errorMsg = 'The form was NOT submitted. Check your internet connection.';
   waiting = false;
   imagePreview: string;
+  myPost: any;
 
   constructor(private http: HttpClient) { }
 
@@ -86,8 +87,9 @@ export class SignUpFormComponent implements OnInit {
     this.http
     .post<{ message: string, post: Post }>(environment.signupUrl, postData)
     .subscribe(responseData => {
-      console.log(responseData)
-
+      
+      this.myPost = responseData;
+      console.log(this.myPost)
       formDirective.resetForm();
       this.signupForm.reset();
       this.submitted = true;
