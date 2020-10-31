@@ -36,7 +36,7 @@ export class SignUpFormComponent implements OnInit {
         videolink: new FormControl(null),
         entryType: new FormControl(null),
         image: new FormControl(null, {
-          validators: [Validators.required],
+          // validators: [Validators.required],
           asyncValidators: [mimeType]
         })
     });
@@ -72,7 +72,7 @@ export class SignUpFormComponent implements OnInit {
     this.submitError = false;
     const data = this.signupForm.value;
     const postData = new FormData();
-    console.log(data)
+    console.log(data, postData)
     postData.append('name', data.name);
     postData.append('age', data.age);
     postData.append('email', data.email);
@@ -83,7 +83,10 @@ export class SignUpFormComponent implements OnInit {
     postData.append('state', data.state);
     postData.append('videolink', data.videolink);
     postData.append('entryType', data.entryType);
-    postData.append('image', data.image, data.name);
+    if (data.image) {
+      postData.append('image', data.image, data.name);
+    }
+    console.log(postData)
     this.http
     .post<{ message: string, post: Post }>(environment.signupUrl, postData)
     .subscribe(responseData => {
@@ -91,7 +94,7 @@ export class SignUpFormComponent implements OnInit {
       this.myPost = responseData;
       console.log(this.myPost)
       formDirective.resetForm();
-      this.signupForm.reset();
+      // this.signupForm.reset();
       this.submitted = true;
       this.submitError = false;
       this.waiting = false;
