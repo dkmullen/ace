@@ -9,7 +9,7 @@
     <div class="spacer"></div>
   
     <div class="container">
-        <form [formGroup]="signupForm" #formDirective="ngForm" (ngSubmit)="onSubmit(signupForm, formDirective)" id="singingForm">
+        <form [formGroup]="signupForm" #formDirective="ngForm" (ngSubmit)="onEdit()" id="singingForm">
             <div class="form-group">
                 <mat-form-field>
                     <input matInput type="text" id="name" formControlName="name" class="formcontrol" placeholder="Name" required>
@@ -78,7 +78,9 @@
                 <div *ngIf="submitError" class="error">{{errorMsg}}</div>
             </div>
         </form>   
-        <button mat-flat-button type="button" (click)="onGet()">Get</button>    
+        <button mat-flat-button type="button" (click)="onGetAll()">Get All</button>    
+        <button mat-flat-button type="button" (click)="onDelete('5fb976c73b1f30d2c18462f7')">Delete One</button>    
+        <button mat-flat-button type="button" (click)="onGetOne('5f98c9f1334494000402f63b')">Get One</button>    
         <img [src]="myPost.signupPost.imagePath" *ngIf="myPost">
     </div>
     <p>For any questions, please contact <a href="mailto:jay@aceknox.com">jay@aceknox.com</a>.</p>

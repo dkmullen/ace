@@ -17,6 +17,33 @@ export class HomeComponent implements OnInit {
   ];
   cards = [
     {
+      title: 'Happy Holidays from ACE',
+      subtitle: 'Thanks to our 2020 artists and donors',
+      image: `assets/images/homepage/holiday.jpg`,
+      alt: 'A theater as seen from the stage',
+      photocredit: 'Photo by \
+ <a href="https://unsplash.com/@darkandflawed?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">\
+ Meghna R</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">\
+ Unsplash</a>',
+      message1: 'More contests coming in 2021',
+      message2: 'We are grateful for your support.',
+      button1: {
+        buttontxt: 'Donate',
+        link: 'https://www.paypal.com/donate?hosted_button_id=2N2ERBUC223SW',
+        fragment: '',
+        navMethod: 'external',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: 'Contest details',
+        link: '/signup-form', // my test link for generic signup for
+        navMethod: 'internal',
+        disabled: true,
+        display: false
+      }
+    },
+    {
       title: 'National ACE Theatre Awards',
       subtitle: 'Registration is open!',
       image: `assets/images/homepage/theatre.jpg`,

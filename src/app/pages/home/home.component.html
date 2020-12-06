@@ -10,7 +10,7 @@
       <mat-card-subtitle>{{item.subtitle}}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src={{item.image}} alt={{item.alt}}>
-    <div class="photocredit" *ngIf="item.photocredit">{{item.photocredit}}</div>
+    <div class="photocredit" *ngIf="item.photocredit" [innerHTML]="item.photocredit"></div>
     <mat-card-content>
       <p><span class="accent-text bold">{{item.message1}}</span></p>
       <p>{{item.message2}}</p>

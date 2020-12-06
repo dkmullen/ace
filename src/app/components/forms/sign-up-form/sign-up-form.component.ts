@@ -5,6 +5,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { mimeType } from '../../../validators/mime-type-validator';
 import { environment } from '../../../../environments/environment';
 import { Post } from './signup.model';
+import { SignUpService } from './sign-up.service';
 
 @Component({
   selector: 'app-sign-up-form',
@@ -20,8 +21,9 @@ export class SignUpFormComponent implements OnInit {
   waiting = false;
   imagePreview: string;
   myPost: any;
+  event = 'test'; // Experimenting with this being set to mw to define what we are signing up for
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private signupService: SignUpService) { }
 
   ngOnInit() {
     this.signupForm = new FormGroup({
@@ -67,34 +69,16 @@ export class SignUpFormComponent implements OnInit {
     reader.readAsDataURL(file);
   }
 
-  onSubmit(signupForm, formDirective) {
+  onSubmit() {
     this.waiting = true;
     this.submitError = false;
     const data = this.signupForm.value;
-    const postData = new FormData();
-    console.log(data, postData)
-    postData.append('name', data.name);
-    postData.append('age', data.age);
-    postData.append('email', data.email);
-    postData.append('phone', data.phone);
-    postData.append('grade', data.grade);
-    postData.append('school', data.school);
-    postData.append('city', data.city);
-    postData.append('state', data.state);
-    postData.append('videolink', data.videolink);
-    postData.append('entryType', data.entryType);
-    if (data.image) {
-      postData.append('image', data.image, data.name);
-    }
-    console.log(postData)
-    this.http
-    .post<{ message: string, post: Post }>(environment.signupUrl, postData)
+
+    this.signupService.createPost(data, this.event)
     .subscribe(responseData => {
       
       this.myPost = responseData;
-      console.log(this.myPost)
-      formDirective.resetForm();
-      // this.signupForm.reset();
+      this.signupForm.reset();
       this.submitted = true;
       this.submitError = false;
       this.waiting = false;
@@ -108,39 +92,41 @@ export class SignUpFormComponent implements OnInit {
     );
   }
 
-  onGet() {
-    this.http
-    .get<{ message: string, posts: any }>(environment.signupUrl)
-    .pipe(
-      map((postData) => {
-        return postData.posts.map(post => {
-          return {
-            id: post._id,
-            name: post.name,
-            email: post.email,
-            phone: post.phone,
-            age: post.age,
-            grade: post.grade,
-            school: post.school,
-            city: post.city,
-            state: post.state,
-            videolink: post.videolink,
-            musical: post.musical,
-            monologue: post.monologue,
-            entryType: post.entryType,
-            imagePath: post.imagePath
-          }
-        })
-      })
-    )
-    .subscribe(postData => {
-      console.log(postData)
-    }),
+  onGetAll() {
+    this.signupService.getPosts();
+  }
 
-    
+  onGetOne(id: string) {
+    this.signupService.getPost(id).subscribe(res => {
+      console.log(res)
+    })
+  }
+
+  onEdit() {
+    this.waiting = true;
+    this.submitError = false;
+    const data = this.signupForm.value;
+
+    this.signupService.updatePost('5f98c9f1334494000402f63b', data)
+    .subscribe(responseData => {
+      
+      this.myPost = responseData;
+      this.signupForm.reset();
+      this.submitted = true;
+      this.submitError = false;
+      this.waiting = false;
+    },
     err => {
       console.log(err)
+      this.submitted = false;
+      this.submitError = true;
+      this.waiting = false;
     }
+    );
+  }
+
+  onDelete(postId: string) {
+    this.signupService.deletePost(postId);
   }
 
 }

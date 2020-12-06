@@ -13,6 +13,4 @@ export interface Post {
   monologue?: boolean;
   entryType: string;
   imagePath: string;
-  // individualInstrumental: boolean;
-  // group: boolean;
 }

@@ -72,23 +72,8 @@ $ace-primary: mat-palette($mat-primary);
 $ace-accent:  mat-palette($mat-accent);
 $ace-theme: mat-light-theme($ace-primary, $ace-accent);
 
-
-.ace-theme {
-    @include angular-material-theme($ace-theme);
-
-    // Theme colors:
-    $primary: #000000;
-    $accent: #bb2d53;
-    $primary-dark: #002b36;
-    $primary-light: #839496;
-    $text-light: #ffffff;
-    $text-dark:#002b36;
-    $text-alt: #93a1a1;
-    $red: #dc322f;
-}
-
 $primary: #000000;
 $accent : #bb2d53;
 $light : #ffffff;
 
-@include angular-material-theme($ace-theme);
+@include angular-material-color($ace-theme);
