@@ -17,15 +17,15 @@ export class HomeComponent implements OnInit {
   ];
   cards = [
     {
-      title: 'Happy Holidays from ACE',
-      subtitle: 'Thanks to our 2020 artists and donors',
-      image: `assets/images/homepage/holiday.jpg`,
-      alt: 'A theater as seen from the stage',
+      title: 'More contests ahead in 2021',
+      subtitle: 'Hopefully in person!',
+      image: `assets/images/homepage/road.jpg`,
+      alt: 'An empty stretch of highway on a snowy day',
       photocredit: 'Photo by \
- <a href="https://unsplash.com/@darkandflawed?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">\
- Meghna R</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">\
+ <a href="https://unsplash.com/@alexiby?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">\
+ Alex Iby</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">\
  Unsplash</a>',
-      message1: 'More contests coming in 2021',
+      message1: 'Thanks to our 2020 artists and donors',
       message2: 'We are grateful for your support.',
       button1: {
         buttontxt: 'Donate',

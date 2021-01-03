@@ -76,6 +76,7 @@ export class SignUpFormComponent implements OnInit {
 
     this.signupService.createPost(data, this.event)
     .subscribe(responseData => {
+      console.log(responseData)
       
       this.myPost = responseData;
       this.signupForm.reset();
@@ -107,7 +108,7 @@ export class SignUpFormComponent implements OnInit {
     this.submitError = false;
     const data = this.signupForm.value;
 
-    this.signupService.updatePost('5f98c9f1334494000402f63b', data)
+    this.signupService.updatePost('5fcd821f6258f6ddde8daa7f', data)
     .subscribe(responseData => {
       
       this.myPost = responseData;
