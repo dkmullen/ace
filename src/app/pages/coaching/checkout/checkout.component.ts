@@ -70,16 +70,6 @@ export class CheckoutComponent implements OnInit {
                   the class will be limited to four students.
         `
       },
-      aleah: {
-        classTitle: 'Musical Theatre',
-        classTeacher: 'Aleah Vassell',
-        email: 'aleah@aceknox.com',
-        classDescription: `
-        A weekly <span class="accent-text bold">online</span> class that meets <span class="bold">Saturdays</span>, July 7 - August 4,
-                  <span class="bold">2pm-3pm EDT</span> on Zoom. The cost is $75 and
-                  the class will be limited to four students.
-        `
-      },
     }
   ]
 

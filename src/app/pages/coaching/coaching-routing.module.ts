@@ -6,7 +6,6 @@ import { ASmithComponent } from './a-smith/a-smith.component';
 import { MLytleComponent } from './m-lytle/m-lytle.component';
 import { CLucienComponent } from './c-lucien/c-lucien.component';
 import { JApkingComponent } from './j-apking/j-apking.component';
-import { AVassellComponent } from './a-vassell/a-vassell.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PayComponent } from './pay/pay.component';
 
@@ -28,7 +27,6 @@ const routes: Routes = [
   { path: 'matt-lytle', component: MLytleComponent },
   { path: 'courtney-lucien', component: CLucienComponent },      
   { path: 'jay-apking', component: JApkingComponent },
-  { path: 'aleah-vassell', component: AVassellComponent },
   { path: 'pay', component: PayComponent }
 ];
 

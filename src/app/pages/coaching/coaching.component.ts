@@ -12,7 +12,6 @@ export class CoachingComponent implements OnInit {
     {class: 'Audition Monologues', email: 'cjlucien@gmail.com', firstname: 'Courtney', lastname: 'Lucien', link: 'courtney-lucien', photo: `${this.photoLink}c_lucien_600.jpg`},
     {class: 'Audition Monologues', email: 'lytle.matthew@gmail.com', firstname: 'Matt', lastname: 'Lytle', link: 'matt-lytle', photo: `${this.photoLink}matt_lytle2.jpg`},
     {class: 'Shakespeare Monologues', email: 'jay@aceknox.com', firstname: 'Jay', lastname: 'Apking', link: 'jay-apking', photo: `${this.photoLink}jay_apking.jpg`},
-    {class: 'Musical Theatre', email: 'aleah@aceknox.com', firstname: 'Aleah', lastname: 'Vassell', link: 'aleah-vassell', photo: `${this.photoLink}aleah_vassell3.jpg`}
   ]
 
   constructor() { }
