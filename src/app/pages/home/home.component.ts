@@ -17,21 +17,18 @@ export class HomeComponent implements OnInit {
   ];
   cards = [
     {
-      title: 'More contests ahead in 2021',
-      subtitle: 'Hopefully in person!',
-      image: `assets/images/homepage/road.jpg`,
-      alt: 'An empty stretch of highway on a snowy day',
-      photocredit: 'Photo by \
- <a href="https://unsplash.com/@alexiby?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">\
- Alex Iby</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">\
- Unsplash</a>',
-      message1: 'Thanks to our 2020 artists and donors',
-      message2: 'We are grateful for your support.',
+      title: 'Singing Contest 2021',
+      subtitle: 'Virtual, but still!',
+      image: `assets/images/singing_2019/s14.jpg`,
+      alt: 'A singer',
+      photocredit: '',
+      message1: 'Sign up this weekend',
+      message2: 'Grades 8-12',
       button1: {
-        buttontxt: 'Donate',
-        link: 'https://www.paypal.com/donate?hosted_button_id=2N2ERBUC223SW',
+        buttontxt: 'More',
+        link: '/singing2021',
         fragment: '',
-        navMethod: 'external',
+        navMethod: 'internal',
         disabled: false,
         display: true
       },
@@ -42,18 +39,17 @@ export class HomeComponent implements OnInit {
         disabled: true,
         display: false
       }
-    },
-    {
-      title: 'National ACE Theatre Awards',
-      subtitle: 'Registration is open!',
-      image: `assets/images/homepage/theatre.jpg`,
-      alt: 'A theater as seen from the stage',
-      photocredit: 'Mark Thompson on Unsplash',
-      message1: 'Our first-ever NATIONAL contest',
-      message2: 'For high-school-age and younger',
+    },{
+      title: 'Theatre Contest 2021',
+      subtitle: 'Three categories',
+      image: `assets/images/acting_2019/a13.jpg`,
+      alt: 'An actor',
+      photocredit: '',
+      message1: 'Sign up by May 1',
+      message2: 'Grades 9-12',
       button1: {
-        buttontxt: 'Sign up',
-        link: '/national',
+        buttontxt: 'More',
+        link: '/drama2021',
         fragment: '',
         navMethod: 'internal',
         disabled: false,

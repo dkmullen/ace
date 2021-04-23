@@ -21,7 +21,7 @@ export class SignUpFormComponent implements OnInit {
   waiting = false;
   imagePreview: string;
   myPost: any;
-  event = 'test'; // Experimenting with this being set to mw to define what we are signing up for
+  event = 'singing'; // Experimenting with this being set to mw to define what we are signing up for
 
   constructor(private http: HttpClient, private signupService: SignUpService) { }
 

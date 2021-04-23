@@ -6,8 +6,7 @@ export interface Post {
   age: number;
   grade: string;
   school: string;
-  city: string;
-  state: string;
+  title: string;
   videolink: string;
   // musical: boolean;
   // monologue: boolean;

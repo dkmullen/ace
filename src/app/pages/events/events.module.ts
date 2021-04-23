@@ -23,6 +23,7 @@ import { ShakepeareComponent } from './safeathome/shakepeare/shakepeare.componen
 import { IsabellaFransiscoComponent } from './safeathome/writing/isabella-fransisco/isabella-fransisco.component';
 import { ElizabethNewmanComponent } from './safeathome/writing/elizabeth-newman/elizabeth-newman.component';
 import { NationalComponent } from './national/national.component';
+import { Drama2021Component } from './drama21/drama.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { NationalComponent } from './national/national.component';
     ShakepeareComponent,
     IsabellaFransiscoComponent,
     ElizabethNewmanComponent,
-    NationalComponent
+    NationalComponent,
+    Drama2021Component
   ],
   entryComponents: [VotingDialog],
   imports: [

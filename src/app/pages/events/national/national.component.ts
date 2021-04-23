@@ -12,4 +12,9 @@ export class NationalComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToForm() {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSd4rRO8rFFRMMEdxmzjFkGVPzgZa_hQfdwMQTDFJApq3q0Xpg/viewform?usp=sf_link');
+    
+  }
+
 }

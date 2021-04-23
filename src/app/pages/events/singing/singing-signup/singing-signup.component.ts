@@ -28,8 +28,7 @@ export class SingingSignupComponent implements OnInit {
         age: new FormControl(null, [Validators.required, Validators.min(5)]),
         grade: new FormControl(null, [Validators.required]),
         school: new FormControl(null, [Validators.required]),
-        city: new FormControl(null, [Validators.required]),
-        state: new FormControl(null, [Validators.required]),
+        title: new FormControl(null, [Validators.required]),
         videolink: new FormControl(null, [Validators.required]),
         // musical: new FormControl(null),
         // monologue: new FormControl(null),
@@ -47,8 +46,7 @@ export class SingingSignupComponent implements OnInit {
         age: null,
         grade: '',
         school: '',
-        city: '',
-        state: '',
+        title: '',
         videolink: '',
         // musical: false,
         // monologue: false,
@@ -71,8 +69,7 @@ export class SingingSignupComponent implements OnInit {
       age: data.age,
       grade: data.grade,
       school: data.school,
-      city: data.city,
-      state: data.state,
+      title: data.title,
       videolink: data.videolink,
       // musical: data.musical,
       // monologue: data.monologue,
@@ -81,7 +78,7 @@ export class SingingSignupComponent implements OnInit {
       // group: data.group
     };
     this.http
-    .post<{ message: string }>(environment.nationalUrl, post)
+    .post<{ message: string }>(environment.singing2021Url, post)
     .subscribe(responseData => {
       formDirective.resetForm();
       this.signupForm.reset();

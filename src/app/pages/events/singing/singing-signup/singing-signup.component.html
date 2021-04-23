@@ -1,7 +1,7 @@
 <div class="event_page-wrapper">
 
-  <div class="event_secondary-heading">The National</div>
-  <div class="event_main-heading"> ACE Theatre Awards</div>
+  <!-- <div class="event_secondary-heading">The</div> -->
+  <div class="event_main-heading"> ACE Singing Awards</div>
   <div class="event_secondary-heading accent-text">
       ENTRY FORM
   </div>
@@ -34,14 +34,7 @@
               <input matInput type="text" id="phone" placeholder="Phone" formControlName="phone" required>
             </mat-form-field>
           </div>
-          <div class="form-group">
-            <mat-form-field>
-              <input matInput type="text" id="city" placeholder="City" formControlName="city" required>
-            </mat-form-field>
-            <mat-form-field>
-              <input matInput type="text" id="state" placeholder="State" formControlName="state" required>
-            </mat-form-field>
-          </div>
+
           <div class="form-group">
             <mat-form-field>
               <input matInput type="text" id="grade" placeholder="Grade in school" formControlName="grade" required>
@@ -50,26 +43,22 @@
               <input matInput type="text" id="school" placeholder="Name of your school" formControlName="school" required>
             </mat-form-field>
           </div>
-          <mat-form-field class="wide">
-            <textarea matInput type="textarea" id="videolink" placeholder="Link to your video" formControlName="videolink" required></textarea>
-        </mat-form-field>
+          <div class="form-group">
+            <mat-form-field>
+              <input matInput type="text" id="title" placeholder="Title/Author of song" formControlName="title" required>
+            </mat-form-field>
+            <mat-form-field>
+              <textarea matInput type="textarea" id="videolink" placeholder="Link to your video" formControlName="videolink" required></textarea>
+            </mat-form-field>
+          </div>
+
           <div class="event_section-header">Category
             </div>
           <div class="checkbox-list">
-          <!-- <div class="form-group">
-            <mat-checkbox id="musical" formControlName="musical">
-              Musical Theatre
-            </mat-checkbox>
-          </div>
-          <div class="form-group">
-            <mat-checkbox id="monologue" formControlName="monologue">
-              Monologue
-            </mat-checkbox>
-          </div> -->
           <div class="form-group">
             <mat-radio-group aria-label="Select one" formControlName="entryType" required>
-              <mat-radio-button value="Musical Theatre">Musical Theatre</mat-radio-button><br />
-              <mat-radio-button value="Monologue">Monologue</mat-radio-button>
+              <mat-radio-button value="Rising Star (Grade 8)">Rising Star (Grade 8)</mat-radio-button><br />
+              <mat-radio-button value="Open Singing (Grades 9-12)">Open Singing (Grades 9-12)</mat-radio-button>
             </mat-radio-group>
           </div>
           <!-- <div class="form-group">
