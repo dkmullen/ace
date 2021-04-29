@@ -22,8 +22,8 @@ export class HomeComponent implements OnInit {
       image: `assets/images/singing_2019/s14.jpg`,
       alt: 'A singer',
       photocredit: '',
-      message1: 'Sign up this weekend',
-      message2: 'Grades 8-12',
+      message1: 'Finalists have been selected',
+      message2: 'Thru Grade 12',
       button1: {
         buttontxt: 'More',
         link: '/singing2021',
