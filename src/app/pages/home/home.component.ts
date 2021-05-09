@@ -1,3 +1,4 @@
+import { getRtlScrollAxisType } from '@angular/cdk/platform';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -9,26 +10,20 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   hello = 'Hello';
-  singingWinners = [
-    'connor.jpg', 'hope.jpg', 'joey.jpg', 'marian.jpg', 'noah.jpg'
-  ];
-  actingWinners = [
-    'grace.jpg', 'katelyn.jpg', 'loren.jpg', 'nevaeh.jpg'
-  ];
   cards = [
     {
       title: 'Singing Contest 2021',
-      subtitle: 'Virtual, but still!',
-      image: `assets/images/singing_2019/s14.jpg`,
+      subtitle: 'See all the finalists',
+      image: `assets/images/singing_21/${Math.floor(Math.random() * Math.floor(10) + 1)}.jpg`,
       alt: 'A singer',
       photocredit: '',
-      message1: 'Finalists have been selected',
-      message2: 'Thru Grade 12',
+      message1: 'Vote for your favorite finalist',
+      message2: 'Now thru May 15',
       button1: {
-        buttontxt: 'More',
-        link: '/singing2021',
+        buttontxt: 'Vote',
+        link: 'https://aceknox.com/singing21',
         fragment: '',
-        navMethod: 'internal',
+        navMethod: 'internalWithPageLoad',
         disabled: false,
         display: true
       },
