@@ -1,23 +1,27 @@
 #grid1 {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: auto;
-    grid-gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: auto;
+  grid-gap: 8px;
 }
 
 .actor {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
 .less-margin {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.category {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 699px) {
-    #grid1 {
-        grid-template-columns: 100%;
-
-    }
+  #grid1 {
+    grid-template-columns: 100%;
+  }
 }

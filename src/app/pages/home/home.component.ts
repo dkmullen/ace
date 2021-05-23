@@ -12,18 +12,18 @@ export class HomeComponent implements OnInit {
   hello = 'Hello';
   cards = [
     {
-      title: 'Singing Contest 2021',
-      subtitle: 'See all the finalists',
-      image: `assets/images/singing_21/${Math.floor(Math.random() * Math.floor(10) + 1)}.jpg`,
-      alt: 'A singer',
+      title: 'Theatre Contest 2021',
+      subtitle: 'The results are in',
+      image: `assets/images/acting_2019/a13.jpg`,
+      alt: 'An actor',
       photocredit: '',
-      message1: 'Vote for your favorite finalist',
-      message2: 'Now thru May 15',
+      message1: 'Here are the winners',
+      message2: 'Thanks to all of our contestants',
       button1: {
-        buttontxt: 'Vote',
-        link: 'https://aceknox.com/singing21',
+        buttontxt: 'See winners',
+        link: '/drama2021',
         fragment: '',
-        navMethod: 'internalWithPageLoad',
+        navMethod: 'internal',
         disabled: false,
         display: true
       },
@@ -34,19 +34,20 @@ export class HomeComponent implements OnInit {
         disabled: true,
         display: false
       }
-    },{
-      title: 'Theatre Contest 2021',
-      subtitle: 'Three categories',
-      image: `assets/images/acting_2019/a13.jpg`,
-      alt: 'An actor',
+    },
+    {
+      title: 'Singing Contest 2021',
+      subtitle: 'See all the finalists',
+      image: `assets/images/singing_21/contest-results.jpg`,
+      alt: 'A singer',
       photocredit: '',
-      message1: 'Sign up by May 1',
-      message2: 'Grades 9-12',
+      message1: 'Both contests are complete',
+      message2: 'Thanks, everyone, for entering!',
       button1: {
-        buttontxt: 'More',
-        link: '/drama2021',
+        buttontxt: 'See results',
+        link: 'https://aceknox.com/singing21',
         fragment: '',
-        navMethod: 'internal',
+        navMethod: 'internalWithPageLoad',
         disabled: false,
         display: true
       },
