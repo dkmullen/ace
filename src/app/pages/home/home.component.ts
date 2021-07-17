@@ -12,28 +12,36 @@ export class HomeComponent implements OnInit {
   hello = 'Hello';
   cards = [
     {
-      title: 'ACE in the Park',
-      subtitle: 'A summer concert series',
-      image: `assets/images/park2.jpg`,
-      alt: 'An actor',
+      title: 'This Tuesday (July 20)',
+      subtitle: 'At Knoxville\'s Lakeshore Park',
+      image: `assets/images/july20.jpg`,
+      alt: 'An outdoor concert scene',
       photocredit: '',
-      message1: 'Tuesdays at Knoxville\'s Lakeshore Park',
-      message2: 'Music starts at 6:30',
+      message1: 'Tuesdays all summer at 6:30pm',
+      message2: 'Visit our co-sponsors below',
       button1: {
-        buttontxt: 'Visit Lakeshore\'s site for more',
-        link: 'http://lakeshoreparkknoxville.org/event/ace-in-the-park/',
+        buttontxt: 'Lakeshore Park',
+        link: 'http://lakeshoreparkknoxville.org/',
         fragment: '',
         navMethod: 'external',
         disabled: false,
         display: true
       },
       button2: {
-        buttontxt: '',
-        link: '/signup-form', // my test link for generic signup for
-        navMethod: 'internal',
-        disabled: true,
-        display: false
-      }
+        buttontxt: 'Party Boys',
+        link: 'https://www.partyboysdjshow.com/', // my test link for generic signup for
+        navMethod: 'external',
+        disabled: false,
+        display: true
+      },
+      button3: {
+        buttontxt: 'Turkey Creek',
+        link: 'http://turkeycreek.com/',
+        fragment: '',
+        navMethod: 'external',
+        disabled: false,
+        display: true
+      },
     },
     {
       title: 'Theatre Contest 2021',

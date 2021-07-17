@@ -20,6 +20,8 @@
         (click)="navigate(item.button1.link, item.button1.navMethod, item.button1.fragment)">{{item.button1.buttontxt}}</button>
       <button style="margin-left: 5px" *ngIf="item.button2.display" mat-flat-button color="primary" class="second-btn"
         (click)="navigate(item.button2.link, item.button2.navMethod)">{{item.button2.buttontxt}}</button>
+        <button style="margin-left: 5px" *ngIf="item.button3 && item.button3.display" mat-flat-button color="accent" [disabled]=item.button3.disabled
+        (click)="navigate(item.button3.link, item.button3.navMethod, item.button3.fragment)">{{item.button3.buttontxt}}</button>
     </mat-card-actions>
   </mat-card>
   <p [style.margin-bottom.px]="20" class="announcement">

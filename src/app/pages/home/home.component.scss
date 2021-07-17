@@ -1,58 +1,66 @@
 @import '../../../assets/styles/ace.scss';
 .homepage_card {
-  max-width: 500px;
-  margin-bottom: 1rem;
-  background: rgb(233, 233, 233);
+	max-width: 500px;
+	margin-bottom: 1rem;
+	background: rgb(233, 233, 233);
 
-  mat-card-actions {
-    margin-bottom: unset;
-    padding: unset;
-    margin-left: 1px;
-  }
+	mat-card-actions {
+		margin-bottom: unset;
+		padding: unset;
+		margin-left: 1px;
+	}
 }
 
 .homepage_header-image {
-  background-image: url('../../../assets/images/ace_more_margin.png');
-  background-size: cover;
+	background-image: url('../../../assets/images/ace_more_margin.png');
+	background-size: cover;
 }
 
 .live {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .second-btn {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 
 .photocredit {
-  position: absolute;
-  right: 10px;
-  font-size: x-small;
-  margin-top: -10px;
+	position: absolute;
+	right: 10px;
+	font-size: x-small;
+	margin-top: -10px;
 }
 
 .announcement a {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 #row2 {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 
 @media (max-width: 959px) {
-  #row2 {
-    margin-left: unset;
-  }
+	#row2 {
+		margin-left: unset;
+	}
 }
 
 @media (max-width: 500px) {
-  .photocredit {
-    display: none;
-  }
-  .title-text {
-    font-size: 1rem !important;
-  }
-  .announcement {
-    font-size: 12px;
-  }
+	.photocredit {
+		display: none;
+	}
+	.title-text {
+		font-size: 1rem !important;
+	}
+	.announcement {
+		font-size: 12px;
+	}
+}
+@media (max-width: 439px) {
+	.mat-card-actions {
+		text-align: center;
+	}
+	button {
+		margin-top: 5px !important;
+	}
 }
