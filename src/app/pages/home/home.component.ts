@@ -12,12 +12,12 @@ export class HomeComponent implements OnInit {
   hello = 'Hello';
   cards = [
     {
-      title: 'This Tuesday (July 20)',
-      subtitle: 'At Knoxville\'s Lakeshore Park',
-      image: `assets/images/july20.jpg`,
-      alt: 'An outdoor concert scene',
+      title: 'ACE in the Park',
+      subtitle: 'Summer Concert Finale',
+      image: `assets/images/aug17.jpg`,
+      alt: 'Names in a circle',
       photocredit: '',
-      message1: 'Tuesdays all summer at 6:30pm',
+      message1: 'Tuesday August 17 at 6:30pm',
       message2: 'Visit our co-sponsors below',
       button1: {
         buttontxt: 'Lakeshore Park',
