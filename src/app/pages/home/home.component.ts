@@ -13,17 +13,17 @@ export class HomeComponent implements OnInit {
   cards = [
     {
       title: 'ACE in the Park',
-      subtitle: 'Summer Concert Finale',
-      image: `assets/images/aug17.jpg`,
-      alt: 'Names in a circle',
+      subtitle: 'Thanks for a great summer',
+      image: `assets/images/thanks.jpg`,
+      alt: 'Musicians on a lawn',
       photocredit: '',
-      message1: 'Tuesday August 17 at 6:30pm',
-      message2: 'Visit our co-sponsors below',
+      message1: 'Thanks to our supporters, artists and co-sponsors',
+      message2: 'See some photos here',
       button1: {
-        buttontxt: 'Lakeshore Park',
-        link: 'http://lakeshoreparkknoxville.org/',
+        buttontxt: 'Gallery',
+        link: 'ace-in-the-park',
         fragment: '',
-        navMethod: 'external',
+        navMethod: 'internal',
         disabled: false,
         display: true
       },
@@ -31,16 +31,16 @@ export class HomeComponent implements OnInit {
         buttontxt: 'Party Boys',
         link: 'https://www.partyboysdjshow.com/', // my test link for generic signup for
         navMethod: 'external',
-        disabled: false,
-        display: true
+        disabled: true,
+        display: false
       },
       button3: {
         buttontxt: 'Turkey Creek',
         link: 'http://turkeycreek.com/',
         fragment: '',
         navMethod: 'external',
-        disabled: false,
-        display: true
+        disabled: true,
+        display: false
       },
     },
     {
@@ -61,10 +61,10 @@ export class HomeComponent implements OnInit {
       },
       button2: {
         buttontxt: 'Contest details',
-        link: '/signup-form', // my test link for generic signup for
+        link: '/ace-in-the-park', // my test link for generic signup for
         navMethod: 'internal',
-        disabled: true,
-        display: false
+        disabled: false,
+        display: true
       }
     },
     {

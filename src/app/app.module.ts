@@ -25,7 +25,7 @@ import { StyleDemoComponent } from './pages/misc/style-demo/style-demo.component
     MenuComponent,
     HomeComponent,
     FooterComponent,
-    StyleDemoComponent
+    StyleDemoComponent,
   ],
   imports: [
     BrowserModule,

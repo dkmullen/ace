@@ -6,6 +6,7 @@ import { ActingGalleryComponent } from './acting-gallery/acting-gallery.componen
 import { PastEventsComponent } from './past-events/past-events.component';
 import { PhotoContestComponent } from './photo-contest/photo-contest.component';
 import { Singing2020Component } from './singing2020/singing2020.component';
+import { AceInTheParkGalleryComponent } from './ace-in-the-park-gallery/ace-in-the-park-gallery.component';
 
 const routes: Routes = [
   { path: 'singing-gallery', component: SingingGalleryComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'acting-gallery', component: ActingGalleryComponent },
   { path: 'past-events', component: PastEventsComponent },
   { path: '2019-photo-contest', component: PhotoContestComponent},
+  { path: 'ace-in-the-park', component: AceInTheParkGalleryComponent},
 ];
 
 @NgModule({

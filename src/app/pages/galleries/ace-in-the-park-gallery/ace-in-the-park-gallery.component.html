@@ -1,0 +1,30 @@
+<div class="gallery_page-wrapper">
+  <div class="event_main-heading">ACE in the Park 2021</div>
+  <div class="bold">Thanks for a great summer!</div>
+  <div class="spacer"></div>
+  <div class="italic">
+      Visit our sponsors:
+      <span class="accent-text"><a href="https://www.partyboysdjshow.com/" target="_blank">Party Boys</a></span>,
+      <span class="accent-text"><a href="http://lakeshoreparkknoxville.org" target="_blank">Lakeshore Park</a></span>,
+      <span class="accent-text"><a href="http://turkeycreek.com/" target="_blank">Turkey Creek</a></span>,
+  </div>
+  <div class="spacer"></div>
+
+  <div class="row"
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutGap="20px"
+    fxLayoutAlign="center start">
+
+    <div class="column" fxLayout="column" fxFlex="50">
+      <mat-card *ngFor="let item of pics; index as i" [style.max-width.px]="500">
+        <img mat-card-image src="assets/images/summer_2021/{{item}}.jpeg">
+      </mat-card>
+    </div>
+    <div class="column" fxLayout="column" fxFlex="50">
+      <mat-card *ngFor="let item of picsCol2; index as i" [style.max-width.px]="500">
+        <img mat-card-image src="assets/images/summer_2021/{{item}}.jpeg">
+      </mat-card>
+    </div>
+  </div>
+</div>

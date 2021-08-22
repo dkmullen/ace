@@ -9,6 +9,8 @@ import { ActingGalleryComponent } from './acting-gallery/acting-gallery.componen
 import { PastEventsComponent } from './past-events/past-events.component';
 import { PhotoContestComponent } from './photo-contest/photo-contest.component';
 import { Singing2020Component } from './singing2020/singing2020.component';
+import { AceInTheParkGalleryComponent } from './ace-in-the-park-gallery/ace-in-the-park-gallery.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { Singing2020Component } from './singing2020/singing2020.component';
     ActingGalleryComponent,
     PastEventsComponent,
     PhotoContestComponent,
-    Singing2020Component
+    Singing2020Component,
+    AceInTheParkGalleryComponent
   ],
   imports: [
     CommonModule,
