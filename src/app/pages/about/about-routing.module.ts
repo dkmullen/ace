@@ -8,9 +8,9 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { SupportComponent } from './support/support.component';
 
 const routes: Routes = [
-  { path: 'board', component: BoardComponent },
+  { path: 'mission', component: BoardComponent },
   { path: 'donors', component: DonorsComponent },
-  { path: 'email', component: EmailComponent },
+  // { path: 'email', component: EmailComponent },
   { path: 'sponsors', component: SponsorsComponent },
   { path: 'support', component: SupportComponent },
 ];

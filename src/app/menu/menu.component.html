@@ -7,7 +7,8 @@
 
     <mat-menu #topLevel="matMenu">
       <button mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >Home</button>
-      <button mat-menu-item [matMenuTriggerFor]="features">NEW</button>
+      <button mat-menu-item [routerLink]="['/features/videos']"routerLinkActive="router-link-active">Interviews</button>
+
       <button mat-menu-item [matMenuTriggerFor]="auditions">Events</button>
       <!-- <button mat-menu-item [matMenuTriggerFor]="coaching">Coaching</button> -->
       <button mat-menu-item [matMenuTriggerFor]="galleries">Galleries</button>
@@ -16,8 +17,9 @@
 
     <ng-template #fullMenu>
       <div id="full-menu">
-        <button mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >Home</button>
-        <button class="accent"  mat-menu-item [matMenuTriggerFor]="features">NEW</button>
+        <button class="accent" mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >Home</button>
+        <button mat-menu-item [routerLink]="['/features/videos']"routerLinkActive="router-link-active">Interviews</button>
+        <!-- <button class="accent"  mat-menu-item [matMenuTriggerFor]="features">NEW</button> -->
         <button mat-menu-item [matMenuTriggerFor]="auditions">Events</button>
         <!-- <button mat-menu-item [matMenuTriggerFor]="coaching">Coaching</button> -->
         <button mat-menu-item [matMenuTriggerFor]="galleries">Galleries</button>
@@ -55,9 +57,9 @@
     </mat-menu>
 
     <mat-menu #about="matMenu">
-      <button mat-menu-item [routerLink]="['/about/board']" routerLinkActive="router-link-active">Mission/Board</button>
+      <button mat-menu-item [routerLink]="['/about/mission']" routerLinkActive="router-link-active">Mission</button>
       <button mat-menu-item [routerLink]="['/about/donors']" routerLinkActive="router-link-active" >Donors</button>
-      <button mat-menu-item [routerLink]="['/about/email']" routerLinkActive="router-link-active" >Email Newsletter</button>
+      <!-- <button mat-menu-item [routerLink]="['/about/email']" routerLinkActive="router-link-active" >Email Newsletter</button> -->
     </mat-menu>
 
     <mat-menu #safer="matMenu">
