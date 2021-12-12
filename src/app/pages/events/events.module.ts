@@ -25,6 +25,7 @@ import { ElizabethNewmanComponent } from './safeathome/writing/elizabeth-newman/
 import { NationalComponent } from './national/national.component';
 import { Drama2021Component } from './drama21/drama.component';
 import { Singing21Component } from './2021/singing21/singing21.component';
+import { Drama22Component } from './drama22/drama22.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { Singing21Component } from './2021/singing21/singing21.component';
     ElizabethNewmanComponent,
     NationalComponent,
     Drama2021Component,
-    Singing21Component
+    Singing21Component,
+    Drama22Component
   ],
   entryComponents: [VotingDialog],
   imports: [

@@ -12,6 +12,30 @@ export class HomeComponent implements OnInit {
   hello = 'Hello';
   cards = [
     {
+      title: 'ACE Awards at the Clarence Brown Theatre',
+      subtitle: 'January 9, 2022',
+      image: `assets/images/drama22.jpg`,
+      alt: 'An actor',
+      photocredit: '',
+      message1: 'Have a chance to win $500 for you and $200 for your school',
+      message2: 'Four categories. Enter any or all of them!',
+      button1: {
+        buttontxt: 'Sign up today',
+        link: '/drama2022',
+        fragment: '',
+        navMethod: 'internal',
+        disabled: false,
+        display: true
+      },
+      button2: {
+        buttontxt: 'Contest details',
+        link: '/ace-in-the-park', // my test link for generic signup for
+        navMethod: 'internal',
+        disabled: true,
+        display: false
+      }
+    },
+    {
       title: 'ACE in the Park',
       subtitle: 'Thanks for a great summer',
       image: `assets/images/thanks.jpg`,

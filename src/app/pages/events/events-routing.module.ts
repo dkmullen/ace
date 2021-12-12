@@ -14,6 +14,7 @@ import { IsabellaFransiscoComponent } from './safeathome/writing/isabella-fransi
 import { ElizabethNewmanComponent } from './safeathome/writing/elizabeth-newman/elizabeth-newman.component';
 import { NationalComponent } from './national/national.component';
 import { Drama2021Component } from './drama21/drama.component';
+import { Drama22Component } from './drama22/drama22.component';
 import { Singing21Component } from './2021/singing21/singing21.component';
  
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'national/signup', component: SingingSignupComponent },
   { path: 'singing2021', component: NationalComponent },
   { path: 'drama2021', component: Drama2021Component },
+  { path: 'drama2022', component: Drama22Component },
   { path: 'singing21', component: Singing21Component },
   { path: 'acting', component: ActingComponent },
   { path: 'singer-songwriter', component: SingerSongwriterComponent },
