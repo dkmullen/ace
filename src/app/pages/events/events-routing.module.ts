@@ -14,15 +14,17 @@ import { IsabellaFransiscoComponent } from './safeathome/writing/isabella-fransi
 import { ElizabethNewmanComponent } from './safeathome/writing/elizabeth-newman/elizabeth-newman.component';
 import { NationalComponent } from './national/national.component';
 import { Drama2021Component } from './drama21/drama.component';
+import { TimeslotsComponent } from './drama22/timeslots/timeslots.component';
 import { Drama22Component } from './drama22/drama22.component';
 import { Singing21Component } from './2021/singing21/singing21.component';
- 
+
 const routes: Routes = [
   { path: 'singing', component: SingingComponent },
   { path: 'national/signup', component: SingingSignupComponent },
   { path: 'singing2021', component: NationalComponent },
   { path: 'drama2021', component: Drama2021Component },
   { path: 'drama2022', component: Drama22Component },
+  { path: 'drama2022/times', component: TimeslotsComponent },
   { path: 'singing21', component: Singing21Component },
   { path: 'acting', component: ActingComponent },
   { path: 'singer-songwriter', component: SingerSongwriterComponent },
@@ -32,11 +34,11 @@ const routes: Routes = [
   { path: 'writing/first', component: IsabellaFransiscoComponent },
   { path: 'writing/second', component: ElizabethNewmanComponent },
   { path: 'writing', component: WritingComponent },
-  { path: 'dance', component: DanceComponent }
+  { path: 'dance', component: DanceComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class EventsRoutingModule { }
+export class EventsRoutingModule {}

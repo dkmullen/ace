@@ -26,6 +26,7 @@ import { NationalComponent } from './national/national.component';
 import { Drama2021Component } from './drama21/drama.component';
 import { Singing21Component } from './2021/singing21/singing21.component';
 import { Drama22Component } from './drama22/drama22.component';
+import { TimeslotsComponent } from './drama22/timeslots/timeslots.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { Drama22Component } from './drama22/drama22.component';
     NationalComponent,
     Drama2021Component,
     Singing21Component,
-    Drama22Component
+    Drama22Component,
+    TimeslotsComponent
   ],
   entryComponents: [VotingDialog],
   imports: [
