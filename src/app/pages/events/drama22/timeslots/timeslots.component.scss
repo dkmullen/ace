@@ -1,0 +1,32 @@
+.closed {
+  text-decoration: line-through;
+}
+#times-grid {
+  display: grid;
+  max-width: 500px;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: auto;
+  grid-gap: 8px;
+  margin: auto;
+}
+.mat-form-field {
+  width: 300px;
+}
+#instructions {
+  max-width: 550px;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.message-wrapper {
+  height: 1rem;
+}
+.submit-button {
+  margin-top: 1.5rem;
+}
+.error {
+  font-size: small;
+  color: red;
+}
+.message {
+  font-size: small;
+}

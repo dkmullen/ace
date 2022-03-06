@@ -1,0 +1,81 @@
+<div class="event_page-wrapper">
+  <div class="event_main-heading">ACE Awards</div>
+
+  <div>at the Clarence Brown Theatre</div>
+  <div>April 3, 2022</div>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <p id="instructions">
+    Time slots are ten minutes long. Sign up for
+    <span class="bold accent-text"
+      >one time slot for each of the categories you have entered</span
+    >.
+  </p>
+
+  <div id="times-grid">
+    <ul>
+      <li *ngFor="let item of slOne">
+        <mat-checkbox
+          [(ngModel)]="item.selected"
+          [disabled]="!item.isOpen"
+          [class]="item.isOpen ? 'accent-text' : 'closed'"
+        >
+          {{ item.time }}
+        </mat-checkbox>
+      </li>
+    </ul>
+    <ul>
+      <li *ngFor="let item of slTwo">
+        <mat-checkbox
+          [(ngModel)]="item.selected"
+          [disabled]="!item.isOpen"
+          [class]="item.isOpen ? 'accent-text' : 'closed'"
+        >
+          {{ item.time }}
+        </mat-checkbox>
+      </li>
+    </ul>
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Your name</mat-label>
+    <input matInput [(ngModel)]="name" />
+  </mat-form-field>
+  <div class="message-wrapper">
+    <span class="progress-bar">
+      <mat-progress-bar
+        *ngIf="submitting || loading"
+        mode="indeterminate"
+        color="accent"
+      ></mat-progress-bar>
+    </span>
+    <div *ngIf="missingInfo" class="error">
+      Did you select at least one time and enter your name?
+    </div>
+    <div *ngIf="errorState" class="error">
+      Network error. Your times were not submitted.
+    </div>
+    <div class="message" *ngIf="finished">
+      Your time slots have been reserved. Please make a copy of them. See you
+      April 3!
+    </div>
+  </div>
+  <button
+    class="submit-button"
+    mat-flat-button
+    color="primary"
+    type="button"
+    (click)="onSubmit()"
+    [disabled]="finished"
+  >
+    Submit
+  </button>
+  <div class="spacer"></div>
+  <div class="message">
+    Contact <a href="mailto:jay@aceknox.com">jay@aceknox.com</a> with any
+    questions.
+  </div>
+</div>
