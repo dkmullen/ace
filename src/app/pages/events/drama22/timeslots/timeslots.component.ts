@@ -35,8 +35,8 @@ export class TimeslotsComponent implements OnInit {
           item.selected = false;
         });
         this.sortedList = data.sort((a, b) => (a.id > b.id ? 1 : -1));
-        this.slOne = this.sortedList.slice(0, 9);
-        this.slTwo = this.sortedList.slice(9, 18);
+        this.slOne = this.sortedList.slice(0, 14);
+        this.slTwo = this.sortedList.slice(14, 28);
         this.loading = false;
       })
       .catch((error) => {
