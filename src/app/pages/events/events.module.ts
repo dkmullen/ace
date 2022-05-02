@@ -28,6 +28,7 @@ import { Singing21Component } from './2021/singing21/singing21.component';
 import { Drama22Component } from './drama22/drama22.component';
 import { TimeslotsComponent } from './drama22/timeslots/timeslots.component';
 import { Singing22Component } from './singing22/singing22.component';
+import { Singing22VidsComponent } from './singing22/vids/singing22-vids/singing22-vids.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { Singing22Component } from './singing22/singing22.component';
     Singing21Component,
     Drama22Component,
     TimeslotsComponent,
-    Singing22Component
+    Singing22Component,
+    Singing22VidsComponent
   ],
   entryComponents: [VotingDialog],
   imports: [

@@ -17,6 +17,7 @@ import { Drama2021Component } from './drama21/drama.component';
 import { Drama22Component } from './drama22/drama22.component';
 import { Singing21Component } from './2021/singing21/singing21.component';
 import { Singing22Component } from './singing22/singing22.component';
+import { Singing22VidsComponent } from './singing22/vids/singing22-vids/singing22-vids.component';
 
 const routes: Routes = [
   { path: 'singing', component: SingingComponent },
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path: 'writing/second', component: ElizabethNewmanComponent },
   { path: 'writing', component: WritingComponent },
   { path: 'dance', component: DanceComponent },
+  { path: 'videos', component: Singing22VidsComponent },
 ];
 
 @NgModule({

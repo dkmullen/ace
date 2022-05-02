@@ -6,34 +6,59 @@ import { Router } from '@angular/router';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class HomeComponent implements OnInit {
   hello = 'Hello';
   cards = [
     {
-      title: 'ACE Awards at the Clarence Brown Theatre',
-      subtitle: 'RESCHEDULED for April 3, 2022',
-      image: `assets/images/drama22.jpg`,
-      alt: 'An actor',
-      photocredit: '',
-      message1: 'A chance to win $500 for you and $200 for your school',
-      message2: 'Four categories. Enter any or all of them!',
+      title: 'Finalists Announced! ',
+      subtitle: 'The ACE AWARDS Online Singing Competition ',
+      image: `assets/images/luke-thornton-JNl7o-Mj2cc-unsplash.jpg`,
+      alt: 'A young musician singing and playing a guitar',
+      photocredit:
+        'Photo by <a href="https://unsplash.com/@lukethornton?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luke Thornton</a> on <a href="https://unsplash.com/s/photos/sing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>',
+      message1: 'Thanks to everyone who entered!',
+      message2: 'Vote for your favorite starting 7pm May 2',
       button1: {
-        buttontxt: 'Sign up today',
-        link: '/drama2022',
+        buttontxt: 'See the finalists',
+        link: '/events/singing22',
         fragment: '',
         navMethod: 'internal',
         disabled: false,
-        display: true
+        display: true,
       },
       button2: {
         buttontxt: 'Contest details',
         link: '/ace-in-the-park', // my test link for generic signup for
         navMethod: 'internal',
         disabled: true,
-        display: false
-      }
+        display: false,
+      },
+    },
+    {
+      title: 'ACE Awards at the Clarence Brown Theatre',
+      subtitle: 'April 3, 2022',
+      image: `assets/images/drama22.jpg`,
+      alt: 'An actor',
+      photocredit: '',
+      message1: 'Thanks to all who participated',
+      message2: 'Here are the winners...',
+      button1: {
+        buttontxt: 'Results',
+        link: '/drama2022',
+        fragment: '',
+        navMethod: 'internal',
+        disabled: false,
+        display: true,
+      },
+      button2: {
+        buttontxt: 'Contest details',
+        link: '/ace-in-the-park', // my test link for generic signup for
+        navMethod: 'internal',
+        disabled: true,
+        display: false,
+      },
     },
     {
       title: 'ACE in the Park',
@@ -49,14 +74,14 @@ export class HomeComponent implements OnInit {
         fragment: '',
         navMethod: 'internal',
         disabled: false,
-        display: true
+        display: true,
       },
       button2: {
         buttontxt: 'Party Boys',
         link: 'https://www.partyboysdjshow.com/', // my test link for generic signup for
         navMethod: 'external',
         disabled: true,
-        display: false
+        display: false,
       },
       button3: {
         buttontxt: 'Turkey Creek',
@@ -64,7 +89,7 @@ export class HomeComponent implements OnInit {
         fragment: '',
         navMethod: 'external',
         disabled: true,
-        display: false
+        display: false,
       },
     },
     {
@@ -81,15 +106,15 @@ export class HomeComponent implements OnInit {
         fragment: '',
         navMethod: 'internal',
         disabled: false,
-        display: true
+        display: true,
       },
       button2: {
         buttontxt: 'Contest details',
         link: '/ace-in-the-park', // my test link for generic signup for
         navMethod: 'internal',
         disabled: false,
-        display: true
-      }
+        display: true,
+      },
     },
     {
       title: 'Singing Contest 2021',
@@ -105,15 +130,15 @@ export class HomeComponent implements OnInit {
         fragment: '',
         navMethod: 'internalWithPageLoad',
         disabled: false,
-        display: true
+        display: true,
       },
       button2: {
         buttontxt: 'Contest details',
         link: '/signup-form', // my test link for generic signup for
         navMethod: 'internal',
         disabled: true,
-        display: false
-      }
+        display: false,
+      },
     },
     // {
     //   title: 'Help For Your Next Audition',
@@ -201,15 +226,15 @@ export class HomeComponent implements OnInit {
         fragment: 'jed diamond',
         navMethod: 'internal',
         disabled: false,
-        display: true
+        display: true,
       },
       button2: {
         buttontxt: null,
         link: null,
         navMethod: null,
         disabled: true,
-        display: false
-      }
+        display: false,
+      },
     },
     // {
     //   title: 'NEW: ACE Interviews',
@@ -234,7 +259,7 @@ export class HomeComponent implements OnInit {
     //     disabled: true,
     //     display: false
     //   }
-    // }, 
+    // },
     // {
     //   title: 'NEW: ACE Interviews',
     //   subtitle: 'Actor Kim Martin-Cotten',
@@ -258,7 +283,7 @@ export class HomeComponent implements OnInit {
     //     disabled: true,
     //     display: false
     //   }
-    // }, 
+    // },
     // {
     //   title: 'NEW: ACE Interviews',
     //   subtitle: 'Actor Matt Lytle',
@@ -282,7 +307,7 @@ export class HomeComponent implements OnInit {
     //     disabled: true,
     //     display: false
     //   }
-    // }, 
+    // },
     // {
     //   title: 'NEW: ACE Interviews',
     //   subtitle: 'Actor Courtney Lucien',
@@ -306,7 +331,7 @@ export class HomeComponent implements OnInit {
     //     disabled: true,
     //     display: false
     //   }
-    // }, 
+    // },
     // {
     //   title: 'NEW: ACE Interviews',
     //   subtitle: 'Author Alan Gratz',
@@ -330,7 +355,7 @@ export class HomeComponent implements OnInit {
     //     disabled: true,
     //     display: false
     //   }
-    // },    
+    // },
     // {
     //   title: 'NEW: ACE Interviews',
     //   subtitle: 'Musical Theatre: Four Perspectives',
@@ -354,7 +379,7 @@ export class HomeComponent implements OnInit {
     //     disabled: true,
     //     display: false
     //   }
-    // },  
+    // },
     {
       title: 'Interview: Actor Kate Arrington',
       subtitle: 'of the Steppenwolf Theatre Company',
@@ -369,19 +394,19 @@ export class HomeComponent implements OnInit {
         fragment: 'kate-arrington',
         navMethod: 'internal',
         disabled: false,
-        display: true
+        display: true,
       },
       button2: {
         buttontxt: null,
         link: null,
         navMethod: null,
         disabled: true,
-        display: false
-      }
-    }
+        display: false,
+      },
+    },
   ];
 
-  constructor(protected router: Router) { }
+  constructor(protected router: Router) {}
 
   ngOnInit() {}
 
@@ -392,15 +417,15 @@ export class HomeComponent implements OnInit {
   navigate(link, method, fragment?) {
     switch (method) {
       case 'internal':
-        return fragment ? this.router.navigate([link], {fragment: fragment}) : 
-          this.router.navigate([link]);
+        return fragment
+          ? this.router.navigate([link], { fragment: fragment })
+          : this.router.navigate([link]);
       case 'external':
         return window.open(link);
-        /* Nav to internal page but need page refresh,
+      /* Nav to internal page but need page refresh,
         ie, when using voting buttons */
       case 'internalWithPageLoad':
         return window.open(link, '_self');
     }
   }
-
 }
