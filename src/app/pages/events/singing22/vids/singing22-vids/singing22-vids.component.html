@@ -1,0 +1,538 @@
+<div class="event_page-wrapper">
+  <div class="event_secondary-heading">
+    ACE <span class="accent-text">Singing Contest</span> 2022
+  </div>
+  <p>
+    <span class="bold"
+      >Thanks SO MUCH to everyone for sharing your music with us!
+    </span>
+    <!-- There is much talent here, but only a few prizes. -->
+    <span class="accent-text bold">Here are your finalists.</span> Vote for your
+    favorite here till May 7, 2022 at 6:00pm. CONTESTANTS: Remember that your
+    final video for the judges is due May 7. (Contest details
+    <span class="accent-text pseudo-link" [routerLink]="['/singing22']"
+      >here</span
+    >).
+  </p>
+
+  <!-- <div class="pic">
+    <img src="../../../../../assets/images/singing_21/mary.jpg" />
+    <p class="accent-text bold">Mary Claire Carter</p>
+    <p class="less-top">Overall winner!</p>
+  </div>
+  <div class="pic">
+    <img src="../../../../../assets/images/singing_21/joey.jpg" />
+    <p class="accent-text bold">Joey Nieman</p>
+    <p class="less-top">Rising Star winner!</p>
+  </div>
+
+  <div>
+    <img class="wide" src="../../../../../assets/images/singing_21/maddy.jpg" />
+    <p class="accent-text bold">Maddy Dishner</p>
+    <p class="less-top">Audience favorite!</p>
+  </div> -->
+  <!-- <p id="voting" (click)="openDialog()">Trouble voting?</p> -->
+  <div class="spacer"></div>
+  <div class="accent-text bold">Find an artist</div>
+  <div id="chips">
+    <mat-chip-list>
+      <mat-chip
+        color="primary"
+        selected
+        *ngFor="let contestant of videoArray"
+        (click)="scrollToElement(contestant.id)"
+      >
+        {{ contestant.name }}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+  <div class="spacer"></div>
+
+  <!-- <p [style.margin-bottom.px]="20" class="announcement">
+  Judges' Prize: Marian Vacaliuc - $150
+</p> -->
+  <div class="video-container" id="macy">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/-COBD19g9Pg"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="artist">
+    <span class="bold accent-text">Macy Shoemaker</span> - Grace Christian
+    Academy
+  </div>
+  <!-- LikeBtn.com BEGIN -->
+  <span
+    class="likebtn-wrapper"
+    data-theme="custom"
+    data-icon_l="hrt7"
+    data-icon_l_c="#bb2d53"
+    data-icon_l_c_v="#000000"
+    data-identifier="macy22"
+    data-show_like_label="false"
+    data-dislike_enabled="false"
+    data-icon_dislike_show="false"
+    data-voting_cancelable="false"
+    data-voting_frequency="85000"
+    data-site_id="5e151493943ec9fb10be9a79"
+    data-voting_enabled="true"
+  ></span>
+  <script>
+    (function (d, e, s) {
+      if (d.getElementById('likebtn_wjs')) return;
+      a = d.createElement(e);
+      m = d.getElementsByTagName(e)[0];
+      a.async = 1;
+      a.id = 'likebtn_wjs';
+      a.src = s;
+      m.parentNode.insertBefore(a, m);
+    })(document, 'script', '//w.likebtn.com/js/w/widget.js');
+  </script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Macy</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="irelan">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/GZdi9dCKa9M"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="artist">
+    <span class="bold accent-text">Irelan Fender</span> - River's Edge Christian
+    Academy
+  </div>
+  <!-- LikeBtn.com BEGIN -->
+  <span
+    class="likebtn-wrapper"
+    data-theme="custom"
+    data-icon_l="hrt7"
+    data-icon_l_c="#bb2d53"
+    data-icon_l_c_v="#000000"
+    data-identifier="irelan22"
+    data-show_like_label="false"
+    data-dislike_enabled="false"
+    data-icon_dislike_show="false"
+    data-voting_cancelable="false"
+    data-voting_frequency="85000"
+    data-site_id="5e151493943ec9fb10be9a79"
+    data-voting_enabled="true"
+  ></span>
+  <script>
+    (function (d, e, s) {
+      if (d.getElementById('likebtn_wjs')) return;
+      a = d.createElement(e);
+      m = d.getElementsByTagName(e)[0];
+      a.async = 1;
+      a.id = 'likebtn_wjs';
+      a.src = s;
+      m.parentNode.insertBefore(a, m);
+    })(document, 'script', '//w.likebtn.com/js/w/widget.js');
+  </script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Irelan</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="joey">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/NCwnxt3gy7k"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="artist">
+    <span class="bold accent-text">Joey Nieman</span> - Farragut Middle School
+  </div>
+  <!-- LikeBtn.com BEGIN -->
+  <span
+    class="likebtn-wrapper"
+    data-theme="custom"
+    data-icon_l="hrt7"
+    data-icon_l_c="#bb2d53"
+    data-icon_l_c_v="#000000"
+    data-identifier="joey22"
+    data-show_like_label="false"
+    data-dislike_enabled="false"
+    data-icon_dislike_show="false"
+    data-voting_cancelable="false"
+    data-voting_frequency="85000"
+    data-site_id="5e151493943ec9fb10be9a79"
+    data-voting_enabled="true"
+  ></span>
+  <script>
+    (function (d, e, s) {
+      if (d.getElementById('likebtn_wjs')) return;
+      a = d.createElement(e);
+      m = d.getElementsByTagName(e)[0];
+      a.async = 1;
+      a.id = 'likebtn_wjs';
+      a.src = s;
+      m.parentNode.insertBefore(a, m);
+    })(document, 'script', '//w.likebtn.com/js/w/widget.js');
+  </script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Joey</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="abigail">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/9rWGkqdDRmU"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="artist">
+    <span class="bold accent-text">Abigail Seaman</span> - Grace Christian
+    Academy
+  </div>
+  <!-- LikeBtn.com BEGIN -->
+  <span
+    class="likebtn-wrapper"
+    data-theme="custom"
+    data-icon_l="hrt7"
+    data-icon_l_c="#bb2d53"
+    data-icon_l_c_v="#000000"
+    data-identifier="abigail22"
+    data-show_like_label="false"
+    data-dislike_enabled="false"
+    data-icon_dislike_show="false"
+    data-voting_cancelable="false"
+    data-voting_frequency="85000"
+    data-site_id="5e151493943ec9fb10be9a79"
+    data-voting_enabled="true"
+  ></span>
+  <script>
+    (function (d, e, s) {
+      if (d.getElementById('likebtn_wjs')) return;
+      a = d.createElement(e);
+      m = d.getElementsByTagName(e)[0];
+      a.async = 1;
+      a.id = 'likebtn_wjs';
+      a.src = s;
+      m.parentNode.insertBefore(a, m);
+    })(document, 'script', '//w.likebtn.com/js/w/widget.js');
+  </script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Abigail</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="avery">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/QMoHLbj9sv8"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="artist">
+    <span class="bold accent-text">Avery Arwood</span> - Grace Christian Academy
+  </div>
+  <!-- LikeBtn.com BEGIN -->
+  <span
+    class="likebtn-wrapper"
+    data-theme="custom"
+    data-icon_l="hrt2"
+    data-icon_l_c="#bb2d53"
+    data-icon_l_c_v="#000000"
+    data-identifier="avery22"
+    data-show_like_label="false"
+    data-dislike_enabled="false"
+    data-icon_dislike_show="false"
+    data-voting_cancelable="false"
+    data-voting_frequency="85000"
+    data-site_id="5e151493943ec9fb10be9a79"
+    data-voting_enabled="true"
+  ></span>
+  <script>
+    (function (d, e, s) {
+      if (d.getElementById('likebtn_wjs')) return;
+      a = d.createElement(e);
+      m = d.getElementsByTagName(e)[0];
+      a.async = 1;
+      a.id = 'likebtn_wjs';
+      a.src = s;
+      m.parentNode.insertBefore(a, m);
+    })(document, 'script', '//w.likebtn.com/js/w/widget.js');
+  </script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Avery</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="sophia">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/keyC1HtYP6I"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="artist">
+    <span class="bold accent-text">Sophia Newton</span> - Christian Academy of
+    Knoxville
+  </div>
+  <!-- LikeBtn.com BEGIN -->
+  <span
+    class="likebtn-wrapper"
+    data-theme="custom"
+    data-icon_l="hrt7"
+    data-icon_l_c="#bb2d53"
+    data-icon_l_c_v="#000000"
+    data-identifier="sophia22"
+    data-show_like_label="false"
+    data-dislike_enabled="false"
+    data-icon_dislike_show="false"
+    data-voting_cancelable="false"
+    data-voting_frequency="85000"
+    data-site_id="5e151493943ec9fb10be9a79"
+    data-voting_enabled="true"
+  ></span>
+  <script>
+    (function (d, e, s) {
+      if (d.getElementById('likebtn_wjs')) return;
+      a = d.createElement(e);
+      m = d.getElementsByTagName(e)[0];
+      a.async = 1;
+      a.id = 'likebtn_wjs';
+      a.src = s;
+      m.parentNode.insertBefore(a, m);
+    })(document, 'script', '//w.likebtn.com/js/w/widget.js');
+  </script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Sophia</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="sherleen">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/0nit2d9FlOI"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="artist">
+    <span class="bold accent-text">Sherleen Mwaura</span> - West High School
+  </div>
+  <!-- LikeBtn.com BEGIN -->
+  <span
+    class="likebtn-wrapper"
+    data-theme="custom"
+    data-icon_l="hrt7"
+    data-icon_l_c="#bb2d53"
+    data-icon_l_c_v="#000000"
+    data-identifier="sherleen22"
+    data-show_like_label="false"
+    data-dislike_enabled="false"
+    data-icon_dislike_show="false"
+    data-voting_cancelable="false"
+    data-voting_frequency="85000"
+    data-site_id="5e151493943ec9fb10be9a79"
+    data-voting_enabled="true"
+  ></span>
+  <script>
+    (function (d, e, s) {
+      if (d.getElementById('likebtn_wjs')) return;
+      a = d.createElement(e);
+      m = d.getElementsByTagName(e)[0];
+      a.async = 1;
+      a.id = 'likebtn_wjs';
+      a.src = s;
+      m.parentNode.insertBefore(a, m);
+    })(document, 'script', '//w.likebtn.com/js/w/widget.js');
+  </script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Sherleen</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="presley">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/0zuYM6D7SLU"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="artist">
+    <span class="bold accent-text">Presley Ford</span> - West High School
+  </div>
+  <!-- LikeBtn.com BEGIN -->
+  <span
+    class="likebtn-wrapper"
+    data-theme="custom"
+    data-icon_l="hrt7"
+    data-icon_l_c="#bb2d53"
+    data-icon_l_c_v="#000000"
+    data-identifier="presley22"
+    data-show_like_label="false"
+    data-dislike_enabled="false"
+    data-icon_dislike_show="false"
+    data-voting_cancelable="false"
+    data-voting_frequency="85000"
+    data-site_id="5e151493943ec9fb10be9a79"
+    data-voting_enabled="true"
+  ></span>
+  <script>
+    (function (d, e, s) {
+      if (d.getElementById('likebtn_wjs')) return;
+      a = d.createElement(e);
+      m = d.getElementsByTagName(e)[0];
+      a.async = 1;
+      a.id = 'likebtn_wjs';
+      a.src = s;
+      m.parentNode.insertBefore(a, m);
+    })(document, 'script', '//w.likebtn.com/js/w/widget.js');
+  </script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Presley</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="jasmyne">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/9TnAF27LSxA"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="artist">
+    <span class="bold accent-text">Jasmyne Simpkins</span> - Home School
+  </div>
+  <!-- LikeBtn.com BEGIN -->
+  <span
+    class="likebtn-wrapper"
+    data-theme="custom"
+    data-icon_l="hrt7"
+    data-icon_l_c="#bb2d53"
+    data-icon_l_c_v="#000000"
+    data-identifier="jasmyne22"
+    data-show_like_label="false"
+    data-dislike_enabled="false"
+    data-icon_dislike_show="false"
+    data-voting_cancelable="false"
+    data-voting_frequency="85000"
+    data-site_id="5e151493943ec9fb10be9a79"
+    data-voting_enabled="true"
+  ></span>
+  <script>
+    (function (d, e, s) {
+      if (d.getElementById('likebtn_wjs')) return;
+      a = d.createElement(e);
+      m = d.getElementsByTagName(e)[0];
+      a.async = 1;
+      a.id = 'likebtn_wjs';
+      a.src = s;
+      m.parentNode.insertBefore(a, m);
+    })(document, 'script', '//w.likebtn.com/js/w/widget.js');
+  </script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Jasmyne</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+
+  <div class="video-container" id="mary">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/4oQLtMS06Ck"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="artist">
+    <span class="bold accent-text">Mary Claire Carter</span> - Farragut High
+    School
+  </div>
+  <!-- LikeBtn.com BEGIN -->
+  <span
+    class="likebtn-wrapper"
+    data-theme="custom"
+    data-icon_l="hrt7"
+    data-icon_l_c="#bb2d53"
+    data-icon_l_c_v="#000000"
+    data-identifier="mary_claire22"
+    data-show_like_label="false"
+    data-dislike_enabled="false"
+    data-icon_dislike_show="false"
+    data-voting_cancelable="false"
+    data-voting_frequency="85000"
+    data-site_id="5e151493943ec9fb10be9a79"
+    data-voting_enabled="true"
+  ></span>
+  <script>
+    (function (d, e, s) {
+      if (d.getElementById('likebtn_wjs')) return;
+      a = d.createElement(e);
+      m = d.getElementsByTagName(e)[0];
+      a.async = 1;
+      a.id = 'likebtn_wjs';
+      a.src = s;
+      m.parentNode.insertBefore(a, m);
+    })(document, 'script', '//w.likebtn.com/js/w/widget.js');
+  </script>
+  <!-- LikeBtn.com END -->
+  <span class="follow">Vote for Mary Claire</span>
+
+  <div class="spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="spacer"></div>
+</div>
